@@ -16,6 +16,14 @@ Takeaway for us: a lever can be much more than a switch. The half-press / full-p
 
 I could **not** find where the slanted-lever idea came from; none of the sources say. Push-to-talk bars on handheld radios and handsets are the obvious family, but that is my inference.
 
+### What is the TE FX MIC's reference device? (owner question)
+- **Retailer and press descriptions** call it a handheld mic in an **80s CB-radio style** and "a tiny radio mic", and say it could be mistaken for a kids' toy or a CB radio ([Yanko Design](https://www.yankodesign.com/2025/11/05/teenage-engineerings-latest-microphone-is-the-most-unserious-yet-brilliant-piece-of-music-tech-weve-seen/amp/), [Product Hunt](https://www.producthunt.com/posts/ep-2350-fx-mic)). **Teenage Engineering's own statement of the inspiration was not found.** The lineage below is my inference.
+- The look matches a **CB or two-way-radio hand microphone**: a rectangular body, a perforated front, a **coiled cable**, and a big spring-loaded **push-to-talk (PTT) bar on the side**. It is *not* a walkie-talkie (no radio inside) and not a telegraph.
+- **PTT** means press to transmit, release to listen (a half-duplex radio habit, see [Handie-Talkie](https://en.wikipedia.org/wiki/Handie-Talkie) for the walkie-talkie ancestry). A **telegraph key** is a different thing: a lever tapped to send Morse. They share only the "spring lever with a click" feel.
+- **What the TE lever does** is described differently by different sources: "squeeze the lever to shape the vocal FX" (retailers), "press the orange talk button and you are off" ([Synth Anatomy](https://synthanatomy.com/2026/08/teenage-engineering-ep-2350-fx-mic-the-mic-with-built-in-sample-playback.html)), and a wake-on-touch plus travel-proportional control ([Hackaday teardown](https://hackaday.com/2026/08/20/teardown-shows-low-fi-microphone-is-surprisingly-sophisticated/)). I did not confirm that it gates the audio like a real PTT.
+- Naming is confusing: the earlier **EP-2350 Ting** is the CB-styled model; the **FX MIC** is described as its redesigned successor ([Gearnews](https://gearnews.com/teenage-engineering-ep-2350-fx-mic/)).
+- Idea for us: a **coiled cable** is part of that retro cue. A commercial coiled USB-C cable could be an easy, cheap signature detail.
+
 ### CMF (Nothing) Speaker S / M — swappable panels with official 3D files
 [Digital Trends](https://digitaltrends.com/home-theater/cmfs-first-bluetooth-speakers-s-and-m-come-with-swappable-panels-and-3d-printable-parts/) and [Android Headlines](https://androidheadlines.com/2026/10/cmf-by-nothing-launches-speaker-s-m-specs-price.html) report (October 2026):
 
