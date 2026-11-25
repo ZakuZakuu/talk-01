@@ -6,6 +6,11 @@ A running record of owner direction and open questions, so decisions are not los
 
 ### Owner direction
 
+**Why this exists (stated later the same day)**
+- The owner's laptop microphone is broken (very quiet), and is also unclear in voice chats with friends. So the device is first of all **a real microphone**: voice input by holding the lever, **and** a resident desk / external microphone for calls and ordinary use.
+- The interaction must be **fun and retro** (big lever or big button, walkie-talkie feel), not a plain mic. Both matter: it is a proper microphone, and the interaction has to be enjoyable.
+- Connectors, battery, standalone use and Bluetooth/wireless are **undecided**. A wired first version is acceptable. Wireless is welcome *if it is easy*; the repository's earlier "no wireless" line is not a hard owner rule. The owner asks for Claude's opinion.
+
 **Positioning**
 - This is a **toy-like object that is a little useful**, not a strictly practical product. The reference attitude is Teenage Engineering: products that are not necessary but create desire. The owner likes the design language but finds TE products expensive and functionally mismatched.
 - Closest inspiration: TE **EP-2350 FX MIC** (grey perforated grille on top, off-white lower panel, orange side lever, small side buttons). Inspiration, not copying; we should improve on it and bring our own identity.
@@ -36,7 +41,8 @@ A running record of owner direction and open questions, so decisions are not los
 ### Open questions for the owner (no hurry)
 
 1. **Holding style** — walkie-talkie to the mouth, held at chest height, or mostly on the desk on its stand? This decides mic port position and which side the lever sits.
-2. **Using it with speakers** — a USB microphone cannot drive a speaker by itself. What did you picture: a line-out jack on the device, a USB-C host/dongle setup, or just "works with a speaker that has a USB port"? This could change the electronics a lot, so we should decide whether it is in or out of v0.1.
-3. **Mode switch** — what should the modes be, in your head? (For example: voice-input / always-on desk mic / muted.)
-4. **Hardware license** — any preference for the enclosure and PCB files later? (No rush; only needed before design files are published.)
-5. **Concept direction** — any pager, telegraph, radio or other objects you love the look of? Photos would help set proportion and details.
+2. ~~Using it with speakers~~ — withdrawn. Claude misread a voice-input sentence; the owner never asked for speaker output. If a built-in speaker is wanted, say so.
+3. **Mode switch** — see the proposal in Claude's reply on 2026-11-25: three lever behaviours (dictate / talk / open). Does that match what you imagine?
+4. **Power and wireless** — wired USB-C only for v0.1 with room reserved for a later battery, or should the first shell already include batteries? (Claude's recommendation is in the chat reply; not yet decided.)
+5. **Hardware license** — any preference for the enclosure and PCB files later? (No rush; only needed before design files are published.)
+6. **Concept direction** — any pager, telegraph, radio or other objects you love the look of? Photos would help set proportion and details.
