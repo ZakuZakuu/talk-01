@@ -86,6 +86,11 @@ A running record of owner direction and open questions, so decisions are not los
 - The owner sent four reference photos (cream-teal-lavender micro-cassette deck render, stacked compo stereo with screws and orange translucent keys, translucent-blue-record turntable, cream-teal boombox). Not stored in the repo.
 - Results: [`../design/concepts/round-6/README.md`](../design/concepts/round-6/README.md).
 
+**New direction: grip to talk (2026-11-25, late)**
+- The owner asked whether the design is "locked into TE's key on the left", and proposed: **the left hand holds the device, the four fingers squeeze to talk, and the left thumb rolls a wheel to change mode.** Asked for several designs and overnight research; the owner went to sleep.
+- Results: research [`../design/squeeze-grip.md`](../design/squeeze-grip.md) and six designs [`../design/concepts/round-7/README.md`](../design/concepts/round-7/README.md).
+- Claude corrected an earlier assumption: the TE lever is described as **squeezed**, not thumb-pressed.
+
 ### Claude's notes from the discussion
 
 - TE's recognisable elements are the **perforated dot-matrix grille, the single saturated lever and the two-tone split body** (observed from one marketing render). Our concepts should not reproduce that combination. Our real differentiators are the **built-in rear stand** and **USB audio + keyboard in one cable**; the stand could be made a visual feature rather than a hidden mechanism.
