@@ -77,6 +77,15 @@ A running record of owner direction and open questions, so decisions are not los
 - The owner was dissatisfied just from the images and had not read the rest. Claude should **find many more reference photos of old devices** and design from them. Visual quality is judged first.
 - Results: [`../design/concepts/round-5/README.md`](../design/concepts/round-5/README.md).
 
+**Feedback on round 5 and the side-strip idea (2026-11-25)**
+- Round 5 was much better and "very distinctive". The **first design (TPS)** resonated most, especially its **separate long strip on the left**.
+- **Idea:** make the **whole left side the push-to-talk key**: spring it up (possibly with a cut top corner or an inset design); press to talk, press further to send; then a **sliding sleeve or similar holds it down** so the body is a full rectangle again. This protects the key in a bag. It can also be **only part** of the side that pops up, with a sleeve holding the rest.
+- **Ergonomics (left hand):** thumb presses; can other fingers use keys, or a lever under the thumb pad? Design from the **few key interactions**: hold to talk, switch mode, mode switching, at most power.
+- **Back:** a **small U stand** and a **small openable hatch** with pins so users can write programs.
+- **Materials and colour:** the round parts will be **matte 3D prints**. Palette: retro **beige with bright colours such as teal**; multicolour, like the old Mac, Windows and Chrome logos.
+- The owner sent four reference photos (cream-teal-lavender micro-cassette deck render, stacked compo stereo with screws and orange translucent keys, translucent-blue-record turntable, cream-teal boombox). Not stored in the repo.
+- Results: [`../design/concepts/round-6/README.md`](../design/concepts/round-6/README.md).
+
 ### Claude's notes from the discussion
 
 - TE's recognisable elements are the **perforated dot-matrix grille, the single saturated lever and the two-tone split body** (observed from one marketing render). Our concepts should not reproduce that combination. Our real differentiators are the **built-in rear stand** and **USB audio + keyboard in one cable**; the stand could be made a visual feature rather than a hidden mechanism.

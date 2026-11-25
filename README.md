@@ -33,6 +33,7 @@ Concept and research only. No hardware, firmware, sound quality or CAD has been 
 - [Round 4: three cuts from the push-to-talk line (Handie / Palm / Pod)](design/concepts/round-4/README.md)
 - [Retro inspiration brainstorm (cassette, camera, Game Boy, Walkman, old Mac and more)](design/brainstorm-retro.md)
 - [Round 5: eight retro push-to-talk devices (TPS / Wand / Cube / Tuner / G.I. / Pageboy / Gameboy / Recorder)](design/concepts/round-5/README.md)
+- [Round 6: the side strip as the push-to-talk key (mechanism, feasibility, six designs)](design/concepts/round-6/README.md)
 - [Claude research review: USB microphone routes](docs/research/claude-review.md)
 - [Claude Code collaboration guide](CLAUDE.md)
 

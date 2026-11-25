@@ -31,7 +31,8 @@ Difficulty notes are Claude's rough estimates from reading and general knowledge
 |---|---|
 | USB-C on the top edge | Owner request; avoids a cable at the desk-contact edge. |
 | Three-stage lever: light press = hold to talk; bottom-out click = latch; extra firm push = send | Owner's description. Avoids timed gestures. Inspired by the TE FX MIC lever's three sensors. Needs a slightly compliant stop (or a Hall sensor with thresholds). Release of the latch is not decided. |
-| Lever protection for bag carry (recessed shoulders, flip guard, slide cover, LOCK position) | Owner concern; options listed in the ideas file. |
+| **Side-strip push-to-talk key** with a **sliding sleeve** that holds it flush (the body becomes a full rectangle; LOCK) | Owner's idea, 2026-11-25. See `design/concepts/round-6/`. The firmware must read the sleeve position, so "held down by the sleeve" is not "talking". Needs a mechanical mock first. |
+| Lever protection for bag carry (recessed shoulders, flip guard, slide cover, LOCK position) | Owner concern; options listed in the ideas file. Superseded in direction by the sleeve above. |
 | Removable back cover with a hackable bay (BOOT/RESET, header, battery space, info label) | Fits the toy and SDK positioning; reserve space even in v0.1. |
 | Print-your-own covers with a published cover spec | Keep the mic port outside the swappable zone. Needs a hardware/CAD licence decision. |
 | Mechanical-only printed mock for feel testing | Cheap, doubles as a fidget toy. |
