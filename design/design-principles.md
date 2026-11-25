@@ -40,6 +40,14 @@ Evidence level: **[interview]** = said by the designer or founder in a published
 9. **Make it physical early.** Print rough models, hold them, line them up. Many options, one decider.
 10. **Constraint is the engine.** Decide what to leave out first.
 
+## Lessons added after round 4 ("retro tech", not "modern tech")
+
+Round 4 looked modern: thin chamfers, pale greys, diagonal slots. Looking at real photos of old devices (see [`concepts/round-5/README.md`](concepts/round-5/README.md)) adds three rules:
+
+11. **Chunky molded forms.** Generous radii, thick bezels, big ribbed knobs, brass or chrome screws. Thin and sharp reads as modern.
+12. **Colour-blocked panels and honest old materials.** Whole panels in different colours or finishes (blue and silver strip, walnut and brass, black and brushed metal). This is also what TE does.
+13. **Old grilles and old type.** Fine horizontal lines, tall vertical slots, or a field of round perforations. Never diagonal slots. Raised capital words, small capital labels beside controls, arrow pictograms, a data plate.
+
 ## Round 2 scored against the checklist (honest)
 
 | Rule | D Dial | E Armed | F Handset | Comment |

@@ -70,6 +70,13 @@ A running record of owner direction and open questions, so decisions are not los
 - Inspiration may range widely: walkie-talkie, push-to-talk, telegraph, **cassette players, CD players, game consoles, phones, Walkman, cameras, old Macs, Game Boy**, up to about the year 2000. Combine them with TE's flat graphic language.
 - Results: [`../design/concepts/round-4/README.md`](../design/concepts/round-4/README.md) and [`../design/brainstorm-retro.md`](../design/brainstorm-retro.md).
 
+**Feedback on round 4 (2026-11-25)**
+- Cut was only the closest; the owner did **not** want it refined, but wanted **more varied** designs.
+- Round 4 felt **too modern and technical**, not "retro tech". Starting from walkie-talkies, it should feel properly old.
+- **Diagonal slots are out.** Preferred grilles: **horizontal lines, vertical slots, or dot-matrix perforations**. TE colours whole panels differently; the owner likes that.
+- The owner was dissatisfied just from the images and had not read the rest. Claude should **find many more reference photos of old devices** and design from them. Visual quality is judged first.
+- Results: [`../design/concepts/round-5/README.md`](../design/concepts/round-5/README.md).
+
 ### Claude's notes from the discussion
 
 - TE's recognisable elements are the **perforated dot-matrix grille, the single saturated lever and the two-tone split body** (observed from one marketing render). Our concepts should not reproduce that combination. Our real differentiators are the **built-in rear stand** and **USB audio + keyboard in one cable**; the stand could be made a visual feature rather than a hidden mechanism.
