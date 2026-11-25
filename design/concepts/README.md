@@ -1,5 +1,7 @@
 # Concept sketches — first round
 
+> **Round 2 is here:** [`round-2/`](round-2/README.md) (D Dial, E Armed, F Handset), built from the owner's feedback. This page documents round 1.
+
 Date: 2026-11-25 · Status: **flat 2D sketches for discussion. Not CAD, not a final design.** Every dimension is a guess; no electronics envelope has been measured yet.
 
 | Sheet | Idea | Files |

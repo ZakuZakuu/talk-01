@@ -83,8 +83,9 @@ def dimv(x, y1, y2, label):
             line(x - 1, y2, x + 1, y2, DIM, 0.15) + t(x + 1.8, (y1 + y2) / 2 + 0.6, label, 1.8, "start", DIM))
 
 
-def panel(ox, oy, inner):
-    return f'<g transform="translate({f(ox)},{f(oy)}) scale({S})">{inner}</g>'
+def panel(ox, oy, inner, sc=None):
+    sc = S if sc is None else sc
+    return f'<g transform="translate({f(ox)},{f(oy)}) scale({sc})">{inner}</g>'
 
 
 def px_text(x, y, s, size=14, fill=INK, weight="normal", family=MONO, anchor="start"):
@@ -140,7 +141,7 @@ def info_block(x, y, legend, pros, cons, col=520):
     return "".join(s)
 
 
-def open_side(Px, Py, th, H, D, hh, Ls, grille_y, mouth_deg, draw_local, draw_stand, note1, note3=""):
+def open_side(Px, Py, th, H, D, hh, Ls, grille_y, mouth_deg, draw_local, draw_stand, note1, note3="", sc=None):
     """Side view with the body leaning back `th` degrees on its stand, resting on a desk."""
     (hx, hy), (fx, fy) = stand_geometry(H, hh, Ls, th)
     right = D * math.cos(math.radians(th)) + 14
@@ -153,14 +154,15 @@ def open_side(Px, Py, th, H, D, hh, Ls, grille_y, mouth_deg, draw_local, draw_st
     mx, my = math.cos(math.radians(mouth_deg)), -math.sin(math.radians(mouth_deg))
     s.append(arrow(gx, gy, gx + 22 * nx, gy + 22 * ny, "#2f6f3a", 0.3))
     s.append(arrow(gx, gy, gx + 30 * mx, gy + 30 * my, ORANGE, 0.3))
-    s.append(t(gx + 22 * nx + 1.5, gy + 22 * ny + 0.8, f"port faces {th:.0f}° up", 1.8, "start", "#2f6f3a"))
-    s.append(t(gx + 30 * mx + 1.5, gy + 30 * my - 0.5, f"to mouth ~{mouth_deg:.0f}° up", 1.8, "start", ORANGE))
+    k = S / (S if sc is None else sc)
+    s.append(t(gx + 22 * nx + 1.5, gy + 22 * ny + 0.8, f"port faces {th:.0f}° up", 1.8 * k, "start", "#2f6f3a"))
+    s.append(t(gx + 30 * mx + 1.5, gy + 30 * my - 0.5, f"to mouth ~{mouth_deg:.0f}° up", 1.8 * k, "start", ORANGE))
     stab = stability(H, D, th)
     where = "behind" if stab < 0 else "IN FRONT OF"
-    s.append(t(fx, 6.2, note1, 1.7, "start", DIM))
-    s.append(t(fx, 9.0, f"opens ~{open_angle(th, hh, H, Ls):.0f}° from the body, body leans {th:.0f}° back from vertical", 1.7, "start", DIM))
-    s.append(t(fx, 11.8, f"balance: centre of mass {abs(stab):.0f} mm {where} the pivot{note3}", 1.7, "start", DIM))
-    return panel(Px, Py, "".join(s)), fx, right
+    s.append(t(fx, 6.2 * k, note1, 1.7 * k, "start", DIM))
+    s.append(t(fx, 9.0 * k, f"opens ~{open_angle(th, hh, H, Ls):.0f}° from the body, body leans {th:.0f}° back from vertical", 1.7 * k, "start", DIM))
+    s.append(t(fx, 11.8 * k, f"balance: centre of mass {abs(stab):.0f} mm {where} the pivot{note3}", 1.7 * k, "start", DIM))
+    return panel(Px, Py, "".join(s), sc), fx, right
 
 
 def open_angle(th, hh, H, Ls):

@@ -27,6 +27,7 @@ Concept and research only. No hardware, firmware, sound quality or CAD has been 
 - [Feature backlog (core vs optional fun features)](docs/feature-backlog.md)
 - [Concept sketches, first round (A Pager / B Telegraph / C Radio)](design/concepts/README.md)
 - [Inspiration and design ideas for round 2](design/inspiration.md)
+- [Concept sketches, round 2 (D Dial / E Armed / F Handset)](design/concepts/round-2/README.md)
 - [Claude research review: USB microphone routes](docs/research/claude-review.md)
 - [Claude Code collaboration guide](CLAUDE.md)
 

@@ -49,6 +49,10 @@ A running record of owner direction and open questions, so decisions are not los
 - All of these are brainstorm points, not commitments.
 - Research and Claude's ideas: [`../design/inspiration.md`](../design/inspiration.md).
 
+**Three-stage lever and round 2 brief (2026-11-25)**
+- The owner likes the three-stage lever and described the stages: light press = hold to talk; pressing to the bottom = **latch**; an extra bit of force at the bottom = **send**. Mechanics can be sorted out later; the feel matters most.
+- Round 2 brief: new, more novel directions, **not a random mash-up**. Each concept should have clear tradeoffs and be self-consistent. No strong preference yet; the aim is a good final product. Result: [`../design/concepts/round-2/README.md`](../design/concepts/round-2/README.md).
+
 ### Claude's notes from the discussion
 
 - TE's recognisable elements are the **perforated dot-matrix grille, the single saturated lever and the two-tone split body** (observed from one marketing render). Our concepts should not reproduce that combination. Our real differentiators are the **built-in rear stand** and **USB audio + keyboard in one cable**; the stand could be made a visual feature rather than a hidden mechanism.

@@ -30,7 +30,7 @@ Difficulty notes are Claude's rough estimates from reading and general knowledge
 | Idea | Notes |
 |---|---|
 | USB-C on the top edge | Owner request; avoids a cable at the desk-contact edge. |
-| Two-stage lever (hold to talk; bottom-out click = latch or send) | Avoids timed gestures. Inspired by the TE FX MIC lever's three sensors. |
+| Three-stage lever: light press = hold to talk; bottom-out click = latch; extra firm push = send | Owner's description. Avoids timed gestures. Inspired by the TE FX MIC lever's three sensors. Needs a slightly compliant stop (or a Hall sensor with thresholds). Release of the latch is not decided. |
 | Lever protection for bag carry (recessed shoulders, flip guard, slide cover, LOCK position) | Owner concern; options listed in the ideas file. |
 | Removable back cover with a hackable bay (BOOT/RESET, header, battery space, info label) | Fits the toy and SDK positioning; reserve space even in v0.1. |
 | Print-your-own covers with a published cover spec | Keep the mic port outside the swappable zone. Needs a hardware/CAD licence decision. |
