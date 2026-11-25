@@ -62,6 +62,14 @@ A running record of owner direction and open questions, so decisions are not los
 - **The back cover should not be the whole back.** The stand should be a **small U shape**, or the **cover and stand combined**.
 - Research and the resulting checklist: [`../design/design-principles.md`](../design/design-principles.md). Round 3: [`../design/concepts/round-3/README.md`](../design/concepts/round-3/README.md).
 
+**Feedback on round 3 and the new brief (2026-11-25)**
+- Round 3 was **too aggressive**: flip, tilt and layers went too far. The owner still values the creativity.
+- **Cut** is the preferred shape. The owner still wants a device that **starts from a walkie-talkie**, because it is something you talk into; the favourite reference remains the TE FX MIC.
+- The **coiled cable** is an important point. The shape does not have to be a rectangle; Cut or MP3-player-like shapes are fine.
+- Core function: **push to talk**. Body: **a small walkie-talkie-like handheld**.
+- Inspiration may range widely: walkie-talkie, push-to-talk, telegraph, **cassette players, CD players, game consoles, phones, Walkman, cameras, old Macs, Game Boy**, up to about the year 2000. Combine them with TE's flat graphic language.
+- Results: [`../design/concepts/round-4/README.md`](../design/concepts/round-4/README.md) and [`../design/brainstorm-retro.md`](../design/brainstorm-retro.md).
+
 ### Claude's notes from the discussion
 
 - TE's recognisable elements are the **perforated dot-matrix grille, the single saturated lever and the two-tone split body** (observed from one marketing render). Our concepts should not reproduce that combination. Our real differentiators are the **built-in rear stand** and **USB audio + keyboard in one cable**; the stand could be made a visual feature rather than a hidden mechanism.
