@@ -36,6 +36,7 @@ Concept and research only. No hardware, firmware, sound quality or CAD has been 
 - [Round 6: the side strip as the push-to-talk key (mechanism, feasibility, six designs)](design/concepts/round-6/README.md)
 - [Grip to talk: research and analysis](design/squeeze-grip.md)
 - [Round 7: grip to talk, six forms (strip, handset, bullet, ray, pebble, G.I.)](design/concepts/round-7/README.md)
+- [Round 8: one layout, four skins; plus a study of which way the thumb wheel turns](design/concepts/round-8/README.md)
 - [Claude research review: USB microphone routes](docs/research/claude-review.md)
 - [Claude Code collaboration guide](CLAUDE.md)
 

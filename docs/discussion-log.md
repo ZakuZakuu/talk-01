@@ -91,6 +91,11 @@ A running record of owner direction and open questions, so decisions are not los
 - Results: research [`../design/squeeze-grip.md`](../design/squeeze-grip.md) and six designs [`../design/concepts/round-7/README.md`](../design/concepts/round-7/README.md).
 - Claude corrected an earlier assumption: the TE lever is described as **squeezed**, not thumb-pressed.
 
+**More references and the wheel direction (2026-11-25, morning)**
+- Two new references: a real yellow walkie-talkie (too industrial and military; the owner still prefers TE) and a dark gadget with a glowing screwed window, a seven-dimple speaker and a ribbed roller sunk in a corner pocket.
+- **Wheel:** the first reference's twisted top knob is "the wrong direction". The owner wants a **roller sunk into the edge**, not necessarily in a corner (the sunk-in feel is the point). The owner's interaction: **thumb switches; the other side presses to talk** (Claude read "the right hand" as the right-hand side, where the fingers are).
+- Results: [`../design/concepts/round-8/README.md`](../design/concepts/round-8/README.md).
+
 ### Claude's notes from the discussion
 
 - TE's recognisable elements are the **perforated dot-matrix grille, the single saturated lever and the two-tone split body** (observed from one marketing render). Our concepts should not reproduce that combination. Our real differentiators are the **built-in rear stand** and **USB audio + keyboard in one cable**; the stand could be made a visual feature rather than a hidden mechanism.

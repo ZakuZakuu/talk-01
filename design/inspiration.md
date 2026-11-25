@@ -25,6 +25,10 @@ I could **not** find where the slanted-lever idea came from; none of the sources
 - Naming is confusing: the earlier **EP-2350 Ting** is the CB-styled model; the **FX MIC** is described as its redesigned successor ([Gearnews](https://gearnews.com/teenage-engineering-ep-2350-fx-mic/)).
 - Idea for us: a **coiled cable** is part of that retro cue. A commercial coiled USB-C cable could be an easy, cheap signature detail.
 
+### Two more owner references (2026-11-25, not stored in the repo)
+- **A real yellow walkie-talkie**: rugged and military-outdoor in language (the owner does not want that), but it confirms the interaction idea: **the thumb switches, the hand grips**. Its channel knob is a **top-mounted twisted knob**; the owner imagines a **roller stroked along the edge** instead. Its round grille with horizontal slots and its exposed rubber ridges are of interest. The owner still prefers the TE feel.
+- **A dark gadget** with a glowing frosted square window with corner screws, a **seven-dimple speaker**, small round buttons, a cut corner, and a **ribbed cylinder roller sunk into a pocket at the bottom-right**. The sunk-in roller is the thing to borrow. See [`concepts/round-8/README.md`](concepts/round-8/README.md).
+
 ### CMF (Nothing) Speaker S / M — swappable panels with official 3D files
 [Digital Trends](https://digitaltrends.com/home-theater/cmfs-first-bluetooth-speakers-s-and-m-come-with-swappable-panels-and-3d-printable-parts/) and [Android Headlines](https://androidheadlines.com/2026/10/cmf-by-nothing-launches-speaker-s-m-specs-price.html) report (October 2026):
 
