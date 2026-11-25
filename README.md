@@ -24,6 +24,7 @@ Concept and research only. No hardware, firmware, sound quality or CAD has been 
 - [Hardware research and validation plan](docs/hardware-research.md)
 - [First design/research sprint](docs/roadmap.md)
 - [Discussion log (owner direction and open questions)](docs/discussion-log.md)
+- [Feature backlog (core vs optional fun features)](docs/feature-backlog.md)
 - [Claude research review: USB microphone routes](docs/research/claude-review.md)
 - [Claude Code collaboration guide](CLAUDE.md)
 
