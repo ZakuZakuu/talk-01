@@ -15,6 +15,8 @@ A running record of owner direction and open questions, so decisions are not los
 - Bluetooth: owner expects it would mostly be used for input and chat, not for recording, so lower audio quality is acceptable there; a wired desk version is preferred for desktop use. Not for v1.0, only reserve space and keep a BLE-capable MCU.
 - Typical desk use: laptop on a desk, device on the owner's **left**, roughly 30–60 cm away; a stand that brings it closer (e.g. next to the keyboard, about 30 cm) is welcome.
 
+- The immediate use case is **voice input while "web coding" with an AI assistant**, so the device is mostly used at a desk with a laptop.
+
 **Positioning**
 - This is a **toy-like object that is a little useful**, not a strictly practical product. The reference attitude is Teenage Engineering: products that are not necessary but create desire. The owner likes the design language but finds TE products expensive and functionally mismatched.
 - Closest inspiration: TE **EP-2350 FX MIC** (grey perforated grille on top, off-white lower panel, orange side lever, small side buttons). Inspiration, not copying; we should improve on it and bring our own identity.
