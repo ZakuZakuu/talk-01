@@ -25,6 +25,17 @@ Difficulty notes are Claude's rough estimates from reading and general knowledge
 | **SDK for second-party development** | Owner | Start with a documented event/config interface. Community can add more play. | Later |
 | **Bluetooth / wireless, battery** | Owner | Owner expects mostly input and chat use, where lower audio quality is fine. The chosen MCU should be BLE-capable and space reserved. Not v0.1. Windows support for Bluetooth LE audio microphones not yet researched. | Later |
 
+## Design-level ideas (decide before CAD; see `design/inspiration.md`)
+
+| Idea | Notes |
+|---|---|
+| USB-C on the top edge | Owner request; avoids a cable at the desk-contact edge. |
+| Two-stage lever (hold to talk; bottom-out click = latch or send) | Avoids timed gestures. Inspired by the TE FX MIC lever's three sensors. |
+| Lever protection for bag carry (recessed shoulders, flip guard, slide cover, LOCK position) | Owner concern; options listed in the ideas file. |
+| Removable back cover with a hackable bay (BOOT/RESET, header, battery space, info label) | Fits the toy and SDK positioning; reserve space even in v0.1. |
+| Print-your-own covers with a published cover spec | Keep the mic port outside the swappable zone. Needs a hardware/CAD licence decision. |
+| Mechanical-only printed mock for feel testing | Cheap, doubles as a fidget toy. |
+
 ## One cheap early decision
 
 Even for v0.1, decide to **expose lever and mode state to the host in a documented way**. It costs little now and enables the desktop pet, the SDK and community ideas later.

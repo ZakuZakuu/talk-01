@@ -20,8 +20,8 @@ These come from the owner discussion in [`../../docs/discussion-log.md`](../../d
 - **Mic first.** It must work as a plain USB microphone and as a voice-input device. Fun is the second priority.
 - **Three modes**: DICT (lever = configurable key), TALK (lever = walkie-style push-to-talk), OPEN (always-on desk mic). The mode must be **visible** on the device.
 - **Wired USB-C only for v0.1.** Battery and wireless are not drawn; the bodies keep room for them.
-- **USB-C on the right edge** (in the front view), because the owner's device usually sits to the *left* of the laptop and the cable runs to the right.
-- **Lever on the left edge** (front view), pressed with the thumb of the right hand, walkie-talkie style. The layout is mirror-able; handedness is an open question.
+- **USB-C on the right edge** (in the front view), because the owner's device usually sits to the *left* of the laptop and the cable runs to the right. *Owner feedback: it should be on the top instead; round 2 will change this.* B is parked; A and C are preferred. See [`../inspiration.md`](../inspiration.md).
+- **Lever on the left edge** (front view), pressed with the thumb of the **left** hand. The owner keeps the right hand on the mouse, so the device is held in the left hand. *(An earlier version of this note said "right hand"; that was wrong.)* The layout is mirror-able.
 - **Optional buzzer** holes, kept as far from the mic as the body allows (a buzzer can leak into the mic).
 - **Desk use**: the owner sits at a laptop, device 30–60 cm away at the left, or closer next to the keyboard. The mouth is roughly 40° above the mic in that setup (a rough estimate).
 - **Grille and mic port**: the mic port is a single small hole. Slits, slots and rings are the visible grille; their acoustic effect is untested.
@@ -78,7 +78,7 @@ The EP-2350 FX MIC (from one promotional render) combines a perforated dot-matri
 ## Questions for the owner
 
 1. Which parts above do you like, mix and match? (A body with C's dial? B's keys on a portrait body?)
-2. Lever side: right-hand thumb (as drawn), or should it be mirrored?
+2. ~~Lever side~~ — answered: left-hand thumb, lever on the left edge (as drawn).
 3. How important is carrying it handheld versus leaving it on the desk?
 4. Colourways: keep warm cream + orange, or try something else?
 

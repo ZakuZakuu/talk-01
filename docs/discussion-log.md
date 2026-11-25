@@ -38,6 +38,17 @@ A running record of owner direction and open questions, so decisions are not los
 - FDM 3D printer available; owner is a model-maker and is comfortable with surface finishing and painting.
 - An ESP32-C3 is on hand. Per `hardware-research.md` it cannot act as the USB audio + HID device, so it is only for interaction experiments.
 
+**Feedback on the first concept sketches (2026-11-25)**
+- The owner prefers **A (Pager)** and **C (Radio)**, portrait, over **B (Telegraph)**, which is parked, not deleted. B may be influenced by the reference product; the owner is open to either.
+- **USB-C should be on the top**, not the right edge, since the device sits on a desk.
+- Wants more **small clever details**: look at retro devices, Teenage Engineering and Nothing for ideas.
+- **Removable cover plates** (battery or hidden info underneath, users can 3D print their own) are considered a key idea for a toy / hackable device.
+- The device will be carried in a bag, so the **lever needs protection** (slide cover or fold-over guard) against being pressed or damaged.
+- **Ergonomics**: right hand is on the mouse, so the **left hand holds** it and the **left thumb** presses the left-edge lever. A small round **thumb dial at a corner** for mode switching, with a nice feel, is suggested.
+- The prototype should also work as an **EDC fidget toy** even without function; make it playful.
+- All of these are brainstorm points, not commitments.
+- Research and Claude's ideas: [`../design/inspiration.md`](../design/inspiration.md).
+
 ### Claude's notes from the discussion
 
 - TE's recognisable elements are the **perforated dot-matrix grille, the single saturated lever and the two-tone split body** (observed from one marketing render). Our concepts should not reproduce that combination. Our real differentiators are the **built-in rear stand** and **USB audio + keyboard in one cable**; the stand could be made a visual feature rather than a hidden mechanism.
