@@ -53,6 +53,15 @@ A running record of owner direction and open questions, so decisions are not los
 - The owner likes the three-stage lever and described the stages: light press = hold to talk; pressing to the bottom = **latch**; an extra bit of force at the bottom = **send**. Mechanics can be sorted out later; the feel matters most.
 - Round 2 brief: new, more novel directions, **not a random mash-up**. Each concept should have clear tradeoffs and be self-consistent. No strong preference yet; the aim is a good final product. Result: [`../design/concepts/round-2/README.md`](../design/concepts/round-2/README.md).
 
+**Feedback on round 2 (2026-11-25)**
+- No colour stands out and none is disliked: "all fine". Colour is not the issue.
+- Overall the three designs "fall short" and do not catch the eye compared with Teenage Engineering, Nothing and Braun-style products. Quality bar: **on par with TE is the aim; slightly worse with room to improve is acceptable**.
+- TE looks minimal at a glance but is intricate up close; the owner wants that. The FX MIC's slanted side button is very eye-catching.
+- Wants **bolder, more radical** options and for Claude to research the designers' philosophy and interviews and learn from them.
+- The owner is not a designer and can only tell by feel what suits their taste. So: show many options and let the owner react.
+- **The back cover should not be the whole back.** The stand should be a **small U shape**, or the **cover and stand combined**.
+- Research and the resulting checklist: [`../design/design-principles.md`](../design/design-principles.md). Round 3: [`../design/concepts/round-3/README.md`](../design/concepts/round-3/README.md).
+
 ### Claude's notes from the discussion
 
 - TE's recognisable elements are the **perforated dot-matrix grille, the single saturated lever and the two-tone split body** (observed from one marketing render). Our concepts should not reproduce that combination. Our real differentiators are the **built-in rear stand** and **USB audio + keyboard in one cable**; the stand could be made a visual feature rather than a hidden mechanism.

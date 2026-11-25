@@ -1,5 +1,7 @@
 # Round 2 — three coherent directions
 
+> **Owner feedback on this round:** all three were "a bit short of something" and did not catch the eye; the owner wants bolder, more distinctive designs. See [`../round-3/README.md`](../round-3/README.md) and [`../../design-principles.md`](../../design-principles.md). The baseline items (top USB-C, three-stage lever) still stand; the full-back cover does not (the owner wants a small hatch, and a small U stand or a cover that doubles as the stand).
+
 Date: 2026-11-25 · Status: **sketches for discussion. Tentative dimensions, nothing built or measured.**
 
 Round 1 explored shapes. Round 2 starts from the owner's feedback and from [`../../inspiration.md`](../../inspiration.md). The rule for this round: **each concept has exactly one organising idea, and every other part either serves it or is deliberately left out.** This is not a mix of every idea on the list.

@@ -28,6 +28,8 @@ Concept and research only. No hardware, firmware, sound quality or CAD has been 
 - [Concept sketches, first round (A Pager / B Telegraph / C Radio)](design/concepts/README.md)
 - [Inspiration and design ideas for round 2](design/inspiration.md)
 - [Concept sketches, round 2 (D Dial / E Armed / F Handset)](design/concepts/round-2/README.md)
+- [Design principles worth stealing (TE / Nothing / Braun) and a checklist](design/design-principles.md)
+- [Round 3: silhouette lineup (Flip / Tilt / Cut / Layers / Wedge / Pebble)](design/concepts/round-3/README.md)
 - [Claude research review: USB microphone routes](docs/research/claude-review.md)
 - [Claude Code collaboration guide](CLAUDE.md)
 
