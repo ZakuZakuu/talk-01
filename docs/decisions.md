@@ -52,6 +52,7 @@ What the owner has decided, and what is still open. Recorded from the discussion
 
 - Modes on the wheel: **DICT, TALK, OPEN, LOCK**, with the wheel's click as a latch.
 - The key's stages: hold to talk, a click to latch, a firm push to send (the TE lever's idea). Whether v0.1 has one, two or three is open.
+- Microphone staging: a cheap I2S module first, in the real body, then listen; a higher-SNR chip (for example T5848) only if the noise floor is audible; the pickup on a replaceable bracket reachable through the removable lid ([`research/microphone-quality.md`](research/microphone-quality.md)). A general expansion space instead of a dedicated battery bay.
 - Hardware route: ESP32-S3 with an I2S digital microphone as the primary and an RP2040/RP2350 as the fallback, from [`research/claude-review.md`](research/claude-review.md). Nothing has been bought or tested.
 - Body depth: about 22 mm is drawn; a thicker body squeezes better but is less pocketable ([`../design/squeeze-grip.md`](../design/squeeze-grip.md)).
 - Hardware, CAD and software licences (MIT for software is the intent in the README; the rest is undecided).

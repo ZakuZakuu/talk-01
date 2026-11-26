@@ -2,6 +2,17 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (very late) — microphone quality: a second opinion, analysed
+
+### Owner direction
+- The owner relayed another assistant's view: raise the audio budget a little so talk.01 can also do podcasts, narration and voice recording; compare SNR, frequency response, AOP, directivity; consider TDK T5848 and Infineon IM72D128/IM73D122; a finished lavalier assembly as another route; a replaceable pickup bracket; a baseline + a high-end part + a finished microphone as the test set. The owner did not understand how the routes (including the DJI Mic Mini) differ and asked Claude to analyse. **No decision yet.**
+
+### Claude's notes
+- [`research/microphone-quality.md`](research/microphone-quality.md): three kinds of route (a digital MEMS chip on a module, an analog capsule with a converter, a finished product as a reference); which numbers are verified; a calculation showing that a better chip gains about 2 dB in a 35 dBA room and about 7 dB in a 25 dBA room; mechanics, port, pops, power noise and gain staging (16-bit USB) matter more than the chip at first.
+- Proposed: stage 1 cheap module in the real body; stage 2 T5848 on a tiny carrier only if needed; a replaceable bracket installed through the 38 mm hole with the lid off.
+- Conflict to resolve: a bare chip needs a tiny carrier PCB, and `CLAUDE.md` says no custom PCB in this phase.
+- Questions: stage 1 as the plan? carrier PCB allowed later, and can the owner solder tiny chips? a DJI Mic Mini or USB microphone to compare? general expansion space instead of a battery bay (agreed)?
+
 ## 2026-11-26 (deep night) — choices made, on to real parts
 
 ### Owner direction
