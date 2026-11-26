@@ -2,6 +2,20 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (late night) — polish: colour, lettering, lid, modes
+
+### Owner direction
+- The prototype is very good already; the lid is replaceable. Further polishing, with real mechanical and electronic engineering practice.
+1. **Colour:** default dark/light, **not** the key's colour for the body and plate (not G1/G2). Bright key; body one colour or a small tonal difference.
+2. **Panel:** make it better and more personal; the reference picture's lettering is carefully designed.
+3. **Lid:** no screws (too fiddly); a snap-fit like a battery cover, removable. Catch design not yet thought through.
+4. **Mode wheel:** how to build the rotary part, is there a 4-position encoder, and how to show the position (an arc, a row with folded guide lines, other). Other walkies have a top rotary knob (volume?): optional, later.
+
+### Claude's notes
+- Three tone-on-tone palettes, an original wordmark and pixel-dot label font; FDM limits on small text. Four ways to show the mode (arc, leaders, list, dial); proposal: the dial. Five ways to sense it; key point: an ordinary encoder is **relative**, so after a reset the pointer and mode can disagree; proposal: two switches and a cam (absolute) for v0.1, a magnet sensor later. A snap-fit lid with rigid top hooks and two in-plane snap arms, a first strain estimate (about 1 %) and PETG; a side section of the inside. [`../design/concepts/v0.5/README.md`](../design/concepts/v0.5/README.md).
+- Part sizes are typical values, the strain figure a hand calculation from informal sources: coupons and datasheet checks needed.
+- Questions: palette? mode display? two switches and a cam? lid design and PETG? wordmark W1/W2, decals?
+
 ## 2026-11-26 (night) — the whole lower half as one plate
 
 ### Owner direction

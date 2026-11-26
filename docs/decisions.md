@@ -22,6 +22,13 @@ What the owner has decided, and what is still open. Recorded from the discussion
 - The pickup is a **round hole under a square cover plate** (a circle inside a square), the plate patterned as lines, slots or small holes. F1, F2 and F3 were all liked; F1's pickup was felt to be too small. Which pattern and colour is open ([`../design/concepts/v0.3/README.md`](../design/concepts/v0.3/README.md)).
 - **Then (same day):** the owner prefers **the whole lower half as one cover plate** (like a ridged cover over a round hole, a dot-matrix grille, or a grid), rather than a small plate inset in the face; several patterns to choose from ([`../design/concepts/v0.4/README.md`](../design/concepts/v0.4/README.md)). The owner's references were used for the idea only.
 
+### Refinements (owner, 2026-11-26, night)
+- The prototype is accepted as "good looking"; the lid is replaceable anyway. Details to be polished, **designed with real mechanics and electronics in mind**, not as a pure styling exercise.
+- **Colour:** default is a **dark/light, tone-on-tone** scheme, **not** the key's colour for the body or plate. The key is bright; the body one colour or a small tonal difference.
+- **Panel:** more personal, with carefully designed lettering.
+- **Lid:** **no screws**; a **snap-fit**, removable and swappable like a battery cover. The exact catch design is open ([`../design/concepts/v0.5/README.md`](../design/concepts/v0.5/README.md)).
+- **Mode indication** and the rotary sensing are open (arc, row with guide lines, other); a top rotary knob for volume or gain is optional and later.
+
 ### Look
 - The front should carry **more of our own design** than TE's top-grille / bottom-cream split (owner, 2026-11-26); three compositions are drawn in v0.2.
 - A TE-inspired **flat graphic language** applied on the surface (colour-blocked panels, small labels, pictograms, visible screws), with a **retro** feel, not a modern-tech or industrial/military one.
