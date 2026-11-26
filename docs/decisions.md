@@ -67,6 +67,9 @@ The body of 58 × 92 × 24 mm is **too thick and too wide**; make it slimmer and
 ## Purchases decided by the owner (2026-11-26)
 The owner buys: an **ESP32-S3 Super Mini** (about 20 yuan; instead of the XIAO at about 50), an **ICS-43434 round module** (one piece), **6 × 6 through-hole tact switches** (10 to 20) from the microphone shop, and a caliper if one cannot be borrowed. The cable, wires and breadboard are the owner's own. The orders (the owner's screenshot): the "ESP32-S3-SuperMini" variant of a C3/S3/C6 listing (20.48 yuan), 6 × 6 × 4.3 through-hole tact switches, 20 pieces (0.69 yuan), and a **"domestic (国产) ICS-43434"** omnidirectional microphone module (11.55 yuan). **"Domestic" most likely means a compatible part, not necessarily the TDK chip**, so the datasheet figures of the TDK part (about 65 dBA signal-to-noise) are **not guaranteed** for this board; it is judged by listening. On arrival: photos of both sides of each board with a ruler and the seller's sizes; the shell's board pocket is designed around the Super Mini actually received ([`parts-list.md`](parts-list.md)).
 
+## Firmware preparation (owner's go-ahead, 2026-11-26)
+The owner left the order of work to Claude and allowed the firmware to be prepared ahead of the hardware. Prepared, **unbuilt and untested**: [`../firmware/`](../firmware/README.md): stage 1 is the upstream usb-mic project unchanged; stage 2 is a microphone plus a keyboard in one USB device (the BOOT button as the push-to-talk key). The owner builds, flashes and tests when the hardware arrives.
+
 ## Proposed by Claude, **not** decided
 
 - Modes on the wheel: **DICT, TALK, OPEN, LOCK**, with the wheel's click as a latch.

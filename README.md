@@ -50,6 +50,8 @@ Concept and research only. No hardware, firmware, sound quality or CAD has been 
 - [Claude research review: USB microphone routes](docs/research/claude-review.md)
 - [**Spec v0.1** (the frozen plan)](docs/spec-v0.1.md)
 - [Parts list and measuring sheet](docs/parts-list.md)
+- [Bench-test plan](docs/bench-test-plan.md) and the [firmware](firmware/README.md) (written, unbuilt)
+- [Research: one USB device that is a microphone and a keyboard](docs/research/uac-hid-composite.md)
 - [CAD (parametric, with the first prints)](cad/README.md)
 - [Mechanical plan for the S2 body (48 × 88 × 17)](docs/mechanical-plan-S2.md)
 - [Round-1 print results](docs/test-results/round-1.md) and the [round-2 size ladder](docs/print-test-guide/round2-size-ladder.png)

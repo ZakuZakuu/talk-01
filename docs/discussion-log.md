@@ -2,6 +2,16 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-27 (early) — the owner hands over the order of work; firmware prepared
+
+### Owner direction
+- Buys the three parts (Super Mini, the domestic ICS-43434 board, tact switches); trusts the domestic board (reviews say it beats the INMP441). The wheel needs no encoder (two switches and a cam). No steel balls for now. **Leaves the order of work to Claude**: prepare the code ahead, continue as far as sensible, and stop where the owner has to confirm or test.
+
+### Claude's notes
+- Stopping point reached: the **firmware is written but unbuilt**; the owner has to build and run it when the hardware arrives. `CLAUDE.md` updated (firmware preparation allowed; autonomy and stop points).
+- Research: the audio component has no keyboard option; `USB_DEVICE_UAC_AS_PART` lets the project supply descriptors ([`research/uac-hid-composite.md`](research/uac-hid-composite.md)). Stage 2 does that ([`../firmware/README.md`](../firmware/README.md)). Vendored third-party files are in [`../firmware/NOTICE.md`](../firmware/NOTICE.md).
+- Not done and waiting for the parts: board pockets and the microphone bracket (need the real sizes).
+
 ## 2026-11-26 (night) — the wheel and the cap agreed
 
 ### Owner direction

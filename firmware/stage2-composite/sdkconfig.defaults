@@ -1,0 +1,13 @@
+# talk.01 bench firmware, stage 2. UNBUILT AND UNTESTED.
+CONFIG_IDF_TARGET="esp32s3"
+
+# the project supplies the USB descriptors (so that a keyboard can be added next to the microphone)
+CONFIG_USB_DEVICE_UAC_AS_PART=y
+
+# microphone only, 48 kHz, mono, 16-bit (as in the upstream usb-mic project)
+CONFIG_UAC_SPEAKER_CHANNEL_NUM=0
+CONFIG_UAC_MIC_CHANNEL_NUM=1
+CONFIG_UAC_SAMPLE_RATE=48000
+CONFIG_UAC_BIT_RESOLUTION_16=y
+CONFIG_UAC_MIC_INTERVAL_MS=10
+CONFIG_UAC_SUPPORT_MACOS=y

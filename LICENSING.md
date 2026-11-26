@@ -4,7 +4,8 @@ Chosen 2026-11-26 by Claude, as the owner asked ("pick the most suitable"). The 
 
 | What | Licence | Where |
 |---|---|---|
-| **Software**: scripts, generators, later firmware | [MIT](LICENSES/MIT.txt) (`SPDX: MIT`) | `design/concepts/src/`, future firmware |
+| **Software**: scripts, generators, firmware | [MIT](LICENSES/MIT.txt) (`SPDX: MIT`) | `design/concepts/src/`, `firmware/` (the code written for this project) |
+| **Vendored third-party firmware files** | keep their own licences: **MIT** or [**Apache-2.0**](LICENSES/Apache-2.0.txt) | `firmware/stage2-composite/main/tusb/`, see [`firmware/NOTICE.md`](firmware/NOTICE.md) |
 | **Hardware design files**: parametric CAD, STL, STEP, drawings of the parts | [CERN-OHL-P-2.0](LICENSES/CERN-OHL-P-2.0.txt) (`SPDX: CERN-OHL-P-2.0`) | `cad/` |
 | **Documentation and artwork**: text, concept sheets, images, diagrams | [CC BY 4.0](LICENSES/CC-BY-4.0.txt) (`SPDX: CC-BY-4.0`) | `docs/`, `design/` (except `design/concepts/src/`), `README.md` |
 

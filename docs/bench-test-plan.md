@@ -1,6 +1,6 @@
 # Bench test plan (draft, 2026-11-26)
 
-Status: **a plan only. No firmware has been written or flashed; flashing needs the owner's go-ahead (`CLAUDE.md`).** Purpose: find out, before the enclosure is finished, whether the electronics do what talk.01 needs. This is the biggest technical risk of the project.
+Status: **the firmware is written ([`../firmware/`](../firmware/README.md)) but NOT built, flashed or run; the owner gave the go-ahead to prepare it (2026-11-26).** The step-by-step guide with the wiring and what to report is [`../firmware/README.md`](../firmware/README.md); the research behind the composite device is [`research/uac-hid-composite.md`](research/uac-hid-composite.md). Stage 1 is the upstream usb-mic project unchanged; stage 2 adds the keyboard. Purpose: find out, before the enclosure is finished, whether the electronics do what talk.01 needs. This is the biggest technical risk of the project.
 
 ## What has to be proven (in this order)
 1. **The board starts and appears on the computer** (the XIAO ESP32S3 shows up over USB-C; a first program runs).

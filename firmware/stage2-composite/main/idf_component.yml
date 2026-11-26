@@ -1,0 +1,8 @@
+## IDF Component Manager manifest. UNBUILT AND UNTESTED, see ../README.md.
+dependencies:
+  idf:
+    version: '>=5.5.0'
+  # versions as in the upstream usb-mic project's lock file (usb_device_uac 1.3.2, tinyusb 0.19.0~3)
+  espressif/usb_device_uac: "1.3.2"
+  # listed here as well so that main can include tusb.h (dependencies of main are public)
+  espressif/tinyusb: "^0.19.0~3"
