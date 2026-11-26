@@ -20,6 +20,7 @@ What the owner has decided, and what is still open. Recorded from the discussion
 - The v0.2 layout (key upper-left, wheel on the right) was accepted: "quite good".
 - **Upper / lower structure:** controls, lamp and other parts in the **upper** part; **one big pickup area in the lower half**. (TE is the reverse: grille on top.)
 - The pickup is a **round hole under a square cover plate** (a circle inside a square), the plate patterned as lines, slots or small holes. F1, F2 and F3 were all liked; F1's pickup was felt to be too small. Which pattern and colour is open ([`../design/concepts/v0.3/README.md`](../design/concepts/v0.3/README.md)).
+- **Then (same day):** the owner prefers **the whole lower half as one cover plate** (like a ridged cover over a round hole, a dot-matrix grille, or a grid), rather than a small plate inset in the face; several patterns to choose from ([`../design/concepts/v0.4/README.md`](../design/concepts/v0.4/README.md)). The owner's references were used for the idea only.
 
 ### Look
 - The front should carry **more of our own design** than TE's top-grille / bottom-cream split (owner, 2026-11-26); three compositions are drawn in v0.2.

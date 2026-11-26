@@ -2,6 +2,18 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (night) — the whole lower half as one plate
+
+### Owner direction
+- Sent three reference pictures: a ridged cover over a round hole (a "TING FX"-marked picture the owner calls the older version of the TE microphone), a dot-matrix grille, and a square grid over round speaker cones. My v0.3 drawing differed from what was in mind but was acceptable; the feel of the three was right.
+- Make **the whole lower half one cover plate**, like the first picture, or other shapes: show several designs.
+
+### Claude's notes
+- Four patterns on a full-width lid: horizontal ridges, vertical ridges, grid, dots; the gaps go through only over the round hole. [`../design/concepts/v0.4/README.md`](../design/concepts/v0.4/README.md).
+- A removable lid fits the backlog's cover system and allows with/without sound tests. No sound claim; FDM gap printing untested.
+- I have not verified who made the first picture, used the pictures for ideas only, and did not store them.
+- Questions: which pattern or mix? plate colour? removable or one piece? hole size?
+
 ## 2026-11-26 (even later) — upper controls, lower pickup
 
 ### Owner direction
