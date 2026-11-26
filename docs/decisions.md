@@ -9,13 +9,15 @@ What the owner has decided, and what is still open. Recorded from the discussion
 - A hobby project: it can be playful, but **first versions stay simple**. Anything hard to build goes to the backlog.
 - Wired USB-C for v0.1. No battery or wireless in v0.1 (space may be reserved).
 
-### Interaction (v0.1, decided 2026-11-26)
-- Layout follows the TE microphone: **the left side is a thumb wheel, the right side is one big key.**
-- **The wheel** is an **edge roller** sunk into a pocket on the left edge, with its **axis perpendicular to the face** (from the front it is a circle) and the thumb stroking it up and down. It is a wheel, not a switch, because a wheel supports more positions.
+### Interaction (v0.1, decided 2026-11-26; layout updated the same day)
+- **Layout (updated 2026-11-26, replaces "wheel left, key right"):** the owner moved the wheel because the lower left is where the base of the thumb sits and is hard to reach. Follow the walkie-talkie / TE convention: **the push-to-talk key is on the left, in the upper half**; **our own wheel is on the right** (upper right or lower right, to be judged by which turns more easily; mode changes are rare). Claude's recommendation, not yet decided: a **top-right chamfered corner** ([`../design/concepts/v0.2/README.md`](../design/concepts/v0.2/README.md)).
+- **The wheel** is an **edge roller** sunk into a pocket, with its **axis perpendicular to the face** (from the front it is a circle). It is a wheel, not a switch, because a wheel supports more positions.
+- **Edges that stick out must not dig into the hand** (owner). Claude's starting numbers, not decided: key 5 mm out at most, radii 2 mm or more, wheel about 1 mm out.
 - **The key** is **a mature TE-style big key with a few stages, fixed in position**. It may be slanted (like TE) or parallel to the edge. **No pop-up strip, no sleeve, no four-finger squeeze, in v0.1.**
 - **No glowing window.**
 
 ### Look
+- The front should carry **more of our own design** than TE's top-grille / bottom-cream split (owner, 2026-11-26); three compositions are drawn in v0.2.
 - A TE-inspired **flat graphic language** applied on the surface (colour-blocked panels, small labels, pictograms, visible screws), with a **retro** feel, not a modern-tech or industrial/military one.
 - **Beige with bright colours** (such as teal). The skins **SAND (beige + teal)** and **POPPY (cream + red)** were liked.
 - Grilles: horizontal lines, vertical slots or dot-matrix. **No diagonal slots.**

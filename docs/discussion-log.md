@@ -2,6 +2,19 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (later) — wheel position and the left-hand key
+
+### Owner direction
+- The thumb wheel at the lower left is **hard to reach** (the base of the thumb / palm is there). Reposition it.
+- The owner researched that most walkie-talkies, and TE, put the push-to-talk key on the **left (upper left)**, and asked whether that is the optimum / the consensus. Decision for now: **borrow that convention** (not a copy): key at the upper left, **our wheel on the right** (upper right or lower right; the owner will judge which turns more easily; mode switching is rarely used).
+- Protruding edges must not be uncomfortable (the owner's word: "硌手").
+- The front currently imitates TE's two tiers; it should carry more of our own design for a layout of one wheel and one key.
+
+### Claude's notes
+- Searched for why PTT sits on the left: **no source explains it**. Patents say a single PTT assumes a right-handed operator and ambidextrous designs exist. My inference (unverified): the left edge is under a right hand's fingers and a left hand's thumb.
+- Proposed the top-right chamfered corner for the wheel, with stiff detents and a LOCK position; protrusion limits as starting numbers; three new fronts. See [`../design/concepts/v0.2/README.md`](../design/concepts/v0.2/README.md). The hand zones are reasoning, not measurement.
+- Questions: left hand always or swapped? corner wheel acceptable? which front?
+
 ## 2026-11-25 — first discussion with Claude
 
 ### Owner direction
