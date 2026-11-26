@@ -27,12 +27,12 @@ python3 -m venv .venv && .venv/bin/pip install -r cad/requirements.txt
 
 ## What to print first (Bambu Lab A1 mini, PLA)
 
-Suggested settings: 0.4 mm nozzle, 0.2 mm layers, 3 walls, 10 to 15 % infill for the body, no supports. The weight and time are shown by the slicer; I have not estimated them.
+Every file is already oriented for printing (Z up): import it and print it as it is. The body's rounded back edge on the bed may look slightly rough; it is a feel prototype. Suggested settings: 0.4 mm nozzle, 0.2 mm layers, 3 walls, 10 to 15 % infill for the body, no supports. The weight and time are shown by the slicer; I have not estimated them.
 
 | File | Qty | Orientation | What it answers |
 |---|---|---|---|
 | `mockup_body.stl` | 1 | **front face up**, back on the bed | the size and shape in the hand; the wheel pocket; how the ridges feel under the fingers |
-| `mockup_key_3mm.stl`, `_5mm`, `_7mm` | 1 each | the **flat (stuck-on) side down** | which protrusion is comfortable |
+| `mockup_key_3mm.stl`, `_5mm`, `_7mm` | 1 each | **as exported** (the slanted profile on the bed; the stuck-on side stands upright, so the visible slanted face prints smooth) | which protrusion is comfortable |
 | `mockup_wheel.stl` | 1 (a dark colour) | flat | the wheel's size and rim; use a piece of **1.75 mm filament** as the axle (a drop of glue on one end) |
 | `calibration_plate.stl` | 1 | face up | clearances, ridge gaps, through-slots, line widths |
 | `calibration_tabs.stl` | 1 | flat | the five tabs for the plate's pockets |
