@@ -73,6 +73,8 @@ The owner left the order of work to Claude and allowed the firmware to be prepar
 ## Round-3 print results and the assembly direction (owner, 2026-11-27)
 - The **keyhole-slide cap** was printed and **works very well**; it is **a little loose** (to be tightened). The size (S2) is "very suitable, small and refined"; the look "very good, a retro feel".
 - **Assembly: M2 self-tapping screws** (as in the owner's robots). **Design the shells so they print with as few supports as possible**, by adding assembly structures instead.
+- Screws (owner, 2026-11-27): **M2 self-tapping, countersunk head** (as in the owner's robots) for now; the body is not meant to be opened often, and what must be reached (later) goes behind the sliding cap. Heat-set inserts (pushed in with a soldering iron) are a method the owner has used and likes, and remain the fallback.
+- Cap catch (owner): "slides down too easily", otherwise stable; a bowed (preloaded) tongue holds firmer: more preload wanted, strength to be chosen by feel from a coupon.
 - Claude's design choices in answer (**the owner may veto**): the body is split into a **lower frame and an upper shell** (each printed with its face on the bed) plus a flat back plate; the cap's catch becomes an in-plane catch at the keyholes; details in [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §10.
 
 ## Proposed by Claude, **not** decided

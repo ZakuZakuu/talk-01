@@ -7,6 +7,10 @@ A running record of owner direction and open questions, so decisions are not los
 ### Owner direction
 - The slide cap printed well and works nicely; a little loose, it could be tighter. The size is "very suitable, small and refined"; the shell looks good, with a retro feel. When designing the shell, think about hollow parts needing supports: use few supports, add assembly structures to avoid them. Assembly with self-tapping screws, as in the owner's robots; research it. Make the shell now.
 
+### Owner follow-up (same day)
+- "Loose" meant it slides down too easily; seated it is stable. Bending the old tongue up made it hold more. Screws: M2 countersunk self-tapping like the owner's robots; heat-set inserts are also fine but we use self-tapping; whatever must be opened goes behind the sliding cap.
+- Claude: steeper holding ramp, a four-strength catch coupon, countersunk holes in the back plate coupon.
+
 ### Claude's notes
 - The tongue-and-bump catch cannot be printed face down (the bump sits below the bed): replaced by flat in-plane catches at the keyholes; the cap is tightened (bump idea dropped; the catch nub and a 0.2 mm neck play do it). **Untested.**
 - Body split into a lower frame and an upper shell, both printed face down, plus a back plate; the lower frame and a boss coupon are built; the upper shell comes next. See [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §10.

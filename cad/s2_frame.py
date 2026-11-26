@@ -33,12 +33,23 @@ SPOKES = (90.0, 210.0, 330.0)
 ARM_W, ARM_CUT = 0.9, 0.8          # arm width, the cut round it
 ARM_BELOW, ARM_ABOVE = 3.0, 4.0    # the arm runs from 3 mm below the peg's resting point to 4 mm above it (fixed at the top)
 NUB = 0.6                          # how far the nub reaches into the slot: the neck (2.4 in a 2.8 slot) meets 0.4 mm of interference
-NUB_Y0, NUB_Y1, RAMP = 0.1, 1.6, 0.6   # the nub's footprint along the arm from its free end, and its two ramps; its top edge stays 0.2 mm below the resting neck
+NUB_Y0, NUB_Y1 = 0.1, 1.6          # the nub's footprint along the arm from its free end; its top edge stays 0.2 mm below the resting neck
+RAMP_IN, RAMP_HOLD = 0.7, 0.4      # the ramp the peg climbs when the cap is pushed up (gentle, about 49 deg) and the one that holds it against sliding down (steep, about 56 deg): owner 2026-11-27, 'slides down too easily'
 
 
 def outline_solid(z0, z1, y_top):
     s = cq.Workplane("XY").workplane(offset=z0).rect(W, y_top, centered=False).extrude(z1 - z0)
     return s.edges(cq.selectors.BoxSelector((-1, -1, z0 - 1), (W + 1, 1, z1 + 1))).edges("|Z").fillet(R_CORNER)
+
+
+def catch(s, px, py, arm_w=ARM_W, nub=NUB, ramp_in=RAMP_IN, ramp_hold=RAMP_HOLD):
+    """Cut one catch arm beside the keyhole slot at (px, py) and add its nub (also used by the catch coupon with other strengths)."""
+    xa0 = px + C.SLOT_W / 2
+    ya0, ya1 = py - ARM_BELOW, py + ARM_ABOVE
+    s = s.cut(box(xa0 + arm_w, ya0 - ARM_CUT, Z_I - 0.1, xa0 + arm_w + ARM_CUT, ya1, Z_R + 0.1))      # the outer cut
+    s = s.cut(box(xa0, ya0 - ARM_CUT, Z_I - 0.1, xa0 + arm_w + ARM_CUT, ya0, Z_R + 0.1))             # the cut under the free end
+    n = (cq.Workplane("XY").workplane(offset=Z_I).polyline([(xa0, ya0 + NUB_Y0), (xa0 - nub, ya0 + NUB_Y0 + ramp_in), (xa0 - nub, ya0 + NUB_Y1 - ramp_hold), (xa0, ya0 + NUB_Y1)]).close().extrude(Z_R - Z_I))
+    return s.union(n)
 
 
 def frame(with_extension=False):
@@ -53,12 +64,7 @@ def frame(with_extension=False):
         s = s.cut(box(px - C.SLOT_W / 2, py - C.SLIDE, Z_I - 0.1, px + C.SLOT_W / 2, py, Z_R + 0.1))
         s = s.cut(cyl(px, py, C.SLOT_W / 2, Z_I - 0.1, Z_R + 0.1))
     for (px, py) in C.PEGS:                                                      # the catches: a flat arm beside each slot, in the floor plane
-        xa0 = px + C.SLOT_W / 2
-        ya0, ya1 = py - ARM_BELOW, py + ARM_ABOVE
-        s = s.cut(box(xa0 + ARM_W, ya0 - ARM_CUT, Z_I - 0.1, xa0 + ARM_W + ARM_CUT, ya1, Z_R + 0.1))      # the outer cut
-        s = s.cut(box(xa0, ya0 - ARM_CUT, Z_I - 0.1, xa0 + ARM_W + ARM_CUT, ya0, Z_R + 0.1))             # the cut under the free end
-        nub = (cq.Workplane("XY").workplane(offset=Z_I).polyline([(xa0, ya0 + NUB_Y0), (xa0 - NUB, ya0 + NUB_Y0 + RAMP), (xa0 - NUB, ya0 + NUB_Y1 - RAMP), (xa0, ya0 + NUB_Y1)]).close().extrude(Z_R - Z_I))
-        s = s.union(nub)
+        s = catch(s, px, py)
     # the round opening Ø34, with a hub in the middle held by three spokes (the floor is a flat profile: free to draw)
     ring = cyl(HUB_C[0], HUB_C[1], C.HOLE_D / 2, Z_I - 0.1, Z_R + 0.1)
     keep = cyl(HUB_C[0], HUB_C[1], HUB_OD / 2, Z_I - 0.2, Z_R + 0.2)
