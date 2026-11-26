@@ -7,6 +7,8 @@ A small walkie-talkie-like **wired USB-C microphone**: a real microphone first (
 
 ## 2 · Body (mm; the face seen from the front, origin at the top-left)
 
+> **Under revision (owner, 2026-11-26, after the round-1 prints):** 58 × 92 × 24 is **too thick and too wide** (the index finger cannot reach the wheel; hard for smaller hands). A size ladder S1 52 × 90 × 20, S2 48 × 88 × 17 and S3 46 × 86 × 15 is being compared; the paper fit favours **S2** (needs the controller board beside the wheel, not behind it, and low switches). The numbers below are the round-1 values until the owner picks. See [`test-results/round-1.md`](test-results/round-1.md).
+
 | Item | Value |
 |---|---|
 | Outer size | **58 wide × 92 high × 24 deep** (24 chosen over 22 so the real parts fit; to be re-checked) |

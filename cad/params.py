@@ -39,3 +39,10 @@ BUILD = (180.0, 180.0, 180.0)
 def Y(y_draw):
     """Convert a drawing y (down from the top) to a CAD y (up)."""
     return H - y_draw
+
+
+# --- lessons from the round-1 prints (owner, 2026-11-26) on a Bambu A1 mini, PLA, 0.4 mm nozzle, 0.2 mm layers
+FIT_PUSH = 0.20      # per side: a push fit that holds ("2 is best"); 0.15 is too tight, 0.25 a little loose, 0.30 and more fall out
+FIT_LID = 0.25       # per side for the lid in its frame (it must also come out again)
+HOLE_EXTRA = 0.30    # a small round hole prints about this much too small: model it this much bigger
+WHEEL_HOLE_R2 = 1.15 # the wheel's axle hole for 1.75 mm filament (the 2.0 mm hole of round 1 was far too tight)

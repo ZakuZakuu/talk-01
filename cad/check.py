@@ -48,6 +48,17 @@ def main():
     deflection = 0.6
     strain = 1.5 * calibration.ARM_T * deflection / arm_free ** 2
     print(f"  snap arm strain (1.5 t y / L^2, t={calibration.ARM_T}, y={deflection}, L={arm_free}): {strain * 100:.2f} %")
+    print("== round 2")
+    for name, w, h, d in mockup.LADDER:
+        kd = d - 6.0
+        b = mockup.body(w, h, d, kd)
+        wp = mockup.wheel(mockup.WHEEL_HOLE_R2).translate((w - (W - WHEEL_CX), h - WHEEL_CY_DRAW, d - WHEEL_POCKET_DEPTH + 0.4))
+        k = mockup.key_block(5.0, h, d, kd)
+        print(f"  {name} {w:.0f} x {h:.0f} x {d:.0f}: wheel in pocket {vol(b.intersect(wp)):.3f} mm3, key on body {vol(b.intersect(k)):.3f} mm3")
+    for bump in (0.8, 0.5):
+        l2 = calibration.lid2(bump)
+        f2 = calibration.frame2(bump)
+        print(f"  snap pair bump {bump}: lid seated in frame {vol(f2.intersect(l2)):.3f} mm3; strain at the insertion deflection {1.5 * calibration.ARM_T * (bump - 0.25 + 0.0) / arm_free ** 2 * 100:.2f} %")
     print("ALL MESHES OK" if ok else "CHECK FAILED")
 
 

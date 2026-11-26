@@ -2,6 +2,16 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (morning) — round-1 prints: results
+
+### Owner direction
+- Printed and tested: the clearance tabs (0.20 mm best; 0.15 too tight; 0.25 slightly loose; 0.30 and 0.40 fall out); the body is **too thick and too wide** (the index finger cannot reach the wheel; hard for smaller hands, children); make it narrower and thinner, length about the same or a little smaller, keeping the look in proportion; the wheel fits and turns well, but its 2.0 mm axle hole is far too tight (the body's hole is right); the snap lid could not be removed once in; asked where the cover is meant to be used.
+
+### Claude's notes
+- The snap lid is a **miniature of the front lower lid** (the whole ridged lower half); it could not be removed because I gave it no way to get a nail under: my design fault. Round 2 adds a finger slot.
+- Size ladder S1 52 × 90 × 20, S2 48 × 88 × 17, S3 46 × 86 × 15, with paper-fit notes; new fit numbers; [`test-results/round-1.md`](test-results/round-1.md).
+- Still unknown: which key block (3, 5, 7 mm) is best; whether the lid clicked or an arm broke; the photo's slots, ridges and lines (confirm).
+
 ## 2026-11-26 (small hours) — spec frozen, modelling approved
 
 ### Owner direction

@@ -104,6 +104,50 @@ def frame():
     return f
 
 
+# --- round 2: the snap pair with a way to get the lid out again --------------------------------------------------
+# Round 1 had NO way to get a nail under the lid, so it could not be removed. Now the frame has a finger slot under the lid's bottom
+# edge, reached from a scoop that goes down to the floor; the clearance is 0.25 per side (round 1: 0.20 was a firm fit).
+def lid2(bump):
+    c = 0.0
+    b = box(-L / 2, 0, 0, L / 2, HH, T)
+    for (x0, x1) in TAB_X:
+        b = b.union(box(x0, HH - 0.2, 0.2, x1, HH + 1.6, 1.2))
+    for sgn in (1, -1):
+        xo = sgn * L / 2
+        xi = sgn * (L / 2 - ARM_T)
+        xs = sgn * (L / 2 - ARM_T - SLOT_W)
+        lo, hi = sorted((xi, xs))
+        b = b.cut(box(lo, -0.5, -0.1, hi, ARM_Y1, T + 0.1))
+        pts = [(xo, 0.4), (xo + sgn * bump, 0.8), (xo + sgn * bump, 1.5), (xo, 1.9)]
+        b = b.union(extrude_xz(pts, 0.8, 4.0))
+    b = b.cut(cq.Workplane("XY").center(0, 0).circle(3.0).extrude(T))
+    return b
+
+
+def frame2(bump, c=0.25):
+    f = box(-20, -7, -6, 20, HH + c + 1.8 + 5, T)                       # a thicker floor (6 mm) so the finger slot can go below the lid
+    f = f.cut(box(-(L / 2 + c), -c, 0, L / 2 + c, HH + c, T + 0.1))
+    for (x0, x1) in TAB_X:
+        lo, hi = sorted((x0 - c, x1 + c))
+        f = f.cut(box(lo, HH + c - 0.1, 0, hi, HH + c + 1.8, 1.4))
+    for sgn in (1, -1):
+        x0 = sgn * (L / 2 + c)
+        x1 = sgn * (L / 2 + bump + 0.35)
+        lo, hi = sorted((x0, x1))
+        f = f.cut(box(lo, 0.5, 0.3, hi, 4.4, 1.9))
+    f = f.cut(cq.Workplane("XY").workplane(offset=0.0).center(0, -3.0).circle(7.5).extrude(T + 0.1))     # the scoop now goes down to the floor
+    f = f.cut(box(-7, -4.5, -3.0, 7, 1.6, 0.05))                                                         # the finger slot, under the lid's bottom edge
+    return f
+
+
+def build_round2():
+    os.makedirs(OUT, exist_ok=True)
+    parts = {"r2_snap_A_lid": lid2(0.8), "r2_snap_A_frame": frame2(0.8), "r2_snap_B_lid": lid2(0.5), "r2_snap_B_frame": frame2(0.5)}
+    for name, solid in parts.items():
+        export_stl(solid, os.path.join(OUT, name + ".stl"), 0.01, 0.1)
+    return parts
+
+
 def build():
     os.makedirs(OUT, exist_ok=True)
     parts = {"calibration_plate": plate(), "calibration_tabs": tabs(), "snap_lid": lid(), "snap_frame": frame()}
@@ -114,4 +158,5 @@ def build():
 
 if __name__ == "__main__":
     build()
-    print("calibration set built into", OUT)
+    build_round2()
+    print("calibration set (round 1 and round 2) built into", OUT)

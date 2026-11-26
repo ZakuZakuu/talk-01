@@ -51,6 +51,7 @@ Concept and research only. No hardware, firmware, sound quality or CAD has been 
 - [**Spec v0.1** (the frozen plan)](docs/spec-v0.1.md)
 - [Parts list and measuring sheet](docs/parts-list.md)
 - [CAD (parametric, with the first prints)](cad/README.md)
+- [Round-1 print results](docs/test-results/round-1.md) and the [round-2 size ladder](docs/print-test-guide/round2-size-ladder.png)
 - [How to test the first prints (illustrated, Chinese)](docs/print-test-guide/1-calibration.png)
 - [Licensing](LICENSING.md)
 - [Claude Code collaboration guide](CLAUDE.md)

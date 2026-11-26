@@ -51,6 +51,9 @@ What the owner has decided, and what is still open. Recorded from the discussion
 ## Frozen spec v0.1 (owner approved 2026-11-26)
 The owner approved Claude's proposed freeze: [`spec-v0.1.md`](spec-v0.1.md). It records, as decided: body 58 × 92 × 24 mm; XIAO ESP32S3; INMP441 and ICS-43434 modules in a replaceable bracket (T5848 later if needed); the two-stage slanted key with a soft stop; the Ø19 mm dial wheel read by two switches and a cam; a PETG snap-fit lid with hooks and in-plane arms, G1 ridges by default; a BOOT/RESET access in the hatch; a general expansion space instead of a battery bay; parametric CAD in `cad/`. Printer: **Bambu Lab A1 mini** (no PETG yet, to be bought; multi-colour possible). Licences chosen by Claude at the owner's request: [`../LICENSING.md`](../LICENSING.md). The owner will buy the parts from [`parts-list.md`](parts-list.md) and does not hurry. CAD and mechanical design are now in scope ([`../CLAUDE.md`](../CLAUDE.md), Phase 2).
 
+## Owner feedback after the round-1 prints (2026-11-26)
+The body of 58 × 92 × 24 mm is **too thick and too wide**; make it slimmer and narrower (length may stay or shrink a little, keeping the look in proportion). The wheel size (Ø19) and how it sits in the pocket are good. Measured fits on the owner's printer: push fit 0.20 mm per side. Details: [`test-results/round-1.md`](test-results/round-1.md). The new body size is **to be chosen** from a size ladder (round 2).
+
 ## Proposed by Claude, **not** decided
 
 - Modes on the wheel: **DICT, TALK, OPEN, LOCK**, with the wheel's click as a latch.
