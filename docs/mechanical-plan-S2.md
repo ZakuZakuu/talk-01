@@ -5,9 +5,9 @@ Status: **a plan with numbers from typical part sizes; nothing here is measured.
 ## 1 · What the owner said after round 2
 - **S2 (48 × 88 × 17 mm)** is the body ("super small, no problem"): keep it **compact and slim**, assembly must work, but **not squeezed to the extreme**. The current shape was "too fat"; slim and long is easier to grip.
 - **The middle key block (5 mm) was the most comfortable.**
-- **The right hand is much more comfortable** than the left: the right thumb reaches the wheel more easily. The owner holds it in the left hand. (See §6.)
+- **Hands:** the right hand felt more comfortable, but **both hands work** (§6); no mirrored version.
 - **The wheel's gap to its pocket was too large**: make the wheel sit close, looking whole. Done: the gap is now 0.6 mm (it was 1.8).
-- **Snap lid:** the arms did **not go fully in** and there was **no click**. Design the arms **directly on the real body**, not a miniature (§4).
+- **Snap lid:** the arms did **not go fully in** and there was **no click**. Design it **directly on the real body**, not a miniature (§4). Then, looking at that piece: the two arms on the front are **too conspicuous**; the front must be **one complete plane, edge to edge, no frame** (§4, now a keyhole slide).
 
 ## 2 · The parts (proposal)
 
@@ -40,20 +40,40 @@ The two shells join with **four M2 screws into heat-set inserts** at the back (t
 
 **The lower zone:** lid 2.4, front wall 1.6, a 1 mm foam under the microphone module (1.8), then about **8 mm of free depth** to the back wall: the expansion space (a thin pack of 4 to 5 mm fits; not in v0.1).
 
-## 4 · The lid on the real body (built in [`../cad/s2_lower.py`](../cad/s2_lower.py))
+## 4 · The lid (the cap): a keyhole slide, nothing on the face
 
-- **Where the arms are:** the lid spans the lower face (y 36 to 88 from the top) inside walls of **2.4 mm** on both sides and the chin. The **two in-plane snap arms are in the lid's side rails, low down**, each 14 mm long, 1.2 mm thick, with an 0.8 mm bump at the free end that clicks into a **groove in the side wall** (the wall keeps 1.55 mm there). The **two rigid hooks** are on the lid's top edge and tuck under a lip of the control zone's lower edge (the seam beam). A **scoop in the chin** and a **slot through the front wall under the lid's bottom edge** let a nail get under it.
-- **Sizes:** lid 42.7 × 49.1 × 2.4 mm in a recess of 43.2 × 49.6 mm: 0.25 mm per side (round 1: 0.20 mm was a firm fit, 0.25 a little loose, 0.30 and more fell out). The lid's face is flush with the control zone (z = 17).
-- **Numbers (hand calculation, PLA typical):** interference at insertion 0.55 mm; strain 0.51 %; the arm is soft, about 1.3 N/mm, so about 0.7 N per arm.
-- **Why round 1 did not click: I do not know.** By the numbers the arms are soft and the bumps should engage. Possible causes: the lid was not pushed fully down; a printed 1 mm slot narrower than modelled (the slot must be open); the groove not deep enough in the print. **The new test piece will show.** It is the real geometry, so what works there is what works in the product.
-- **Fallback if the snap stays unreliable:** four small **magnets** (for example 6 × 2 mm) set in pockets in the lid and the front wall. No flexing parts, tolerant of print errors, a satisfying "clack", easy to lift with the finger slot; one more part to buy and glue. Offered, not chosen.
+**The owner's requirement (2026-11-26, after the round-3 look at the lid test piece):** the front must be **one complete plane, running out to the edge, with no frame**, and the catches must not show. Visible snap arms in the face were "too conspicuous".
+
+**Options considered**
+
+| Option | Verdict |
+|---|---|
+| Arms or hooks on the face, in a frame (the round-2 piece, [`../cad/s2_lower.py`](../cad/s2_lower.py)) | **dropped**: visible, and it needs a frame |
+| Slide-in rails like a battery door | needs the walls to overlap the cap's edges, which is a **visible lip or frame**: rejected |
+| Hooks on the cap's back that snap into the walls from inside (like a phone case) | invisible, but a hook standing up from the cap prints with its layers across the bend: weak; and taking it off needs prying notches |
+| Press or friction fit | round 1 showed that 0.05 mm separates "tight" from "falls out": unreliable |
+| Magnets | invisible and robust; the owner finds it too complex; **kept as the fallback** |
+| **Keyhole slide with a hidden detent** | **proposed, now built** ([`../cad/s2_cap.py`](../cad/s2_cap.py)) |
+
+**How the proposed cap works** (diagram: [`print-test-guide/cap-keyhole.png`](print-test-guide/cap-keyhole.png)):
+- The cap lies **on top of the body's walls** and forms the front edge itself: no frame; the seam is a fine line round it. Its outline is the body's outline (0.1 mm inside), edge to edge.
+- On its back are **four mushroom pegs** (neck Ø2.4, head Ø5.0). The body's floor (1.6 mm) has **four keyholes**: a round entry (Ø6.2) and a slot (2.8 wide) running 6 mm up. You put the cap on **6 mm too low** (its bottom edge overhangs the chin), pegs through the entries, then **slide it up 6 mm**: the heads are now behind the floor and the cap cannot be lifted. Its top edge stops against the control zone.
+- A small **tongue is cut in the floor** (14 × 3 mm, lying flat, with a 0.6 mm bump at its tip); the cap's back has a groove there. At the end of the slide the bump drops into the groove: the **"click"** that holds it. The tongue bends **along the print layers** (the strong direction); by hand calculation 0.73 % strain, about 2.4 N (PLA typical).
+- **To take it off:** thumb on the ridges (the grip), push the cap **down 6 mm** (over the click), lift it off.
+- The checks in [`../cad/check_s2_cap.py`](../cad/check_s2_cap.py): the cap does not touch the shell (the bump left out) at any position of the slide; locked, with the bump in its groove, it does not touch either; in mid-slide only the 0.6 mm bump meets it (the elastic part).
+
+**What is not known (nothing is printed yet):**
+- whether the click is clear and the holding force right; the round-1 snap never clicked, and I do not know why;
+- whether the tongue (it hangs over the cavity) prints: it needs **supports from the bed** under it, which I have not checked in a slicer;
+- how it feels to slide off with a thumb; a small notch in the **body's** chin could expose the cap's bottom edge for a nail (later, only if needed);
+- the pegs' heads use the cavity's depth from z = 10.6 to 13; nothing else may sit there in the lower zone.
 
 ## 5 · Printing notes
 - Front shell **front face up** (as exported): the cavity opens toward the bed; the big round hole leaves no ceiling wider than about 9 mm, so it should print without supports. The lid face up. Untested in a slicer by me.
 - Wheel: hole **2.3 mm** (round 1: 2.0 was too tight; small round holes print about 0.3 mm small). Push fits 0.20 mm per side; the lid 0.25.
 
 ## 6 · Left hand or right hand?
-The layout is **right-hand-friendly**: the fingers wrap the left edge and press the key, the right thumb sweeps the wheel on the right. For the **left hand** it is the mirror image: the key on the right edge, the wheel in the top-left corner. CAD can mirror the whole thing with one parameter. **Question for the owner:** in daily use, which hand holds it while talking? If it is the left, a mirrored build may be better for the owner than the current layout.
+**Both** (owner, 2026-11-26): no mirrored version. With the **left hand**: the thumb presses the key, the index finger turns the wheel. With the **right hand**: the index and middle fingers press the key, the thumb turns the wheel. Both feel fine to the owner; a smaller body helps both. Grip, in the owner's words: the thumb just reaches the middle finger's pad; it touches the little finger only barely; it cannot reach the index finger. (The owner's hand is "about an iPhone" in size; no measuring needed.) Keep the wheel reachable by the index finger as well as by the thumb.
 
 ## 7 · Still open (needs real parts)
 - the real sizes of the controller board, switches, the microphone module and the cable's plug (the top opening is sized by the plug);
@@ -61,6 +81,19 @@ The layout is **right-hand-friendly**: the fingers wrap the left edge and press 
 - the axle and cam: a 2 mm steel pin with a printed cam, or a printed axle (first design to be drawn);
 - the key's hinge and spring; the back shell, hatch and stand.
 
-## 8 · Next
-1. The owner prints **`s2_lower_shell.stl` and `s2_lid.stl`** ([`../cad/out/`](../cad/out/)) and tries the lid: does it click, does it seat flush, does it come out with the finger slot?
-2. Once the parts arrive and are measured, the full shells.
+## 8 · The wheel: bigger, thicker, a hero (owner's wish) and what it costs
+
+The owner wants a **bigger and thicker wheel**, very conspicuous: easier to flick, more character, and (the owner's thought) the sensing could sit deeper, with more room. The honest trade-offs at S2 (48 × 88 × 17, USB-C on top, the controller board beside the wheel):
+
+| Option | What it is | Cost |
+|---|---|---|
+| **P (recommended)** | **Ø21, standing 2 mm PROUD of the face** (2 mm outside plus the same 5.4 mm inside = 7.4 mm of wheel), a bold rim | nothing inside: the depth stack is unchanged; the largest wheel that still leaves the controller board beside it (Ø21 is about the limit at width 48) |
+| Q | Ø24 or bigger | the wheel's pocket would cover the board's place, so the board must move to the lower zone (behind the microphone), and the **USB-C could no longer be on the top edge** (the cable would have to come from the bottom, or via a wire to a port on top): a change to a decided point |
+| R | thicker **inside** (7 to 8 mm) | the stack (wheel, floor, cam, switches, board) grows by 2 to 3 mm: there is only 2.4 mm spare at 17 mm depth; the body would have to be about 19 mm |
+
+An absolute magnetic sensor (an AS5600 module and a magnet) in place of the two switches and the cam makes the stack a little thinner but does not change the plan view, so it does not rescue Q. **Asked of the owner:** is P (proud Ø21) acceptable? A proud wheel is also easier to reach with the index finger, since its rim stands out of the face. (An ergonomic estimate, not tested.)
+
+## 9 · Next
+1. The owner prints **`s2_cap_shell.stl`** (front up, supports from the bed under the detent tongue) and **`s2_cap_PRINT_face_down.stl`** ([`../cad/out/`](../cad/out/)) and tries the cap: does it go on, slide, click, hold, come off?
+2. The owner decides the wheel (P, Q or R).
+3. Once the parts arrive and are measured, the full shells.

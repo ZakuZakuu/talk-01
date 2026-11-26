@@ -94,6 +94,15 @@ def main():
               os.path.join(OUT, "preview_s2_lower.png"), "S2 lower shell with the real lid (hooks at the top, snap arms in the side rails, finger slot at the chin)")
     except Exception as e:
         print("s2 preview skipped:", e)
+    try:
+        sh = trimesh.load(os.path.join(OUT, "s2_cap_shell.stl"))
+        cp = trimesh.load(os.path.join(OUT, "s2_cap.stl"))
+        asm = trimesh.load(os.path.join(OUT, "s2_cap_assembled_view.stl"))
+        sheet([(cp, -50, 20, "cap: the face (one plain plane, ridges, no catches)", {"px": 640}), (cp, 130, 20, "cap: the back (four pegs, the detent groove)", {"px": 640}),
+               (sh, -50, 20, "shell: floor with keyholes, the detent tongue, the round hole", {"px": 640}), (asm, -50, 20, "cap locked on the shell", {"px": 640})],
+              os.path.join(OUT, "preview_s2_cap.png"), "S2 keyhole-slide cap: nothing shows on the face", cols=2)
+    except Exception as e:
+        print("s2 cap preview skipped:", e)
     print("previews written")
 
 

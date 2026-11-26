@@ -1,5 +1,7 @@
 # SPDX-License-Identifier: CERN-OHL-P-2.0
-"""The lower part of the S2 front shell with the REAL lid (hooks at the top, snap arms in the lid's side rails), as a test piece.
+"""SUPERSEDED (2026-11-26): the owner wants a front with no frame and no visible catches; see s2_cap.py.
+
+The lower part of the S2 front shell with the REAL lid (hooks at the top, snap arms in the lid's side rails), as a test piece.
 
 The piece is the front shell cut at z = 9 (open at the back) and at y = 58 (above the seam beam), so it prints in an hour or two and
 shows the lid, the recess, the hook lip, the snap grooves, the finger slot and the round hole on the real body.

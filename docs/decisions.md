@@ -58,6 +58,12 @@ The body of 58 × 92 × 24 mm is **too thick and too wide**; make it slimmer and
 - **Body S2: 48 × 88 × 17 mm** (compact; slim; assembly must work but not squeezed to the extreme). **Key block: 5 mm** (the middle one was the most comfortable). **Wheel close to its pocket** (gap 0.6 mm). **The lid's snap arms are designed on the real body** (no miniature). No further size round. See [`mechanical-plan-S2.md`](mechanical-plan-S2.md).
 - Noted by the owner: the **right hand is more comfortable** than the left (the right thumb reaches the wheel). The owner holds it in the left hand: **left or right layout is a question for the owner**.
 
+## Owner direction on the cap, the hands and the wheel (2026-11-26, later)
+- **The front must be one complete plane, running to the edge, with no frame, and no visible catches.** Snap or slide, whichever works; magnets are too complex. Claude researched the options: proposed a **keyhole slide with a hidden detent** ([`mechanical-plan-S2.md`](mechanical-plan-S2.md) §4); **not yet tested**.
+- **Both hands:** no mirrored version. Left hand: thumb on the key, index finger on the wheel; right hand: index and middle fingers on the key, thumb on the wheel.
+- **The wheel: bigger and thicker, a conspicuous hero** (more reachable, more character, maybe more room for the sensing). The trade-offs and a proposal (P, a proud Ø21 wheel) are in [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §8; **awaiting the owner's choice**.
+- Hand size: no measuring needed (about an iPhone's); grip described (thumb reaches the middle finger's pad, barely the little finger, not the index finger).
+
 ## Proposed by Claude, **not** decided
 
 - Modes on the wheel: **DICT, TALK, OPEN, LOCK**, with the wheel's click as a latch.

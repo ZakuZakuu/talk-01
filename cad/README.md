@@ -17,11 +17,13 @@ Licence: [CERN-OHL-P-2.0](../LICENSES/CERN-OHL-P-2.0.txt) (see [`../LICENSING.md
 | [`preview.py`](preview.py) | the preview pictures above (a small z-buffer renderer) |
 | [`out/`](out/) | the STL files (and a STEP of the body) ready to slice |
 
-## S2 (the chosen body) and the real lid
+## S2 (the chosen body) and the cap
 
-[`s2_params.py`](s2_params.py), [`s2_lower.py`](s2_lower.py) and [`check_s2.py`](check_s2.py): the **lower part of the S2 front shell with the real lid** as a test piece (`out/s2_lower_shell.stl`, `out/s2_lid.stl`); print both as exported (front up, ridges up). The plan: [`../docs/mechanical-plan-S2.md`](../docs/mechanical-plan-S2.md).
+[`s2_params.py`](s2_params.py), [`s2_cap.py`](s2_cap.py) and [`check_s2_cap.py`](check_s2_cap.py): the **keyhole-slide cap** (one complete plane, nothing visible on the face) with the lower part of the S2 front shell as a test piece. Files: `out/s2_cap_shell.stl` (print as exported, front up, **supports from the bed under the detent tongue**) and `out/s2_cap_PRINT_face_down.stl` (already flipped for printing: front face down, pegs up). The mechanism: [`../docs/mechanical-plan-S2.md`](../docs/mechanical-plan-S2.md) §4 and [`../docs/print-test-guide/cap-keyhole.png`](../docs/print-test-guide/cap-keyhole.png).
 
-![S2 lower shell and lid](out/preview_s2_lower.png)
+![S2 cap](out/preview_s2_cap.png)
+
+*Superseded:* [`s2_lower.py`](s2_lower.py) (a lid with visible snap arms in a frame) is kept for history only.
 
 ## Regenerating
 

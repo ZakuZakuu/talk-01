@@ -2,6 +2,18 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (evening) — the cap must show nothing; both hands; a hero wheel
+
+### Owner direction
+- The test lid is not what was imagined: its two catches are too conspicuous on the face. The front should be **one complete plane, edge to edge, no frame**, one thing that clicks in. Research a good catch scheme (snap or slide; magnets sound too complex).
+- **Both hands:** no mirror. Left: thumb presses the key, index finger the wheel; right: index and middle fingers the key, thumb the wheel. Both are comfortable; a smaller body helps.
+- **A bigger, thicker wheel as a conspicuous hero**: it could go deeper (the sensing deeper, more room), looks more distinctive, and is easier to flick.
+- Hand size: about an iPhone's; no measuring. The iPhone was only a size comparison: no phone design is planned (a phone is only a recording reference later). Grip: the thumb just reaches the middle finger's pad, barely the little finger, not the index finger.
+
+### Claude's notes
+- A **keyhole-slide cap with a hidden detent** ([`mechanical-plan-S2.md`](mechanical-plan-S2.md) §4, [`../cad/s2_cap.py`](../cad/s2_cap.py)): four pegs on the cap's back, keyholes in the floor, a flat tongue with a bump; nothing on the face. Numbers checked, nothing printed. The earlier test piece with visible arms is superseded.
+- The wheel: the trade-offs at S2 (the board beside the wheel limits it to about Ø21 unless the USB-C moves); proposal P: a proud Ø21 wheel, awaiting the choice.
+
 ## 2026-11-26 (afternoon) — S2 chosen, round-2 feedback
 
 ### Owner direction

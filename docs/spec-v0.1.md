@@ -15,8 +15,8 @@ A small walkie-talkie-like **wired USB-C microphone**: a real microphone first (
 | Plan corners | radius 5; the **top-right corner chamfered 15 mm** |
 | Edge comfort | front perimeter fillet 1.5, back 2.0; no sharp edge under the hand |
 | Control zone | the top 36 mm of the face (wordmark, lamp, small labels) |
-| Lid | the lower face, **y 36 to 88**, inside 2.4 mm walls; 42.7 × 49.1 mm; 0.25 mm clearance per side |
-| Pickup | a round hole **Ø34** under the lid, centred 24 from the left and 62 from the top |
+| Cap (lid) | the lower face, **y 36 to 88**, edge to edge (47.8 × 51.75 mm); on top of 1.6 mm walls |
+| Pickup | a round hole **Ø34** under the cap, centred 24 from the left and 63 from the top |
 
 ## 3 · The key (left edge, upper half)
 - On the **left edge, y 12 to 58** (46 mm long), **slanted** (the TE-lever idea, our own shape).
@@ -30,10 +30,11 @@ A small walkie-talkie-like **wired USB-C microphone**: a real microphone first (
 - **Sensing:** a cam on the wheel's back presses **two small switches** (Gray code 00, 01, 11, 10), the switches placed inboard. Absolute: the position is known at power-up.
 - Icons: **stickers or multi-colour (AMS lite) inlays**.
 
-## 5 · The lid (no screws)
-- **PETG**; base about 1.0 mm plus **1.4 mm ridges**, 2.4 mm in all; **horizontal ridges** (G1) by default, swappable (other patterns later).
-- Held by **two rigid hooks** at the top edge and **two in-plane snap arms** at the bottom corners; a **thumb notch** at the bottom edge. Starting clearance 0.2 to 0.3 mm, to be set by the calibration print.
-- The microphone **bracket** sits behind the round hole and can be changed from the front with the lid off.
+## 5 · The cap (the lower lid; no screws, nothing visible)
+- **PETG** is the aim (PLA for the tests); base about 1.0 mm plus **1.4 mm ridges**, 2.4 mm in all; **horizontal ridges** (G1) by default, with a plain band at the top; swappable.
+- **One complete plane edge to edge, no frame, no visible catches** (owner, 2026-11-26). It lies on the body's walls and forms the front edge. Held by **four mushroom pegs on its back that slide 6 mm through keyholes in the floor** and a **small detent tongue** in the floor that clicks into a groove in the cap's back. Taken off by pushing it down 6 mm and lifting. Mechanism and open questions: [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §4. A magnet version is the fallback.
+- The cap's outline is the body's outline (0.1 mm inside); 0.15 mm gap to the control zone.
+- The microphone **bracket** sits behind the round hole and can be changed from the front with the cap off.
 
 ## 6 · Electronics (stage 1)
 | Role | Choice |
