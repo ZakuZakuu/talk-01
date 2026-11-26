@@ -24,9 +24,9 @@ A small walkie-talkie-like **wired USB-C microphone**: a real microphone first (
 - **Two stages**: a soft first switch starts the talk (hold); a second switch at the bottom is a quiet latch confirm. A **rubber bump** at the bottom stop. The lesson from TE's lever is in [`research/te-ting-reference.md`](research/te-ting-reference.md).
 - A spring returns the key; it turns on a steel pin at its bottom.
 
-## 4 · The wheel (top-right chamfer): the "dial"
-- **Ø19 mm, 5.4 mm thick**, in a pocket with a **0.6 mm gap** (the owner found 1.8 mm too big) centred at **(33.3, 12)** from the top-left; its rim sticks out of the chamfer by about 1.2 mm; 36 ribs on the rim; the axle hole 2.3 mm.
-- **Four modes** DICT, TALK, OPEN, LOCK on the wheel face as 3 mm icons; a fixed index triangle on the body marks the active one (a camera mode dial). Four detents, 45° apart.
+## 4 · The wheel (top-right chamfer): the "dial", the hero
+- **Option P (owner, 2026-11-26): Ø21 mm, 5.4 mm inside the face and standing 2 mm proud of it (7.4 mm of wheel)**, a bold rim; in a pocket with a 0.6 mm gap, centred about **(32.9, 13)** from the top-left; its rim sticks out of the chamfer by about 1.2 mm; ribs on the rim; the axle hole 2.3 mm. About the largest wheel that leaves room for the controller board beside it at this width. A bigger or thicker-inside wheel was weighed and not chosen ([`mechanical-plan-S2.md`](mechanical-plan-S2.md) §8).
+- **Four modes** DICT, TALK, OPEN, LOCK on the wheel face as icons; a fixed index triangle on the body marks the active one (a camera mode dial). Four detents, 45° apart.
 - **Sensing:** a cam on the wheel's back presses **two small switches** (Gray code 00, 01, 11, 10), the switches placed inboard. Absolute: the position is known at power-up.
 - Icons: **stickers or multi-colour (AMS lite) inlays**.
 

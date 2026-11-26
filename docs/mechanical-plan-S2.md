@@ -87,7 +87,7 @@ The owner wants a **bigger and thicker wheel**, very conspicuous: easier to flic
 
 | Option | What it is | Cost |
 |---|---|---|
-| **P (recommended)** | **Ø21, standing 2 mm PROUD of the face** (2 mm outside plus the same 5.4 mm inside = 7.4 mm of wheel), a bold rim | nothing inside: the depth stack is unchanged; the largest wheel that still leaves the controller board beside it (Ø21 is about the limit at width 48) |
+| **P (CHOSEN by the owner)** | **Ø21, standing 2 mm PROUD of the face** (2 mm outside plus the same 5.4 mm inside = 7.4 mm of wheel), a bold rim | nothing inside: the depth stack is unchanged; the largest wheel that still leaves the controller board beside it (Ø21 is about the limit at width 48) |
 | Q | Ø24 or bigger | the wheel's pocket would cover the board's place, so the board must move to the lower zone (behind the microphone), and the **USB-C could no longer be on the top edge** (the cable would have to come from the bottom, or via a wire to a port on top): a change to a decided point |
 | R | thicker **inside** (7 to 8 mm) | the stack (wheel, floor, cam, switches, board) grows by 2 to 3 mm: there is only 2.4 mm spare at 17 mm depth; the body would have to be about 19 mm |
 
@@ -95,5 +95,5 @@ An absolute magnetic sensor (an AS5600 module and a magnet) in place of the two 
 
 ## 9 · Next
 1. The owner prints **`s2_cap_shell.stl`** (front up, supports from the bed under the detent tongue) and **`s2_cap_PRINT_face_down.stl`** ([`../cad/out/`](../cad/out/)) and tries the cap: does it go on, slide, click, hold, come off?
-2. The owner decides the wheel (P, Q or R).
+2. ~~The owner decides the wheel~~: **P chosen**.
 3. Once the parts arrive and are measured, the full shells.

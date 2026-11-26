@@ -61,7 +61,7 @@ The body of 58 × 92 × 24 mm is **too thick and too wide**; make it slimmer and
 ## Owner direction on the cap, the hands and the wheel (2026-11-26, later)
 - **The front must be one complete plane, running to the edge, with no frame, and no visible catches.** Snap or slide, whichever works; magnets are too complex. Claude researched the options: proposed a **keyhole slide with a hidden detent** ([`mechanical-plan-S2.md`](mechanical-plan-S2.md) §4); **not yet tested**.
 - **Both hands:** no mirrored version. Left hand: thumb on the key, index finger on the wheel; right hand: index and middle fingers on the key, thumb on the wheel.
-- **The wheel: bigger and thicker, a conspicuous hero** (more reachable, more character, maybe more room for the sensing). The trade-offs and a proposal (P, a proud Ø21 wheel) are in [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §8; **awaiting the owner's choice**.
+- **The wheel: bigger and thicker, a conspicuous hero.** **Option P chosen (owner, 2026-11-26): Ø21, standing 2 mm proud of the face** ([`mechanical-plan-S2.md`](mechanical-plan-S2.md) §8). The keyhole-slide cap was found "interesting, good" and will be printed to try.
 - Hand size: no measuring needed (about an iPhone's); grip described (thumb reaches the middle finger's pad, barely the little finger, not the index finger).
 
 ## Proposed by Claude, **not** decided

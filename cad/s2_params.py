@@ -22,10 +22,13 @@ Z_I = Z_R - WALL              # inner face of the front wall under the lid, 13.0
 HOLE_D = 34.0
 HOLE_CX, HOLE_CY = W / 2, 26.0
 
-# the wheel: the rim sticks out of the chamfer by about 1.2 mm; the gap to its pocket is now 0.6 mm (round 1 had 1.8, "a bit big")
-WHEEL_R, WHEEL_T = 9.5, 5.4
+# the wheel: option P chosen by the owner (2026-11-26): Ø21, standing 2 mm proud of the face; the rim sticks out of the chamfer by about 1.2 mm;
+# the gap to its pocket is 0.6 mm (round 1 had 1.8, "a bit big"). Round-1 values were R 9.5 at (W - 14.7, 12).
+WHEEL_R, WHEEL_T = 10.5, 5.4          # radius; the thickness INSIDE the face
+WHEEL_PROUD = 2.0                     # how far the wheel stands out of the face (7.4 mm of wheel in all)
 POCKET_GAP = 0.6
-WHEEL_CX, WHEEL_CY_DRAW = W - 14.7, 12.0
+WHEEL_CY_DRAW = 13.0
+WHEEL_CX = WHEEL_CY_DRAW + (W - CHAMFER) - 1.4142 * (WHEEL_R - 1.2)    # keeps the rim 1.2 mm beyond the chamfer line: about 32.9
 
 # snap system (per side)
 ARM_T, ARM_L, SLOT_W, BUMP = 1.2, 14.0, 1.0, 0.8

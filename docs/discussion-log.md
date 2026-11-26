@@ -2,6 +2,14 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (night) — the wheel and the cap agreed
+
+### Owner direction
+- Accepts **P** (a Ø21 wheel standing 2 mm proud); trusts that the internal space has been thought through. The keyhole-slide cap is "interesting, good", to be printed later. No more objections. Asks: must the owner print now, and after this round can we start buying boards to test?
+
+### Claude's notes
+- The cap print is independent of buying; the parts for the **bench test** can be bought now. Bench-test plan: [`bench-test-plan.md`](bench-test-plan.md); buying order added to [`parts-list.md`](parts-list.md).
+
 ## 2026-11-26 (evening) — the cap must show nothing; both hands; a hero wheel
 
 ### Owner direction

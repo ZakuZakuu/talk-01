@@ -1,5 +1,12 @@
 # Parts list and measuring sheet
 
+## What to buy first, and what can wait (2026-11-26)
+
+The enclosure prints and the electronics bench test do **not** depend on each other, so you can order now.
+1. **Buy now, for the bench test** (items 1, 2, 3, 7, 8, 9 below, plus 22 the caliper if you have none): the XIAO ESP32S3, the two microphone modules, the coiled USB-C cables, the Dupont wires, breadboard and pin headers, silicone wire. A few tact switches (4, 5) are worth adding: they cost cents and are needed for measuring.
+2. **Buy a little later, once the bench test works and the cap print is tried:** the mechanical bits (10 to 18) and the PETG and stickers (19 to 21). By then the CAD will name the exact sizes.
+The plan for the bench test is in [`bench-test-plan.md`](bench-test-plan.md).
+
 For the owner to buy item by item (nothing is ordered by Claude). Updated 2026-11-26. **Why a measuring sheet:** the CAD uses typical sizes until the real parts are measured. Quantities are generous: the parts are cheap and variants differ. Search words are suggestions for Taobao; check each listing's photos.
 
 ## A · Electronics (stage 1)
