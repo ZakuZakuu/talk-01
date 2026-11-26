@@ -7,25 +7,25 @@ A small walkie-talkie-like **wired USB-C microphone**: a real microphone first (
 
 ## 2 · Body (mm; the face seen from the front, origin at the top-left)
 
-> **Under revision (owner, 2026-11-26, after the round-1 prints):** 58 × 92 × 24 is **too thick and too wide** (the index finger cannot reach the wheel; hard for smaller hands). A size ladder S1 52 × 90 × 20, S2 48 × 88 × 17 and S3 46 × 86 × 15 is being compared; the paper fit favours **S2** (needs the controller board beside the wheel, not behind it, and low switches). The numbers below are the round-1 values until the owner picks. See [`test-results/round-1.md`](test-results/round-1.md).
+> **S2 chosen by the owner, 2026-11-26** (after the round-1 and round-2 prints): the first body (58 × 92 × 24) was too thick and too wide. Plan: [`mechanical-plan-S2.md`](mechanical-plan-S2.md); results: [`test-results/round-1.md`](test-results/round-1.md).
 
 | Item | Value |
 |---|---|
-| Outer size | **58 wide × 92 high × 24 deep** (24 chosen over 22 so the real parts fit; to be re-checked) |
+| Outer size | **48 wide × 88 high × 17 deep** (slim; assembly to be confirmed with the real parts) |
 | Plan corners | radius 5; the **top-right corner chamfered 15 mm** |
 | Edge comfort | front perimeter fillet 1.5, back 2.0; no sharp edge under the hand |
 | Control zone | the top 36 mm of the face (wordmark, lamp, small labels) |
-| Lid | the whole lower part, **y 36 to 92, full width** |
-| Pickup | a round hole **Ø38 at (29, 64)** under the lid |
+| Lid | the lower face, **y 36 to 88**, inside 2.4 mm walls; 42.7 × 49.1 mm; 0.25 mm clearance per side |
+| Pickup | a round hole **Ø34** under the lid, centred 24 from the left and 62 from the top |
 
 ## 3 · The key (left edge, upper half)
 - On the **left edge, y 12 to 58** (46 mm long), **slanted** (the TE-lever idea, our own shape).
-- Sticks out **5 mm at most** (the feel mock-up compares **3, 5 and 7 mm**), **12 mm deep**, radii 2 mm or more.
+- Sticks out **5 mm** (the owner found the middle block, 5 mm, the most comfortable), **11 mm deep**, radii 2 mm or more.
 - **Two stages**: a soft first switch starts the talk (hold); a second switch at the bottom is a quiet latch confirm. A **rubber bump** at the bottom stop. The lesson from TE's lever is in [`research/te-ting-reference.md`](research/te-ting-reference.md).
 - A spring returns the key; it turns on a steel pin at its bottom.
 
 ## 4 · The wheel (top-right chamfer): the "dial"
-- **Ø19 mm, 5.4 mm thick**, in a Ø22.6 pocket centred at **(43.3, 12)**; its rim sticks out of the chamfer by about 1.2 mm; 36 ribs on the rim.
+- **Ø19 mm, 5.4 mm thick**, in a pocket with a **0.6 mm gap** (the owner found 1.8 mm too big) centred at **(33.3, 12)** from the top-left; its rim sticks out of the chamfer by about 1.2 mm; 36 ribs on the rim; the axle hole 2.3 mm.
 - **Four modes** DICT, TALK, OPEN, LOCK on the wheel face as 3 mm icons; a fixed index triangle on the body marks the active one (a camera mode dial). Four detents, 45° apart.
 - **Sensing:** a cam on the wheel's back presses **two small switches** (Gray code 00, 01, 11, 10), the switches placed inboard. Absolute: the position is known at power-up.
 - Icons: **stickers or multi-colour (AMS lite) inlays**.

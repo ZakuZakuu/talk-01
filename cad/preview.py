@@ -86,6 +86,14 @@ def main():
     plate = trimesh.load(os.path.join(OUT, "calibration_plate.stl"))
     sheet([(lid, -50, 20, "snap lid (seen from the front, tilted)", {}), (frame, -50, 20, "snap frame (front, tilted)", {}), (plate, -55, 15, "calibration plate (front, tilted)", {"px": 700})],
           os.path.join(OUT, "preview_calibration.png"), "Calibration set (the lid is printed back down, the frame and the plate face up)")
+    try:
+        sh = trimesh.load(os.path.join(OUT, "s2_lower_shell.stl"))
+        ld = trimesh.load(os.path.join(OUT, "s2_lid.stl"))
+        asm = trimesh.load(os.path.join(OUT, "s2_lower_assembled_view.stl"))
+        sheet([(sh, 0, 0, "shell, front", {"px": 640}), (sh, -45, 15, "shell, tilted", {"px": 640}), (ld, -45, 15, "lid, tilted", {"px": 640}), (asm, -45, 15, "lid in the shell", {"px": 640})],
+              os.path.join(OUT, "preview_s2_lower.png"), "S2 lower shell with the real lid (hooks at the top, snap arms in the side rails, finger slot at the chin)")
+    except Exception as e:
+        print("s2 preview skipped:", e)
     print("previews written")
 
 

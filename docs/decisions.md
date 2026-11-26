@@ -54,6 +54,10 @@ The owner approved Claude's proposed freeze: [`spec-v0.1.md`](spec-v0.1.md). It 
 ## Owner feedback after the round-1 prints (2026-11-26)
 The body of 58 × 92 × 24 mm is **too thick and too wide**; make it slimmer and narrower (length may stay or shrink a little, keeping the look in proportion). The wheel size (Ø19) and how it sits in the pocket are good. Measured fits on the owner's printer: push fit 0.20 mm per side. Details: [`test-results/round-1.md`](test-results/round-1.md). The new body size is **to be chosen** from a size ladder (round 2).
 
+## Chosen after round 2 (owner, 2026-11-26)
+- **Body S2: 48 × 88 × 17 mm** (compact; slim; assembly must work but not squeezed to the extreme). **Key block: 5 mm** (the middle one was the most comfortable). **Wheel close to its pocket** (gap 0.6 mm). **The lid's snap arms are designed on the real body** (no miniature). No further size round. See [`mechanical-plan-S2.md`](mechanical-plan-S2.md).
+- Noted by the owner: the **right hand is more comfortable** than the left (the right thumb reaches the wheel). The owner holds it in the left hand: **left or right layout is a question for the owner**.
+
 ## Proposed by Claude, **not** decided
 
 - Modes on the wheel: **DICT, TALK, OPEN, LOCK**, with the wheel's click as a latch.

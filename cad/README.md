@@ -17,6 +17,12 @@ Licence: [CERN-OHL-P-2.0](../LICENSES/CERN-OHL-P-2.0.txt) (see [`../LICENSING.md
 | [`preview.py`](preview.py) | the preview pictures above (a small z-buffer renderer) |
 | [`out/`](out/) | the STL files (and a STEP of the body) ready to slice |
 
+## S2 (the chosen body) and the real lid
+
+[`s2_params.py`](s2_params.py), [`s2_lower.py`](s2_lower.py) and [`check_s2.py`](check_s2.py): the **lower part of the S2 front shell with the real lid** as a test piece (`out/s2_lower_shell.stl`, `out/s2_lid.stl`); print both as exported (front up, ridges up). The plan: [`../docs/mechanical-plan-S2.md`](../docs/mechanical-plan-S2.md).
+
+![S2 lower shell and lid](out/preview_s2_lower.png)
+
 ## Regenerating
 
 ```bash

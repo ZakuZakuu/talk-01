@@ -2,6 +2,19 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (afternoon) — S2 chosen, round-2 feedback
+
+### Owner direction
+- Take Claude's recommended **S2**; no more size rounds; keep it compact and slim, and make sure assembly works, but not squeezed to the extreme. Many walkies are slim and long, easier to grip; the first shape was too fat.
+- The **middle key block (5 mm)** is the most comfortable.
+- The snap lid: the arms did not break; they were **not fully in** and there was **no click**. Design the arms directly on the real body, not a miniature.
+- Held in the **left hand** (the owner's way); the **right hand is much more comfortable**, the right thumb reaches the wheel more easily.
+- The gap between the wheel and its pocket is still a bit large: make it close, whole-looking.
+- The proportion (slim, long) is fine.
+
+### Claude's notes
+- [`mechanical-plan-S2.md`](mechanical-plan-S2.md); the real lid and lower shell for S2 ([`../cad/s2_lower.py`](../cad/s2_lower.py)) as a test piece; fit numbers; a magnet fallback for the lid; the left/right layout question.
+
 ## 2026-11-26 (morning) — round-1 prints: results
 
 ### Owner direction
