@@ -64,6 +64,9 @@ The body of 58 × 92 × 24 mm is **too thick and too wide**; make it slimmer and
 - **The wheel: bigger and thicker, a conspicuous hero.** **Option P chosen (owner, 2026-11-26): Ø21, standing 2 mm proud of the face** ([`mechanical-plan-S2.md`](mechanical-plan-S2.md) §8). The keyhole-slide cap was found "interesting, good" and will be printed to try.
 - Hand size: no measuring needed (about an iPhone's); grip described (thumb reaches the middle finger's pad, barely the little finger, not the index finger).
 
+## Purchases decided by the owner (2026-11-26)
+The owner buys: an **ESP32-S3 Super Mini** (about 20 yuan; instead of the XIAO at about 50), an **ICS-43434 round module** (one piece), **6 × 6 through-hole tact switches** (10 to 20) from the microphone shop, and a caliper if one cannot be borrowed. The cable, wires and breadboard are the owner's own. On arrival: photos of both sides of each board with a ruler and the seller's sizes; the shell's board pocket is designed around the Super Mini actually received ([`parts-list.md`](parts-list.md)).
+
 ## Proposed by Claude, **not** decided
 
 - Modes on the wheel: **DICT, TALK, OPEN, LOCK**, with the wheel's click as a latch.
