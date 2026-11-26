@@ -2,6 +2,14 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (small hours) — spec frozen, modelling approved
+
+### Owner direction
+- Agreed to the proposed freeze and to Claude doing the modelling. Printer: Bambu Lab A1 mini; no PETG yet (to be bought later if needed). `CLAUDE.md` may be updated. Licence: Claude's choice. Parts: no hurry; Claude lists them and the owner buys item by item.
+
+### Claude's notes
+- Wrote [`spec-v0.1.md`](spec-v0.1.md), [`parts-list.md`](parts-list.md) (with a measuring sheet), [`../LICENSING.md`](../LICENSING.md) (MIT, CERN-OHL-P-2.0, CC BY 4.0) and a Phase 2 section in `CLAUDE.md`; started `cad/` with the first prints (a feel mock-up and a calibration set).
+
 ## 2026-11-26 (past midnight) — the TE TING teardown, and prices
 
 ### Owner direction

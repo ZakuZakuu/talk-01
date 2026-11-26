@@ -48,6 +48,9 @@ What the owner has decided, and what is still open. Recorded from the discussion
 ### Back
 - A **small U stand** and a **small openable hatch** with pins inside for the user's own programs. **Not a full-back cover.**
 
+## Frozen spec v0.1 (owner approved 2026-11-26)
+The owner approved Claude's proposed freeze: [`spec-v0.1.md`](spec-v0.1.md). It records, as decided: body 58 × 92 × 24 mm; XIAO ESP32S3; INMP441 and ICS-43434 modules in a replaceable bracket (T5848 later if needed); the two-stage slanted key with a soft stop; the Ø19 mm dial wheel read by two switches and a cam; a PETG snap-fit lid with hooks and in-plane arms, G1 ridges by default; a BOOT/RESET access in the hatch; a general expansion space instead of a battery bay; parametric CAD in `cad/`. Printer: **Bambu Lab A1 mini** (no PETG yet, to be bought; multi-colour possible). Licences chosen by Claude at the owner's request: [`../LICENSING.md`](../LICENSING.md). The owner will buy the parts from [`parts-list.md`](parts-list.md) and does not hurry. CAD and mechanical design are now in scope ([`../CLAUDE.md`](../CLAUDE.md), Phase 2).
+
 ## Proposed by Claude, **not** decided
 
 - Modes on the wheel: **DICT, TALK, OPEN, LOCK**, with the wheel's click as a latch.

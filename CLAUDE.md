@@ -15,7 +15,16 @@ Act as an independent research and industrial-design collaborator, not an implem
 2. Create 2–3 original flat 2D concept sheets (SVG and optionally PNG) with front/rear/side, built-in stand open/closed, and controls. Save under design/concepts/. Present tradeoffs, not a finalized design.
 3. Participate in design discussion. Critically review interaction and technical assumptions; propose concrete options and a few questions for the owner.
 
-Write research findings to docs/research/claude-review.md; summarize concept rationale in design/concepts/README.md. Use a branch/PR for first-round work if possible. Share links and explain unresolved risks. No need to build firmware or CAD or order hardware now.
+Write research findings to docs/research/claude-review.md; summarize concept rationale in design/concepts/README.md. Use a branch/PR for first-round work if possible. Share links and explain unresolved risks. No need to build firmware or CAD or order hardware now. *(Superseded for CAD on 2026-11-26: see Phase 2 below.)*
 
 ## Constraints
 Reuse mature code and modules wherever appropriate; focus on upper-layer UX and product design. No AI inference, custom driver, custom PCB or commercialization work in this phase. Wireless and battery are not part of v0.1 (keep space and a BLE-capable MCU in mind; the owner is open to them later if they turn out to be easy). Heavy or complex DSP (e.g. noise cancellation) stays out. Simple fixed effects, such as a walkie-talkie filter, are allowed as optional fun features after the core works; if an effect turns out hard or CPU-heavy, skip it rather than expand scope (owner decision, 2026-11-25). Do not import third-party assets/code without license verification. Prefer permissive licenses; separate hardware/CAD and software licensing. Do not claim hardware testing or sound quality without evidence. Avoid publishing personal details, secrets or proprietary assets. Keep discussion open and preserve owner decisions; no silent major changes. 
+
+## Phase 2: mechanical design (approved by the owner, 2026-11-26)
+The owner approved the frozen plan in docs/spec-v0.1.md and asked Claude to do the modelling and mechanical design.
+- **Claude may:** model the enclosure and mechanics as parametric code (CadQuery) under `cad/`, export STL and STEP, run interference, clearance and printability checks, prepare test prints (a feel mock-up and a calibration set), and keep the parts list and measuring sheet in docs/parts-list.md.
+- **Still needs the owner's explicit go-ahead:** ordering or buying hardware, firmware flashing, a custom PCB, changing a decision listed in docs/decisions.md or the frozen spec, publishing outside the repository.
+- **Working loop:** Claude designs and checks by numbers; the owner prints, measures real parts with calipers and holds the result; Claude revises from the measurements and photos. Claude cannot print, feel, or measure real parts, and says so; sizes from datasheets or typical values are marked as such until measured.
+- **Printer:** Bambu Lab A1 mini (build volume 180 x 180 x 180 mm, 0.4 mm nozzle; PLA now, PETG to be bought; multi-colour printing possible with an AMS lite). Keep every part inside that volume and printable without supports where possible.
+- **Licences** are in LICENSING.md (MIT software, CERN-OHL-P-2.0 hardware files, CC BY 4.0 documentation).
+- Hardware and CAD files stay in the repository; announce nothing publicly until the owner decides.

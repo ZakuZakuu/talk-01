@@ -1,0 +1,93 @@
+# SPDX-License-Identifier: CERN-OHL-P-2.0
+"""Shaded previews of the STL files with a small z-buffer renderer (numpy + matplotlib for the image), so the shapes can be looked at
+without a CAD viewer.
+    python3 cad/preview.py
+"""
+import os
+import numpy as np
+import trimesh
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
+
+
+def rot(elev, azim):
+    e, a = np.radians(elev), np.radians(azim)
+    rz = np.array([[np.cos(a), -np.sin(a), 0], [np.sin(a), np.cos(a), 0], [0, 0, 1]])
+    rx = np.array([[1, 0, 0], [0, np.cos(e), -np.sin(e)], [0, np.sin(e), np.cos(e)]])
+    return rx @ rz
+
+
+def render(mesh, elev, azim, px=520, color=(0.86, 0.80, 0.66), pad=1.08, span=None):
+    """Orthographic z-buffer render. The viewer looks along -Z' after rotating by (elev, azim); returns an RGB image."""
+    R = rot(elev, azim)
+    v = (mesh.vertices - mesh.bounds.mean(axis=0)) @ R.T
+    tris = v[mesh.faces]
+    nrm = mesh.face_normals @ R.T
+    r = (span or (mesh.bounds[1] - mesh.bounds[0]).max()) * pad / 2
+    sx = (tris[:, :, 0] / r * 0.5 + 0.5) * (px - 1)
+    sy = (1 - (tris[:, :, 1] / r * 0.5 + 0.5)) * (px - 1)
+    z = tris[:, :, 2]
+    img = np.ones((px, px, 3)) * 0.96
+    zb = np.full((px, px), -1e9)
+    light = np.array([0.35, 0.55, 0.75]); light /= np.linalg.norm(light)
+    for i in range(len(tris)):
+        if nrm[i, 2] < -0.02:
+            continue
+        x0, y0, x1, y1, x2, y2 = sx[i, 0], sy[i, 0], sx[i, 1], sy[i, 1], sx[i, 2], sy[i, 2]
+        den = (y1 - y2) * (x0 - x2) + (x2 - x1) * (y0 - y2)
+        if abs(den) < 1e-9:
+            continue
+        xa, xb = int(max(0, np.floor(min(x0, x1, x2)))), int(min(px - 1, np.ceil(max(x0, x1, x2))))
+        ya, yb = int(max(0, np.floor(min(y0, y1, y2)))), int(min(px - 1, np.ceil(max(y0, y1, y2))))
+        if xb < xa or yb < ya:
+            continue
+        gx, gy = np.meshgrid(np.arange(xa, xb + 1), np.arange(ya, yb + 1))
+        l0 = ((y1 - y2) * (gx - x2) + (x2 - x1) * (gy - y2)) / den
+        l1 = ((y2 - y0) * (gx - x2) + (x0 - x2) * (gy - y2)) / den
+        l2 = 1 - l0 - l1
+        m = (l0 >= -1e-4) & (l1 >= -1e-4) & (l2 >= -1e-4)
+        if not m.any():
+            continue
+        zz = l0 * z[i, 0] + l1 * z[i, 1] + l2 * z[i, 2]
+        sel = m & (zz > zb[gy, gx])
+        zb[gy[sel], gx[sel]] = zz[sel]
+        shade = 0.30 + 0.70 * max(0.0, float(nrm[i] @ light))
+        img[gy[sel], gx[sel]] = np.array(color) * shade
+    return img
+
+
+def sheet(items, path, title, cols=None):
+    cols = cols or len(items)
+    rows = (len(items) + cols - 1) // cols
+    fig, axes = plt.subplots(rows, cols, figsize=(4.6 * cols, 4.8 * rows))
+    axes = np.atleast_1d(axes).ravel()
+    for ax, (mesh, elev, azim, label, kw) in zip(axes, items):
+        ax.imshow(render(mesh, elev, azim, **kw))
+        ax.set_title(label, fontsize=10)
+        ax.axis("off")
+    for ax in axes[len(items):]:
+        ax.axis("off")
+    fig.suptitle(title, fontsize=12)
+    fig.tight_layout()
+    fig.savefig(path, dpi=100)
+    plt.close(fig)
+
+
+def main():
+    asm = trimesh.load(os.path.join(OUT, "mockup_assembled_view.stl"))
+    # the body's local axes: x right, y up, z toward the viewer; azim/elev below tilt it
+    sheet([(asm, 0, 0, "front", {}), (asm, -35, 25, "three-quarter (from below-left)", {}), (asm, 0, 90, "from the left (the key side)", {}), (asm, -90, 0, "from the top edge", {})],
+          os.path.join(OUT, "preview_mockup.png"), "Feel mock-up: body + 5 mm key + wheel (assembled view)")
+    lid = trimesh.load(os.path.join(OUT, "snap_lid.stl"))
+    frame = trimesh.load(os.path.join(OUT, "snap_frame.stl"))
+    plate = trimesh.load(os.path.join(OUT, "calibration_plate.stl"))
+    sheet([(lid, -50, 20, "snap lid (seen from the front, tilted)", {}), (frame, -50, 20, "snap frame (front, tilted)", {}), (plate, -55, 15, "calibration plate (front, tilted)", {"px": 700})],
+          os.path.join(OUT, "preview_calibration.png"), "Calibration set (the lid is printed back down, the frame and the plate face up)")
+    print("previews written")
+
+
+if __name__ == "__main__":
+    main()

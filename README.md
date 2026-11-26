@@ -48,7 +48,11 @@ Concept and research only. No hardware, firmware, sound quality or CAD has been 
 - [Microphone quality: what matters, the candidates, a staged plan](docs/research/microphone-quality.md)
 - [Reference: the Teenage Engineering TING teardown, checked, and what we can learn](docs/research/te-ting-reference.md)
 - [Claude research review: USB microphone routes](docs/research/claude-review.md)
+- [**Spec v0.1** (the frozen plan)](docs/spec-v0.1.md)
+- [Parts list and measuring sheet](docs/parts-list.md)
+- [CAD (parametric, with the first prints)](cad/README.md)
+- [Licensing](LICENSING.md)
 - [Claude Code collaboration guide](CLAUDE.md)
 
 ## License
-Intent: MIT for original software; hardware and CAD license to be decided separately before publication of design files. Third-party materials retain their own licenses. Do not assume all referenced designs are commercially reusable.
+See [`LICENSING.md`](LICENSING.md): software is MIT, hardware design files (`cad/`) are CERN-OHL-P-2.0, documentation and artwork are CC BY 4.0. Third-party materials retain their own licences. The name "talk.01" is not licensed.
