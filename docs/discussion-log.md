@@ -2,6 +2,20 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (deep night) — choices made, on to real parts
+
+### Owner direction
+- The first palette (WARM) is the reference. The dial is the most stable mode display.
+- Do not make it complicated: no printing-or-sticker fuss; stickers, or multi-colour (AMS) printing, are fine.
+- Make the wheel bigger, since the pattern must be printed on it; it also gives character.
+- Option 2 (two switches and a cam): move the sensors a little inward to leave room; later design has to follow their structure.
+- The circles and tactile lines are good. Next: settle the part choices from real engineering, then design a real, usable version from the actual part sizes.
+
+### Claude's notes
+- Wheel to 19 mm, chamfer to 15 mm; a first paper fit check; a proposed part list with sizes marked verified, typical or unverified: [`research/component-selection.md`](research/component-selection.md), [`../design/concepts/v0.6/README.md`](../design/concepts/v0.6/README.md).
+- Depth is tight (about 1.6 mm spare); the controller board lies behind the wheel stack; the mic module's port side and the cable's plug size are unknown; chip stock is a risk. Nothing was bought; CAD waits for measured parts.
+- Questions: is the list right? may the body grow to 24 mm? is "measure first, then CAD" the next step?
+
 ## 2026-11-26 (late night) — polish: colour, lettering, lid, modes
 
 ### Owner direction

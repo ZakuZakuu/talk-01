@@ -29,6 +29,14 @@ What the owner has decided, and what is still open. Recorded from the discussion
 - **Lid:** **no screws**; a **snap-fit**, removable and swappable like a battery cover. The exact catch design is open ([`../design/concepts/v0.5/README.md`](../design/concepts/v0.5/README.md)).
 - **Mode indication** and the rotary sensing are open (arc, row with guide lines, other); a top rotary knob for volume or gain is optional and later.
 
+### Choices (owner, 2026-11-26, night)
+- **Palette 1, WARM** (warm grey body, a shade deeper lid, orange key, dark wheel).
+- **The dial** for showing the modes (the icons on the wheel, a fixed index on the body).
+- **Labels: keep it simple**: stickers, or multi-colour (AMS-style) printing; no painting or filling.
+- **A bigger wheel** (the owner; now 19 mm in the drawings) because the icons must be printed on it.
+- **Wheel sensing: two switches and a cam**, with the sensors placed inboard to leave room.
+- Next step (owner): **fix the part choices first**, then design a buildable version from the real part sizes. A proposal is in [`research/component-selection.md`](research/component-selection.md) and awaits confirmation.
+
 ### Look
 - The front should carry **more of our own design** than TE's top-grille / bottom-cream split (owner, 2026-11-26); three compositions are drawn in v0.2.
 - A TE-inspired **flat graphic language** applied on the surface (colour-blocked panels, small labels, pictograms, visible screws), with a **retro** feel, not a modern-tech or industrial/military one.
