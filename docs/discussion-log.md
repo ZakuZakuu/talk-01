@@ -2,6 +2,19 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (even later) — upper controls, lower pickup
+
+### Owner direction
+- The v0.2 layout is good; F1, F2 and F3 are all liked.
+- Put the sound hole in the **lower half**. A round hole (F3) is fine; vintage radio and speaker designs put a **square cover plate over a round hole**, patterned with lines, slots or small holes. Change the layout to an **upper / lower structure**: controls and lamp above, **one big pickup below**: TE's layout reversed.
+- F1 is liked but its pickup is too small and it loses the walkie-talkie feel.
+
+### Claude's notes
+- Drew three variants (A lines, B slots, C dots) and a sketch section of plate, gap, mesh, wall and MEMS microphone: [`../design/concepts/v0.3/README.md`](../design/concepts/v0.3/README.md).
+- The large hole is mostly style; the microphone needs a small port. Plate pattern is free if air path is clear; test by recording with and without the plate. No sound claim made.
+- Risk: a lower pickup is near the desk when leaning on the stand.
+- Questions: A/B/C or a mix? engraved lines? plate colour? separate plate with visible screws?
+
 ## 2026-11-26 (later) — wheel position and the left-hand key
 
 ### Owner direction

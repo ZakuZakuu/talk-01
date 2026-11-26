@@ -16,6 +16,11 @@ What the owner has decided, and what is still open. Recorded from the discussion
 - **The key** is **a mature TE-style big key with a few stages, fixed in position**. It may be slanted (like TE) or parallel to the edge. **No pop-up strip, no sleeve, no four-finger squeeze, in v0.1.**
 - **No glowing window.**
 
+### Front layout (owner, 2026-11-26, later)
+- The v0.2 layout (key upper-left, wheel on the right) was accepted: "quite good".
+- **Upper / lower structure:** controls, lamp and other parts in the **upper** part; **one big pickup area in the lower half**. (TE is the reverse: grille on top.)
+- The pickup is a **round hole under a square cover plate** (a circle inside a square), the plate patterned as lines, slots or small holes. F1, F2 and F3 were all liked; F1's pickup was felt to be too small. Which pattern and colour is open ([`../design/concepts/v0.3/README.md`](../design/concepts/v0.3/README.md)).
+
 ### Look
 - The front should carry **more of our own design** than TE's top-grille / bottom-cream split (owner, 2026-11-26); three compositions are drawn in v0.2.
 - A TE-inspired **flat graphic language** applied on the surface (colour-blocked panels, small labels, pictograms, visible screws), with a **retro** feel, not a modern-tech or industrial/military one.

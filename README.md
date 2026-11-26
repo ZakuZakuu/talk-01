@@ -40,6 +40,7 @@ Concept and research only. No hardware, firmware, sound quality or CAD has been 
 - [Round 7: grip to talk, six forms (strip, handset, bullet, ray, pebble, G.I.)](design/concepts/round-7/README.md)
 - [Round 8: one layout, four skins; plus a study of which way the thumb wheel turns](design/concepts/round-8/README.md)
 - [v0.2 study: key on the left, wheel top-right, three fronts, hand reach](design/concepts/v0.2/README.md)
+- [v0.3 study: controls above, one big pickup below (round hole under a square plate)](design/concepts/v0.3/README.md)
 - [Claude research review: USB microphone routes](docs/research/claude-review.md)
 - [Claude Code collaboration guide](CLAUDE.md)
 
