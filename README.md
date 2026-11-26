@@ -46,6 +46,7 @@ Concept and research only. No hardware, firmware, sound quality or CAD has been 
 - [v0.6: WARM + dial, a bigger wheel, a first fit check with real part sizes](design/concepts/v0.6/README.md)
 - [Component selection (proposal): controller, microphone, switches, cable](docs/research/component-selection.md)
 - [Microphone quality: what matters, the candidates, a staged plan](docs/research/microphone-quality.md)
+- [Reference: the Teenage Engineering TING teardown, checked, and what we can learn](docs/research/te-ting-reference.md)
 - [Claude research review: USB microphone routes](docs/research/claude-review.md)
 - [Claude Code collaboration guide](CLAUDE.md)
 

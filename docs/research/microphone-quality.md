@@ -7,7 +7,7 @@ Status: **analysis from datasheets and arithmetic. Nothing has been recorded or 
 | Route | What it is | Fits talk.01? |
 |---|---|---|
 | **A. A digital MEMS chip on a small module** (I2S or PDM) | the microphone and its converter in one 3.5 × 2.65 mm part; wires straight to the controller | **Yes, this is our route.** XIAO ESP32S3 reads it directly; no analog circuit |
-| **B. An analog electret capsule** (the kind in lavalier microphones) | a small capsule with an analog output | **Needs an extra converter chip** (the ESP32's own ADC is not good for audio) and its own circuit: more parts, not fewer |
+| **B. An analog electret capsule** (the route TE's EP-2350 TING takes; see [`te-ting-reference.md`](te-ting-reference.md)) (the kind in lavalier microphones) | a small capsule with an analog output | **Needs an extra converter chip** (the ESP32's own ADC is not good for audio) and its own circuit: more parts, not fewer |
 | **C. A finished product** (a wireless clip-on, a USB microphone) | a whole system with its own processing | **Not a part. A reference** to listen against, not something to build in |
 
 The **DJI Mic Mini** belongs to C. It is a wireless transmitter and receiver pair (DJI's specs: a 2.4 GHz link, GFSK 2 Mbps; omni; 20 Hz to 20 kHz; equivalent noise 24 dBA; 120 dB SPL maximum) [verified: [DJI specs](https://www.dji.com/mic-mini/specs); the result mixed pages of the Mic Mini and Mic Mini 2, so check the model]. Its "equivalent noise" is a **whole-system** figure, which may include processing. You cannot reuse its capsule or its circuit. Its use to us: **something good to listen against** if the owner has or can borrow one.

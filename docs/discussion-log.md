@@ -2,6 +2,18 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-26 (past midnight) — the TE TING teardown, and prices
+
+### Owner direction
+- Relayed a second opinion: Adafruit has torn down the TE EP-2350 TING (RP2350, NAU88L21 codec, an analog capsule, a lever with two switches and a potentiometer), re-flashed it with CircuitPython, and a GitHub repo makes it a USB microphone. The opinion suggested adding RP2350 + analog capsule + codec as an alternative route.
+- Taobao prices checked by the owner: T5848 modules over 100 yuan and hard to buy; INMP441 about 10 yuan; ICS-43434 about 30 to 40 yuan. So "need we start from the 441? The 43434 is not expensive." The owner also feels TE's analog-capsule-plus-converter route is perhaps more mature, and similar to DJI's.
+
+### Claude's notes
+- [`research/te-ting-reference.md`](research/te-ting-reference.md): the hardware claims are verified from the Adafruit pages; the capsule type, a quality comparison with DJI, and the codec's 103 dBA are **not** confirmed (the codec's SNR figures conflict). The bottoming-out thump is **verified**, in the demo code's comment. The USB-microphone repo has 1 commit, no licence, and no technical detail, so its code must not be copied.
+- Lessons: a soft first switch to start, a soft stop, microphone on foam; a bootloader access in the hatch; replaceable firmware is attractive.
+- Agreed: buy both the INMP441 and the ICS-43434; skip the T5848. Kept the digital-MEMS primary route, with the TING-style route as a documented alternative.
+- Questions: do you own or can you borrow a TING to record against? is drag-and-drop firmware (RP2350) important to you?
+
 ## 2026-11-26 (very late) — microphone quality: a second opinion, analysed
 
 ### Owner direction

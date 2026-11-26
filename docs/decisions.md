@@ -52,6 +52,8 @@ What the owner has decided, and what is still open. Recorded from the discussion
 
 - Modes on the wheel: **DICT, TALK, OPEN, LOCK**, with the wheel's click as a latch.
 - The key's stages: hold to talk, a click to latch, a firm push to send (the TE lever's idea). Whether v0.1 has one, two or three is open.
+- Stage-1 microphones: the INMP441 and the ICS-43434 modules together (the owner's Taobao prices make this cheap); T5848 later. A TING-style route (RP2350 + analog capsule + codec) is kept as a documented alternative ([`research/te-ting-reference.md`](research/te-ting-reference.md)).
+- Key stage design (lesson from TE's lever): start on the soft first switch, a soft stop at the bottom, the microphone on foam; the second switch is a quiet latch confirm.
 - Microphone staging: a cheap I2S module first, in the real body, then listen; a higher-SNR chip (for example T5848) only if the noise floor is audible; the pickup on a replaceable bracket reachable through the removable lid ([`research/microphone-quality.md`](research/microphone-quality.md)). A general expansion space instead of a dedicated battery bay.
 - Hardware route: ESP32-S3 with an I2S digital microphone as the primary and an RP2040/RP2350 as the fallback, from [`research/claude-review.md`](research/claude-review.md). Nothing has been bought or tested.
 - Body depth: about 22 mm is drawn; a thicker body squeezes better but is less pocketable ([`../design/squeeze-grip.md`](../design/squeeze-grip.md)).

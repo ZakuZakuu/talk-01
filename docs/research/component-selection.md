@@ -2,6 +2,8 @@
 
 > **Update 2026-11-26 (later):** the **microphone** row below is superseded by the staged plan in [`microphone-quality.md`](microphone-quality.md): a cheap I2S module first, in the real body, listen, and only then a higher-SNR chip (T5848 on a tiny carrier) if the noise floor is audible. The rest stands.
 
+> **Update 2026-11-26 (even later):** the owner's Taobao prices (INMP441 about 10 yuan, ICS-43434 about 30 to 40, T5848 over 100) make **buying both INMP441 and ICS-43434** for stage 1 sensible; skip the T5848 for now. A TING-style alternative (RP2350 + analog capsule + codec) is documented in [`te-ting-reference.md`](te-ting-reference.md), with the lever and bottoming-out noise lessons.
+
 Status: **a proposal for the owner to confirm. Nothing has been bought, measured or tested.** Sizes are marked **[verified]** (read from a datasheet or a listing, linked), **[typical]** (a usual value for the part class) or **[unverified]**. The CAD waits for the real parts in hand.
 
 Why now: the owner asked to fix the part choices first and then design a version that is really buildable. The paper fit check is in [`../../design/concepts/v0.6/fit.png`](../../design/concepts/v0.6/README.md).
