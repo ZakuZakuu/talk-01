@@ -20,6 +20,8 @@ A small personal project: make voice input as satisfying as using a mechanical k
 Concept and research only. No hardware, firmware, sound quality or CAD has been validated yet.
 
 ## Documents
+- [**Decisions** (what the owner has decided, and what is open)](docs/decisions.md)
+- [**v0.1 concept** (the converged design)](design/concepts/v0.1/README.md)
 - [Product brief](docs/product-design.md)
 - [Hardware research and validation plan](docs/hardware-research.md)
 - [First design/research sprint](docs/roadmap.md)

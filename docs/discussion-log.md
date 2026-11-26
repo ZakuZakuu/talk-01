@@ -96,6 +96,12 @@ A running record of owner direction and open questions, so decisions are not los
 - **Wheel:** the first reference's twisted top knob is "the wrong direction". The owner wants a **roller sunk into the edge**, not necessarily in a corner (the sunk-in feel is the point). The owner's interaction: **thumb switches; the other side presses to talk** (Claude read "the right hand" as the right-hand side, where the fingers are).
 - Results: [`../design/concepts/round-8/README.md`](../design/concepts/round-8/README.md).
 
+**Convergence (2026-11-26)** — see [`decisions.md`](decisions.md)
+- The owner asked to converge and simplify: after so many ideas, the first version should not be complicated. The side strip, pop-up, sleeve and squeeze were judged too complex (and the structure drawing was hard to follow).
+- **Decided:** a TE-microphone-like layout: **a thumb wheel on the left, one big key on the right**; the key is the mature **TE-style fixed big key with a few stages**, slanted or parallel; the wheel is a **roller with its axis perpendicular to the face** (like the dark gadget's roller); **no glowing window**; skins **SAND and POPPY** liked; TE-inspired flat graphics on the surface; matte printed parts.
+- The wheel drawing in round 8 looked like a sideways axis (my drawing error); it is now a circle.
+- Results: [`../design/concepts/v0.1/README.md`](../design/concepts/v0.1/README.md).
+
 ### Claude's notes from the discussion
 
 - TE's recognisable elements are the **perforated dot-matrix grille, the single saturated lever and the two-tone split body** (observed from one marketing render). Our concepts should not reproduce that combination. Our real differentiators are the **built-in rear stand** and **USB audio + keyboard in one cable**; the stand could be made a visual feature rather than a hidden mechanism.

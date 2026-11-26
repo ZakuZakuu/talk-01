@@ -5,6 +5,8 @@ talk.01 is a public open-source personal hobby project. Owner wants a compact, s
 
 Updated 2026-11-25 with the owner's clarifications (see docs/discussion-log.md): it must first be a real microphone (the owner's laptop mic is broken), usable for voice input and as a resident desk mic, and the interaction should be retro and fun. It is a "small tool plus small toy". Fun features are welcome but are not the core; see docs/feature-backlog.md.
 
+The owner's converged decisions (2026-11-26) are in docs/decisions.md: read it first. Anything not listed there as decided is open.
+
 Read README.md and docs/product-design.md, docs/hardware-research.md, docs/roadmap.md before working.
 
 ## First assignment

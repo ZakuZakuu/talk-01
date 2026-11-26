@@ -1,5 +1,7 @@
 # Product brief — v0.1 concept
 
+> **Update 2026-11-26:** the interaction and the look have converged. The decisions are in [`decisions.md`](decisions.md) and the picture is in [`../design/concepts/v0.1/README.md`](../design/concepts/v0.1/README.md). This brief is the original text and is partly superseded: in particular, the "Interaction proposal" table below (key mapping, double tap) is not what was decided.
+
 ## User need
 Daily voice typing and AI conversations should feel like picking up a small radio, not holding a keyboard modifier. The same device should handle occasional clean spoken-word recording (podcast, narration, calls) and travel easily. It is a low-priority hobby, not a startup or a deadline-driven project.
 
