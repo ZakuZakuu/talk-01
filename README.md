@@ -54,6 +54,7 @@ Concept and research only. No hardware, firmware, sound quality or CAD has been 
 - [Research: one USB device that is a microphone and a keyboard](docs/research/uac-hid-composite.md)
 - [CAD (parametric, with the first prints)](cad/README.md)
 - [Mechanical plan for the S2 body (48 × 88 × 17)](docs/mechanical-plan-S2.md)
+- [Support-free body, the lower frame and the screws](docs/mechanical-plan-S2.md)
 - [Round-1 print results](docs/test-results/round-1.md) and the [round-2 size ladder](docs/print-test-guide/round2-size-ladder.png)
 - [How to test the first prints (illustrated, Chinese)](docs/print-test-guide/1-calibration.png)
 - [Licensing](LICENSING.md)

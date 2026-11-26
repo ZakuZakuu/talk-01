@@ -103,6 +103,15 @@ def main():
               os.path.join(OUT, "preview_s2_cap.png"), "S2 keyhole-slide cap: nothing shows on the face", cols=2)
     except Exception as e:
         print("s2 cap preview skipped:", e)
+    try:
+        fp = trimesh.load(os.path.join(OUT, "s2_frame_PRINT_front_down.stl"))
+        fa = trimesh.load(os.path.join(OUT, "s2_frame_assembled_view.stl"))
+        cp2 = trimesh.load(os.path.join(OUT, "s2_cap_PRINT_face_down.stl"))
+        sheet([(fp, 0, 0, "frame as printed, seen from above (the open back, the bosses, the mic seat)", {"px": 640}), (fp, -50, 20, "frame as printed, tilted", {"px": 640}),
+               (fa, -50, 20, "assembled: the cap on the frame, with the stop bar", {"px": 640}), (cp2, 130, 20, "cap as printed (front face down, pegs up)", {"px": 640})],
+              os.path.join(OUT, "preview_s2_frame.png"), "S2 lower frame, printed FRONT FACE DOWN, no supports", cols=2)
+    except Exception as e:
+        print("frame preview skipped:", e)
     print("previews written")
 
 

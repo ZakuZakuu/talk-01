@@ -67,6 +67,7 @@ The plan for the bench test is in [`bench-test-plan.md`](bench-test-plan.md).
 | 15 | **Steel balls Ø2 mm** | 10 | "钢珠 2mm" | the detent ball (a test) |
 | 16 | **Steel dowel pins Ø2 × 20 mm** | 10 | "不锈钢 圆柱销 2x20" | the key's hinge pin |
 | 17 | **M2 screws assortment** (M2 × 4, 6, 8) and **M2 heat-set inserts** | 1 set | "M2 螺丝套装", "M2 热熔铜螺母 外径3.2 长3mm" | board posts and the hatch |
+| 17b | **M2 self-tapping screws**, pan head, cross recess: **8 mm** long mainly, some 6 and 10 mm | 30 | "M2 自攻螺丝 十字 圆头 平头" assorted; if the owner's robot screws are M2, the same ones will do | the body is closed with these; look at the pack's label and tell me the size and head |
 | 18 | Spare 1.75 mm filament pieces | (from a spool) | any | the wheel's axle in the mock-up |
 
 ## C · Printing

@@ -23,6 +23,12 @@ Licence: [CERN-OHL-P-2.0](../LICENSES/CERN-OHL-P-2.0.txt) (see [`../LICENSING.md
 
 ![S2 cap](out/preview_s2_cap.png)
 
+### The lower frame, printed without supports
+
+[`s2_frame.py`](s2_frame.py), [`check_s2_frame.py`](check_s2_frame.py), [`boss_test.py`](boss_test.py): the floor under the cap with its walls, six screw bosses, the microphone seat and the in-plane catches, printed **cap-seat face down**; plus a screw-boss coupon. The reasoning: [`../docs/mechanical-plan-S2.md`](../docs/mechanical-plan-S2.md) §10.
+
+![S2 lower frame](out/preview_s2_frame.png)
+
 *Superseded:* [`s2_lower.py`](s2_lower.py) (a lid with visible snap arms in a frame) is kept for history only.
 
 ## Regenerating

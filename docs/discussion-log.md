@@ -2,6 +2,16 @@
 
 A running record of owner direction and open questions, so decisions are not lost or silently changed. Newest entry first. Entries record what the owner said; they are not specifications. Nothing here overrides the owner.
 
+## 2026-11-27 — the cap works; shells without supports; screws
+
+### Owner direction
+- The slide cap printed well and works nicely; a little loose, it could be tighter. The size is "very suitable, small and refined"; the shell looks good, with a retro feel. When designing the shell, think about hollow parts needing supports: use few supports, add assembly structures to avoid them. Assembly with self-tapping screws, as in the owner's robots; research it. Make the shell now.
+
+### Claude's notes
+- The tongue-and-bump catch cannot be printed face down (the bump sits below the bed): replaced by flat in-plane catches at the keyholes; the cap is tightened (bump idea dropped; the catch nub and a 0.2 mm neck play do it). **Untested.**
+- Body split into a lower frame and an upper shell, both printed face down, plus a back plate; the lower frame and a boss coupon are built; the upper shell comes next. See [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §10.
+- Questions: where exactly was the cap loose (it slid back, or rattled)? the size and head of the owner's self-tapping screws?
+
 ## 2026-11-27 (early) — the owner hands over the order of work; firmware prepared
 
 ### Owner direction

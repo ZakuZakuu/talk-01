@@ -70,6 +70,11 @@ The owner buys: an **ESP32-S3 Super Mini** (about 20 yuan; instead of the XIAO a
 ## Firmware preparation (owner's go-ahead, 2026-11-26)
 The owner left the order of work to Claude and allowed the firmware to be prepared ahead of the hardware. Prepared, **unbuilt and untested**: [`../firmware/`](../firmware/README.md): stage 1 is the upstream usb-mic project unchanged; stage 2 is a microphone plus a keyboard in one USB device (the BOOT button as the push-to-talk key). The owner builds, flashes and tests when the hardware arrives.
 
+## Round-3 print results and the assembly direction (owner, 2026-11-27)
+- The **keyhole-slide cap** was printed and **works very well**; it is **a little loose** (to be tightened). The size (S2) is "very suitable, small and refined"; the look "very good, a retro feel".
+- **Assembly: M2 self-tapping screws** (as in the owner's robots). **Design the shells so they print with as few supports as possible**, by adding assembly structures instead.
+- Claude's design choices in answer (**the owner may veto**): the body is split into a **lower frame and an upper shell** (each printed with its face on the bed) plus a flat back plate; the cap's catch becomes an in-plane catch at the keyholes; details in [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §10.
+
 ## Proposed by Claude, **not** decided
 
 - Modes on the wheel: **DICT, TALK, OPEN, LOCK**, with the wheel's click as a latch.

@@ -21,16 +21,16 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
 Z_CUT, Y_TOP = 9.0, 58.0
 HOLE_C = (W / 2, 25.0)                         # the round hole, Ø34 (moved 1 mm down to clear the detent)
 SLIDE = 6.0
-PEGS = ((8.0, 11.0), (W - 8.0, 11.0), (8.0, 45.0), (W - 8.0, 45.0))      # final positions (the cap slid up)
+PEGS = ((11.0, 11.0), (W - 11.0, 11.0), (11.0, 46.0), (W - 11.0, 46.0))  # final positions (the cap slid up); inboard of the screw bosses
 ENTRY_D, SLOT_W = 6.2, 2.8
-NECK_D, NECK_L, CONE_L, HEAD_D, HEAD_L = 2.4, 1.9, 1.6, 5.0, 0.5
+NECK_D, NECK_L, CONE_L, HEAD_D, HEAD_L = 2.4, 1.8, 1.6, 5.0, 0.5   # neck 1.8 on a 1.6 floor: 0.2 mm of play (was 0.3)
 CAP_INSET, CAP_TOP_GAP = 0.1, 0.15
 CAP_X0, CAP_X1 = CAP_INSET, W - CAP_INSET
 CAP_Y0, CAP_Y1 = CAP_INSET, SEAM_Y - CAP_TOP_GAP
 RIDGES_END = 43.8                              # above this the cap is a plain band (the detent groove lives there)
 TONGUE = dict(x0=15.0, x1=29.0, yc=47.5, w=3.0, slot=0.8)
-BUMP_X, BUMP_R, BUMP_H = 16.2, 0.6, 0.6
-GROOVE = dict(x0=11.0, x1=21.0, w=1.6, depth=0.7)
+BUMP_X, BUMP_R, BUMP_H = 16.2, 0.6, 0.8          # bump 0.8 (was 0.6): a firmer click, about 30 % more holding force by the beam formula
+GROOVE = dict(x0=11.0, x1=21.0, w=1.6, depth=1.0)
 
 
 def shell(with_bump=True):
@@ -61,7 +61,7 @@ def peg(px, py):
     return neck.union(cone).union(head)
 
 
-def cap(offset=0.0):
+def cap(offset=0.0, groove=True):
     """The cap; offset (negative = slid down) shifts it along y. offset 0 is the locked position."""
     c = cq.Workplane("XY").workplane(offset=Z_R).center((CAP_X0 + CAP_X1) / 2, (CAP_Y0 + CAP_Y1) / 2).rect(CAP_X1 - CAP_X0, CAP_Y1 - CAP_Y0).extrude(LID_T)
     c = c.edges(cq.selectors.BoxSelector((-1, -1, Z_R - 1), (W + 1, CAP_Y0 + 1, Z_F + 1))).edges("|Z").fillet(R_CORNER - CAP_INSET)
@@ -76,8 +76,9 @@ def cap(offset=0.0):
     disc = cyl(HOLE_C[0], HOLE_C[1], HOLE_D / 2 - 2.0, Z_R - 0.1, Z_R + LID_BASE + 0.1)  # through-slots, only over the round hole
     for (g0, g1) in gaps:
         c = c.cut(box(-1, g0, Z_R - 0.2, W + 1, g1, Z_R + LID_BASE + 0.2).intersect(disc))
-    gv = GROOVE                                                                           # the detent groove in the cap's back
-    c = c.cut(box(gv["x0"], TONGUE["yc"] - gv["w"] / 2, Z_R - 0.1, gv["x1"], TONGUE["yc"] + gv["w"] / 2, Z_R + gv["depth"]))
+    if groove:                                                                            # the old detent groove in the cap's back (not used by the support-free frame)
+        gv = GROOVE
+        c = c.cut(box(gv["x0"], TONGUE["yc"] - gv["w"] / 2, Z_R - 0.1, gv["x1"], TONGUE["yc"] + gv["w"] / 2, Z_R + gv["depth"]))
     for (px, py) in PEGS:
         c = c.union(peg(px, py))
     return c.translate((0, offset, 0))

@@ -106,7 +106,31 @@ The XIAO ESP32S3 and the round microphone boards have **no mounting holes** (the
 
 For the **first bench test** nothing is mounted: the boards sit on the breadboard or on their wires.
 
-## 10 · Next
+## 10 · The body, designed to print without supports (owner's request, 2026-11-27)
+
+**The owner:** the cap slide works and fits well, a little loose; the size is right; the look is good. Print the shells **with as few supports as possible**, by adding assembly structures rather than relying on supports. Assemble with **self-tapping screws** (as the owner's robots are).
+
+**The rule used:** every part has a print orientation in which nothing overhangs more than 45° and no bridge is wider than about 12 mm, and anything that "hangs" hangs from the face that lies on the bed. That decides the body's structure:
+
+| Part | Printed | Why no supports |
+|---|---|---|
+| **Lower frame** (the floor under the cap, its walls, the screw bosses, the microphone seat) | **cap-seat face down on the bed** | the floor is a flat profile on the bed: the keyholes, the catches and the hub's spokes are free; walls, bosses and the seat grow upward |
+| **Upper shell** (the control zone, the wheel's tube, the board pocket, the key's hinge) | **front face down** | the same: everything hangs from the front wall and grows toward the back |
+| **Back plate** | flat | a plate |
+| **Cap** | front face down (pegs up) | the pegs' heads have a 39° cone underneath |
+| Keys, wheel, small parts | flat | |
+
+**Why two shells, not one:** the lower zone's floor sits 2.4 mm behind the control zone's face (the cap lies in that depth). In one piece, printed face down, the whole floor would float above the bed. So the body is split at the seam (y = 52, under the cap's top edge), joined by two alignment tabs, the flat back plate and the screws. A visible joint line runs across the sides at that height, like a panel gap.
+
+**What changed in the cap's catch, and why:** the tongue with a bump (which the owner printed and liked) has its bump in front of the cap seat, which would sit **below** the bed when printed face down. It is replaced by an **in-plane catch at each keyhole**: a flat arm (0.9 × 7 mm) cut from the floor beside the slot, with a 0.6 mm nub pushing into the slot just behind the resting peg; the peg's neck pushes it aside while sliding and it springs back. It is all in the floor plane (a flat profile when printed), hidden under the cap, and the holding force is set by the nub and the arm (by hand calculation about 1.2 N per peg, 4.8 N for four, against about 2.4 N for the old tongue; PLA strain about 1.1 %, a little high: PETG is better). **New and untested.** Also: neck 1.8 mm on a 1.6 mm floor (0.2 mm of play instead of 0.3), the pegs moved inboard (x = 11 and 37).
+
+**The screws** (guidance read: pilot hole about the screw's outer diameter minus 0.4 mm, small vertical holes print small, boss outer diameter at least twice the screw, several wall perimeters round the boss, not for parts taken apart often; [Bambu forum](https://forum.bambulab.com/t/how-to-design-screw-holes-for-3d-printing/217352), [Hubs](https://www.hubs.com/blog/knowledge-base/how-assemble-3d-printed-parts-threaded-fasteners), [Hackaday](https://hackaday.com/2026/05/07/how-to-avoid-failed-screw-holes-in-3d-printed-parts/); the sources disagree on numbers):
+- **M2 self-tapping, pan head, 8 mm long** (the plate is 1.8 mm, so about 6 mm in the boss); boss Ø5, a pilot hole **modelled at 1.9 mm** (the 1.6 mm rule plus 0.3 for the printed shrink seen in round 1); the back plate gets Ø2.4 holes with a Ø4.6 counterbore. Print the boss coupon (`boss_test_*.stl`: pilot holes of 1.7, 1.8, 1.9, 2.0 mm) to choose.
+- Self-tapping screws wear the plastic if the back plate comes off many times: fine for a prototype; if it will be opened often, heat-set inserts are the alternative.
+
+**Done and checked by numbers** ([`../cad/s2_frame.py`](../cad/s2_frame.py), [`../cad/check_s2_frame.py`](../cad/check_s2_frame.py)): the lower frame is a closed mesh; the cap seated on it does not touch it; during the slide only the four nubs meet the four necks; a dummy microphone board fits its seat; the **only overhang in the print orientation is the 12 mm wire slot in the end wall**. **Still to design:** the upper shell (control zone, wheel tube and the dial module, the board pocket, the key's hinge), the back plate (hatch, stand, hold-down for the microphone board), the key, the wheel.
+
+## 11 · Next
 1. The owner prints **`s2_cap_shell.stl`** (front up, supports from the bed under the detent tongue) and **`s2_cap_PRINT_face_down.stl`** ([`../cad/out/`](../cad/out/)) and tries the cap: does it go on, slide, click, hold, come off?
 2. ~~The owner decides the wheel~~: **P chosen**.
 3. Once the parts arrive and are measured, the full shells.
