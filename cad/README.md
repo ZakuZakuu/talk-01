@@ -41,6 +41,8 @@ Every file is already oriented for printing (Z up): import it and print it as it
 
 Stick a key block to the body's left edge with **double-sided tape**, in the marked 0.4 mm recess.
 
+**An illustrated how-to-test guide (Chinese):** [`../docs/print-test-guide/1-calibration.png`](../docs/print-test-guide/1-calibration.png) and [`../docs/print-test-guide/2-snap-and-feel.png`](../docs/print-test-guide/2-snap-and-feel.png).
+
 ## What to look for and report (photos help)
 
 **Mock-up:** does the body feel too thick (24 mm) or too wide (58 mm) in the hand? For each key (3, 5, 7 mm): does it dig into the palm, can the thumb or the fingers reach it, how far does it need to stick out? Does the wheel's rim stick out enough to roll with a finger or thumb? Are the ridges comfortable? What does the weight feel like?
