@@ -93,7 +93,20 @@ The owner wants a **bigger and thicker wheel**, very conspicuous: easier to flic
 
 An absolute magnetic sensor (an AS5600 module and a magnet) in place of the two switches and the cam makes the stack a little thinner but does not change the plan view, so it does not rescue Q. **Asked of the owner:** is P (proud Ø21) acceptable? A proud wheel is also easier to reach with the index finger, since its rim stands out of the face. (An ergonomic estimate, not tested.)
 
-## 9 · Next
+## 9 · How the boards are held (they have no screw holes)
+
+The XIAO ESP32S3 and the round microphone boards have **no mounting holes** (the XIAO has edge pads; the round boards have pads). They are held by **the shape of the shell, a little foam and one or two printed tabs**, not by screws. A plan (sizes from the push-fit test: 0.20 mm per side holds; the real board sizes are still to be measured):
+
+| Part | How it is held |
+|---|---|
+| **XIAO ESP32S3** | in a printed **pocket** (the board's outline plus 0.2 mm a side) on posts; the **USB-C end sits in an opening of the top wall**, and a **stop wall at the other end** takes the push of the plug (plugging a cable pushes about 20 N, which has to go into the wall, not into the solder joints); **two small tabs overhanging 0.8 mm** hold it down. The board goes in at a slant under the tabs and then drops flat; no part has to bend. A 0.5 to 1 mm **foam pad** under it stops buzzing |
+| **Round microphone board (Ø13 to 13.8)** | in a **round seat** in a small bracket behind the Ø34 hole; a **foam ring** (about 1 mm) between the board's sound side and the wall around the hole seals the sound path; two printed tabs or one clip hold it. It is changed **from the front, with the cap off**; thin soft wires carry the six signals, with a notch to relieve the strain |
+| **Switch boards** (the wheel's two switches, the key's two switches) | small pieces of perfboard (or the switches soldered on short wires) on printed posts; a printed clip each |
+| **The cable** | the plug's own sleeve is held in a notch in the top wall; the first design needs the real plug's size |
+
+For the **first bench test** nothing is mounted: the boards sit on the breadboard or on their wires.
+
+## 10 · Next
 1. The owner prints **`s2_cap_shell.stl`** (front up, supports from the bed under the detent tongue) and **`s2_cap_PRINT_face_down.stl`** ([`../cad/out/`](../cad/out/)) and tries the cap: does it go on, slide, click, hold, come off?
 2. ~~The owner decides the wheel~~: **P chosen**.
 3. Once the parts arrive and are measured, the full shells.
