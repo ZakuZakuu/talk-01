@@ -34,9 +34,9 @@ BD_Y0 = BD_Y1 - 22.5
 BD_Z_PCB = (5.9, 6.9)                   # the pcb's back and front face (components face the front)
 USB_X = (BD_X0 + BD_X1) / 2             # the connector's centre
 USB_ZC = 8.6                            # its centre in depth
-BOSSES_UP = ((16.0, 59.0), (44.1, 56.5))                         # back-plate screws (M2 self-tapping into the pilots)
+BOSSES_UP = ((16.0, 59.0), (44.4, 56.0))                         # back-plate screws (M2 self-tapping into the pilots)
 EAR_BOSSES = ((WHEEL_CX - 8.0, 60.5), (WHEEL_CX + 8.0, 60.5))     # the dial module's two screws, drawing it onto its seat (M2 x 5)
-EAR_BOSS_Z = 10.9                       # the boss ends 0.3 mm below the plate's front face (11.2): the seat, not the screws, sets the position
+EAR_BOSS_Z = 11.5                       # the boss ends 0.3 mm IN FRONT of the plate's front face (11.2): the seat, not the screws, sets the position
 TABS_X = (10.0, W - 10.0)               # the lower frame's alignment tabs (z 6 to 8.4, y 52 to 55)
 
 
@@ -99,7 +99,7 @@ def upper(with_pilots=True):
             s = s.cut(cyl(bx, by, F.PILOT_D / 2, Z_BACK - 0.1, Z_BACK + F.PILOT_DEPTH))
     for (bx, by) in EAR_BOSSES:
         s = s.union(cyl(bx, by, F.BOSS_OD / 2, EAR_BOSS_Z, Z_FW + 0.05))
-        s = s.cut(cyl(bx, by, F.PILOT_D / 2, EAR_BOSS_Z - 0.1, EAR_BOSS_Z + 4.2))
+        s = s.cut(cyl(bx, by, F.PILOT_D / 2, EAR_BOSS_Z - 0.1, EAR_BOSS_Z + 3.7))     # pilot 3.8 deep: M2 x 5 reaches 3.5 mm into the boss, the front wall stays whole
     return s
 
 

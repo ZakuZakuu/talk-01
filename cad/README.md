@@ -23,6 +23,10 @@ Licence: [CERN-OHL-P-2.0](../LICENSES/CERN-OHL-P-2.0.txt) (see [`../LICENSING.md
 
 ![S2 cap](out/preview_s2_cap.png)
 
+### The dial
+
+[`s2_dial.py`](s2_dial.py): the wheel (Ø21, 2 mm proud), its bearing plate and the cam with two ridges (Gray code through two switches). The switch carrier is not drawn yet. See [`../docs/mechanical-plan-S2.md`](../docs/mechanical-plan-S2.md) §11.
+
 ### The upper shell and the back plate
 
 [`s2_upper.py`](s2_upper.py), [`s2_back.py`](s2_back.py), [`check_s2_upper.py`](check_s2_upper.py), [`assemble.py`](assemble.py): the control zone (printed front face down) and the flat back plate (outer face up, countersunk M2 holes); the key, the dial module, the hatch and the stand are still to come. See [`../docs/mechanical-plan-S2.md`](../docs/mechanical-plan-S2.md) §11.

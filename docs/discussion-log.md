@@ -11,6 +11,9 @@ A running record of owner direction and open questions, so decisions are not los
 - "Loose" meant it slides down too easily; seated it is stable. Bending the old tongue up made it hold more. Screws: M2 countersunk self-tapping like the owner's robots; heat-set inserts are also fine but we use self-tapping; whatever must be opened goes behind the sliding cap.
 - Claude: steeper holding ramp, a four-strength catch coupon, countersunk holes in the back plate coupon.
 
+### Owner: continue while the boards are on the way
+- "The boards arrive in a day or two; do you want to go on?" Claude: yes, the parts that do not depend on measurements: the dial (wheel, plate, cam). The switch carrier, the key and the stand wait for the switches and the boards.
+
 ### Owner: no supports
 - "Try it; print with few supports (quality, and they are a pain to remove); research fixed assembly structures." Claude built the upper shell and the back plate with only 45° slopes and short flat bridges, and listed what is left (the wheel window's short bridge; the key, the dial module, the hatch).
 
