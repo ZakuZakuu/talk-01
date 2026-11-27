@@ -11,6 +11,9 @@ A running record of owner direction and open questions, so decisions are not los
 - "Loose" meant it slides down too easily; seated it is stable. Bending the old tongue up made it hold more. Screws: M2 countersunk self-tapping like the owner's robots; heat-set inserts are also fine but we use self-tapping; whatever must be opened goes behind the sliding cap.
 - Claude: steeper holding ramp, a four-strength catch coupon, countersunk holes in the back plate coupon.
 
+### Owner on the stand and the PCB
+- Stand: lean not too large, stable; U or any shape, make it look good; when folded it should be sunk into the back (flush), not lying on it. Claude: a flush U stand in a pocket, back plate thickened and printed outer face down; no official Super Mini pcb/STEP file found (only third-party case models of unknown licence).
+
 ### Owner's answers with photos (same day)
 - Super Mini 23.5 x 18 mm (official), thickness ~ pcb + USB-C, BOOT and RESET on the component face just behind the USB-C. The mic board's sound hole: the hole beside the microphone symbol on the silkscreen face. Claude: the board now has its components facing the back (BOOT/RESET through a back-plate slot), the mic's symbol face faces the front with an off-centre sound opening.
 
