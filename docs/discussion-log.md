@@ -11,6 +11,9 @@ A running record of owner direction and open questions, so decisions are not los
 - "Loose" meant it slides down too easily; seated it is stable. Bending the old tongue up made it hold more. Screws: M2 countersunk self-tapping like the owner's robots; heat-set inserts are also fine but we use self-tapping; whatever must be opened goes behind the sliding cap.
 - Claude: steeper holding ramp, a four-strength catch coupon, countersunk holes in the back plate coupon.
 
+### Owner's answers with photos (same day)
+- Super Mini 23.5 x 18 mm (official), thickness ~ pcb + USB-C, BOOT and RESET on the component face just behind the USB-C. The mic board's sound hole: the hole beside the microphone symbol on the silkscreen face. Claude: the board now has its components facing the back (BOOT/RESET through a back-plate slot), the mic's symbol face faces the front with an off-centre sound opening.
+
 ### Owner: "I already gave you the sizes; the Super Mini's are all over the web"
 - Fair: the mic boards' sizes came from the owner's product pages (13 and 13.8 mm round), and Claude should have searched for the Super Mini instead of asking for a ruler. Searched: 23.5 x 18 mm (espboards.dev; another listing 22.52), 2.54 mm pitch, ESP32-S3FH4R2, antenna on the PCB; thickness and the places of the USB-C, BOOT and RESET are not on those pages. The pocket is now 23.5 long.
 

@@ -33,8 +33,8 @@ print("  upper x cap  :", round(vol(u.intersect(cap)), 3))
 print("  upper x the frame's alignment tabs (they poke into the slots; the frame's own tab volume is in `frame`):",
       [round(vol(u.intersect(t)), 3) for t in tabs])
 dummy = cq.Workplane("XY").box(U.BD_X1 - U.BD_X0, U.BD_LEN, 1.0, centered=False).translate((U.BD_X0, U.BD_Y0, U.BD_Z_PCB[0]))
-comp = cq.Workplane("XY").box(10, 12, 3.3, centered=False).translate((U.BD_X0 + 4, U.BD_Y0 + 6, U.BD_Z_PCB[1]))    # a stand-in for the module can
-usb = cq.Workplane("XY").box(9.0, 7.4, 3.2, centered=False).translate((U.USB_X - 4.5, U.BD_Y1 - 6.0, U.BD_Z_PCB[1]))
+comp = cq.Workplane("XY").box(10, 12, 2.0, centered=False).translate((U.BD_X0 + 4, U.BD_Y0 + 6, U.BD_Z_PCB[0] - 2.0))    # a stand-in for the module can
+usb = cq.Workplane("XY").box(9.0, 7.4, 3.2, centered=False).translate((U.USB_X - 4.5, U.BD_Y1 - 6.0, U.BD_Z_PCB[0] - 3.2))
 print("== a dummy Super Mini (18 x 23.5 pcb 1 mm, a can, a USB-C 9 x 3.2) in the pocket:", [round(vol(u.intersect(x)), 3) for x in (dummy, comp, usb)])
 wheel = cq.Workplane("XY").workplane(offset=11.6).center(U.WHEEL_CX, U.WHEEL_CY).circle(10.5).extrude(7.4)
 print("== the wheel (Ø21, z 11.6 to 19) in its bore:", round(vol(u.intersect(wheel)), 3), "mm3 (expected 0)")

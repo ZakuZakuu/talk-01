@@ -32,9 +32,11 @@ TUBE_R = 12.7
 BD_X0, BD_X1, BD_Y1 = 2.0, 20.0, 85.4   # board outline: x, and the top edge (1 mm under the top wall)
 BD_LEN = 23.5                            # espboards.dev lists 23.5 x 18 mm (another listing says 22.52): the longer one is used
 BD_Y0 = BD_Y1 - BD_LEN
-BD_Z_PCB = (5.9, 6.9)                   # the pcb's back and front face (components face the front)
+BD_PCB_T, BD_COMP_H = 1.2, 3.3          # pcb 1.0 to 1.2 plus the USB-C about 3.2 to 3.3: about 4.5 mm in all (owner's estimate, matches a C3 Super Mini listing)
+BD_Z_PCB = (10.1, 11.3)                 # the pcb's back and front face: the components face the BACK, so the plug's axis (1.6 above the pcb) sits at z 8.5, mid depth,
+                                        # and BOOT / RESET can be pressed through the back plate
 USB_X = (BD_X0 + BD_X1) / 2             # the connector's centre
-USB_ZC = 8.6                            # its centre in depth
+USB_ZC = 8.5                            # its centre in depth
 BOSSES_UP = ((16.0, 59.0), (44.4, 56.0))                         # back-plate screws (M2 self-tapping into the pilots)
 EAR_BOSSES = ((WHEEL_CX - 8.0, 60.5), (WHEEL_CX + 8.0, 60.5))     # the dial module's two screws, drawing it onto its seat (M2 x 5)
 EAR_BOSS_Z = 11.5                       # the boss ends 0.3 mm IN FRONT of the plate's front face (11.2): the seat, not the screws, sets the position
@@ -99,6 +101,9 @@ def upper(with_pilots=True):
     for px in (BD_X0, BD_X1 - 1.4):
         for py in (BD_Y0, BD_Y1 - 1.4):
             s = s.union(box(px, py, BD_Z_PCB[1], px + 1.4, py + 1.4, Z_FW + 0.05))
+    # two little hooks on the left wall that overhang the pcb's back face by 0.8 mm (0.1 mm clear): the board goes in from the back at a slant and drops flat
+    for hy in (BD_Y0 + 5.0, BD_Y1 - 9.0):
+        s = s.union(box(WALL - 0.05, hy, BD_Z_PCB[0] - 0.6, BD_X0 + 0.8, hy + 4.0, BD_Z_PCB[0] - 0.1))
     # the USB-C opening in the top wall: a pentagon (width 13, 6.8 deep), the ceiling flat 6 mm wide, flanks at 45 degrees
     zt, zb, hw, ch = USB_ZC - 3.4, USB_ZC + 3.4, 6.5, 3.4      # zt the back side (the print's ceiling), zb the front side
     pts = [(USB_X - hw, zb), (USB_X + hw, zb), (USB_X + hw, zt + ch), (USB_X + hw - ch, zt), (USB_X - hw + ch, zt), (USB_X - hw, zt + ch)]

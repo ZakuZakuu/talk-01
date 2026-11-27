@@ -17,6 +17,7 @@ T = F.BACK_Z                           # 1.8
 CLEAR_D, CSINK_D = 2.4, 4.2            # the through hole and the 90 degree countersink (M2 flat head about 3.8 to 4.0: to be measured)
 EDGE_R = 1.7                           # the outer edge's round (it is on the top when printed)
 HOLES = tuple(F.BOSSES) + tuple(U.BOSSES_UP)
+PICK_SLOT = (U.USB_X, U.BD_Y1 - 7.0, 11.0, 3.4)       # centre x, y, length, width: the two small buttons behind the USB-C (position estimated from a photo)
 
 
 def outline():
@@ -35,6 +36,8 @@ def back():
         cone = cq.Solid.makeCone(CSINK_D / 2, CLEAR_D / 2, depth, cq.Vector(x, y, 0.0), cq.Vector(0, 0, 1))
         s = s.cut(cq.Workplane("XY").add(cone))
         s = s.cut(cyl(x, y, CSINK_D / 2, -0.1, 0.0))
+    cx, cy, ln, wd = PICK_SLOT
+    s = s.cut(cq.Workplane("XY").workplane(offset=-0.1).center(cx, cy).slot2D(ln, wd, 0).extrude(T + 0.2))
     return s
 
 

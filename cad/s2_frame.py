@@ -27,7 +27,7 @@ BOSS_OD, PILOT_D, PILOT_DEPTH = 5.0, 1.9, 7.0     # M2 self-tapping; the pilot i
 BOSSES = ((4.6, 4.6), (W - 4.6, 4.6), (WALL + 2.3, 26.0), (W - WALL - 2.3, 26.0), (W - WALL - 2.3, 46.0))   # no boss on the left at y 46: the key's lane (x < 10, y 28 to 78) is kept free;   # side bosses overlap the wall by 0.2 mm (a tangent boss makes a non-manifold edge)
 HUB_C = C.HOLE_C
 HUB_OD, SEAT_ID, SEAT_BOT = 17.0, 14.2, 9.0       # the microphone seat: the round board (13 to 13.8) is to be measured
-SOUND_D = 7.0                                      # the opening in the hub's flange in front of the board's sound hole
+SOUND_D, SOUND_DX = 5.5, -2.8                      # the opening in the hub's flange in front of the board's sound hole: that hole is about 3 mm off the board's centre (-x in the photo's orientation)
 SPOKES = (90.0, 210.0, 330.0)
 # the in-plane CATCH at each keyhole: a flat arm cut from the floor beside the slot, a nub on its free end pushes into the slot and sits just behind the peg
 ARM_W, ARM_CUT = 1.2, 0.8          # arm width (owner picked coupon variant C, 2026-11-27), the cut round it
@@ -80,9 +80,8 @@ def frame(with_extension=False):
         sp = box(-(C.HOLE_D / 4 - HUB_OD / 4 + 1.0), -1.5, Z_I - 0.2, (C.HOLE_D / 4 - HUB_OD / 4 + 1.0), 1.5, Z_R + 0.2).rotate((0, 0, 0), (0, 0, 1), a).translate((cx, cy, 0))
         keep = keep.union(sp)
     s = s.cut(ring.cut(keep))
-    s = s.cut(cyl(HUB_C[0], HUB_C[1], SOUND_D / 2, Z_I - 0.1, Z_R + 0.1))      # the sound opening in the hub's flange
+    s = s.cut(cyl(HUB_C[0] + SOUND_DX, HUB_C[1], SOUND_D / 2, Z_I - 0.1, Z_R + 0.1))      # the sound opening in the hub's flange
     s = s.union(cyl(HUB_C[0], HUB_C[1], HUB_OD / 2, SEAT_BOT, Z_I + 0.01).cut(cyl(HUB_C[0], HUB_C[1], SEAT_ID / 2, SEAT_BOT - 0.1, Z_I + 0.02)))   # the seat tube
-    s = s.cut(cyl(HUB_C[0], HUB_C[1], SOUND_D / 2, Z_I - 0.1, Z_R + 0.1))
     # screw bosses (hang from the floor, open toward the back)
     for (bx, by) in BOSSES:
         boss = cyl(bx, by, BOSS_OD / 2, BACK_Z, Z_I + 0.01)
