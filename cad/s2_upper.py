@@ -5,7 +5,7 @@ Everything hangs from the front wall and grows toward the back: the walls, the w
 screw bosses, the alignment slots. Overhangs are kept to 45 degrees at most (a 45 degree seat for the dial module, a pentagon-shaped
 USB-C opening, ceilings of 3 mm at most). Coordinates are the ASSEMBLED ones (z = 0 the back, the front face at z = 17); the exported file is flipped.
 
-TENTATIVE: the board pocket is sized for an ESP32-S3 Super Mini (about 22.5 x 18 mm, from memory of listings, NOT MEASURED), the USB opening
+TENTATIVE: the board pocket is sized for an ESP32-S3 Super Mini (23.5 x 18 mm from a web listing; thickness and button places not published), the USB opening
 for a typical plug. The dial module (plate, cam, switches), the key's window and the stand are NOT in this file yet.
     python3 cad/s2_upper.py
 """
@@ -28,9 +28,10 @@ WHEEL_CY = H - 13.0                     # 75
 BORE_R = WHEEL_R + POCKET_GAP           # 11.1: the wheel's hole (0.6 mm gap)
 SEAT_Z0, SEAT_Z1, SEAT_R0, SEAT_R1 = 10.6, 11.2, 11.7, BORE_R     # the dial module's 45 degree seat (a cone), wheel side up
 TUBE_R = 12.7
-# the board pocket (an ESP32-S3 Super Mini, tentative)
-BD_X0, BD_X1, BD_Y1 = 2.0, 20.0, 85.4   # board outline: x, and the top edge (1 mm under the top wall); 22.5 long
-BD_Y0 = BD_Y1 - 22.5
+# the board pocket (an ESP32-S3 Super Mini: 23.5 x 18 mm from a web listing; thickness and the buttons' places are NOT published: tentative)
+BD_X0, BD_X1, BD_Y1 = 2.0, 20.0, 85.4   # board outline: x, and the top edge (1 mm under the top wall)
+BD_LEN = 23.5                            # espboards.dev lists 23.5 x 18 mm (another listing says 22.52): the longer one is used
+BD_Y0 = BD_Y1 - BD_LEN
 BD_Z_PCB = (5.9, 6.9)                   # the pcb's back and front face (components face the front)
 USB_X = (BD_X0 + BD_X1) / 2             # the connector's centre
 USB_ZC = 8.6                            # its centre in depth

@@ -11,6 +11,9 @@ A running record of owner direction and open questions, so decisions are not los
 - "Loose" meant it slides down too easily; seated it is stable. Bending the old tongue up made it hold more. Screws: M2 countersunk self-tapping like the owner's robots; heat-set inserts are also fine but we use self-tapping; whatever must be opened goes behind the sliding cap.
 - Claude: steeper holding ramp, a four-strength catch coupon, countersunk holes in the back plate coupon.
 
+### Owner: "I already gave you the sizes; the Super Mini's are all over the web"
+- Fair: the mic boards' sizes came from the owner's product pages (13 and 13.8 mm round), and Claude should have searched for the Super Mini instead of asking for a ruler. Searched: 23.5 x 18 mm (espboards.dev; another listing 22.52), 2.54 mm pitch, ESP32-S3FH4R2, antenna on the PCB; thickness and the places of the USB-C, BOOT and RESET are not on those pages. The pocket is now 23.5 long.
+
 ### Owner: the upper shell's edge was sharp
 - The owner noticed (and felt it would be uncomfortable) that the upper shell had no rounded front edge while the cap does. Claude's earlier claim that "the cap and shell have sharp edges" was wrong about the cap, and the reason given (a bed-side fillet overhangs) was wrong too. Fixed: 1.5 mm front fillet on the upper shell, 1.0 on the wheel, 1.7 on the back plate's outer edge.
 
