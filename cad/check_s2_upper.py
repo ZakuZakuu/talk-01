@@ -42,9 +42,10 @@ print("== the wheel (Ø21, z 11.6 to 19) in its bore:", round(vol(u.intersect(wh
 n, c, a = m.face_normals, m.triangles_center, m.area_faces
 H0 = m.bounds[1][1]                  # print y -> assembled y = H0 - y (the shell spans y 52 to 88; the flip keeps the order reversed)
 flat = (n[:, 2] < -0.98) & (c[:, 2] > 0.15)
-slant = (n[:, 2] < -0.72) & (n[:, 2] >= -0.98) & (c[:, 2] > 0.15)
+slant = (n[:, 2] < -0.72) & (n[:, 2] >= -0.98) & (c[:, 2] > 0.8)       # above the fillet's foot: the front fillet's first 0.8 mm steps out by 0.3 mm a layer at most
+foot = (n[:, 2] < -0.72) & (c[:, 2] > 0.15) & (c[:, 2] <= 0.8)
 print("== overhangs in the print orientation (above the first layer). flat = a ceiling to bridge; steep = more than 45 deg from the vertical")
-print(f"  steep slanted faces: {a[slant].sum():.2f} mm2 (expected 0)")
+print(f"  steep slanted faces: {a[slant].sum():.2f} mm2 (expected 0); the front fillet's foot (first 0.8 mm, steps of 0.3 mm or less a layer): {a[foot].sum():.1f} mm2")
 print(f"  flat ceilings: {a[flat].sum():.1f} mm2; by height:")
 for z in sorted(set(np.round(c[flat][:, 2], 1))):
     sel = flat & (np.round(c[:, 2], 1) == z)

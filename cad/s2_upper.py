@@ -48,6 +48,21 @@ def prism(z0, z1):
     return s
 
 
+FRONT_FILLET = 1.5                      # the front perimeter, like the cap's (spec: front fillet 1.5); not along the seam edge, which stays flush with the cap
+
+
+def outer_solid():
+    """The outline prism with the front perimeter rounded. The prism is built 3 mm too long at the seam so that the side fillets run out to
+    the seam; the extra is cut off afterwards, which leaves the seam edge itself sharp (the cap's top edge is sharp too)."""
+    pts = [(0.0, Y0 - 3.0), (W, Y0 - 3.0), (W, H - CHAMFER), (W - CHAMFER, H), (0.0, H)]
+    s = cq.Workplane("XY").workplane(offset=Z_BACK).polyline(pts).close().extrude(Z_FRONT - Z_BACK)
+    s = s.edges("|Z").edges(cq.selectors.BoxSelector((-1, H - 1, Z_BACK - 1), (1, H + 1, Z_FRONT + 1))).fillet(R_CORNER)
+    for (x, y) in ((W, H - CHAMFER), (W - CHAMFER, H)):
+        s = s.edges("|Z").edges(cq.selectors.BoxSelector((x - .5, y - .5, Z_BACK - 1), (x + .5, y + .5, Z_FRONT + 1))).fillet(3.0)
+    s = s.faces(">Z").edges().fillet(FRONT_FILLET)
+    return s.intersect(box(-1, Y0, Z_BACK - 1, W + 1, H + 1, Z_FRONT + 1))
+
+
 def inset_prism(z0, z1, inset):
     outer = prism(z0, z1)
     w = outer.faces("<Z").val().outerWire()
@@ -60,7 +75,7 @@ def poly_xz(pts, y0, y1):
 
 
 def upper(with_pilots=True):
-    shell = prism(Z_BACK, Z_FRONT)
+    shell = outer_solid()
     cavity = inset_prism(Z_BACK - 0.1, Z_FW, WALL).intersect(box(-1, Y0 + END_T, Z_BACK - 1, W + 1, H + 1, Z_FW + 1))
     # the cavity's top-left corner is rounded (inner radius 3.4): the board's square corner needs a little relief, leaving a 1 mm skin
     cavity = cavity.union(cyl(R_CORNER, H - R_CORNER, R_CORNER - 1.0, Z_BACK - 0.1, Z_FW).intersect(box(0, H - R_CORNER, 0, R_CORNER, H, 20)))

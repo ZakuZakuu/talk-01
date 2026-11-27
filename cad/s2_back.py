@@ -15,7 +15,7 @@ import s2_upper as U
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
 T = F.BACK_Z                           # 1.8
 CLEAR_D, CSINK_D = 2.4, 4.2            # the through hole and the 90 degree countersink (M2 flat head about 3.8 to 4.0: to be measured)
-EDGE_R = 1.2                           # the outer edge's round (it is on the top when printed)
+EDGE_R = 1.7                           # the outer edge's round (it is on the top when printed)
 HOLES = tuple(F.BOSSES) + tuple(U.BOSSES_UP)
 
 

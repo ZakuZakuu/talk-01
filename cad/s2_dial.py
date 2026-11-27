@@ -21,7 +21,7 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
 CX, CY = U.WHEEL_CX, U.WHEEL_CY
 WHEEL_Z0, WHEEL_Z1 = 11.6, 19.0
 STUB_D, STUB_FLAT, STUB_Z0 = 3.0, 0.4, 8.4          # the stub's diameter, the D flat's depth (from the axis side: the flat is at r - ...), the stub's end
-WHEEL_CHAMFER = 0.8                                  # the face edge, printable (a fillet on the bed face would overhang)
+WHEEL_FILLET = 1.0                                   # the face edge (a fillet on the face that lies on the bed prints fine: each layer steps out only 0.3 mm or less)
 GROOVES, GROOVE_R = 24, 0.8
 PLATE_Z0, PLATE_Z1, PLATE_HOLE = 10.0, 11.2, 3.5
 PLATE_R_FRONT, PLATE_R_BACK = U.SEAT_R1 - 0.1, U.SEAT_R0 - 0.2      # the bevel runs 45 degrees (0.6 mm in z: radius 11.0 to 11.6 -> kept 0.1 clear of the cone)
@@ -41,7 +41,7 @@ def d_stub(z0, z1, extra=0.0):
 
 
 def wheel():
-    w = cyl(CX, CY, WHEEL_R, WHEEL_Z0, WHEEL_Z1).faces(">Z").edges().chamfer(WHEEL_CHAMFER)
+    w = cyl(CX, CY, WHEEL_R, WHEEL_Z0, WHEEL_Z1).faces(">Z").edges().fillet(WHEEL_FILLET)
     for i in range(GROOVES):
         a = 2 * math.pi * i / GROOVES
         w = w.cut(cyl(CX + (WHEEL_R + 0.25) * math.cos(a), CY + (WHEEL_R + 0.25) * math.sin(a), GROOVE_R, WHEEL_Z0 - 1, WHEEL_Z1 + 1))

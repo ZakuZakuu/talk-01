@@ -11,6 +11,9 @@ A running record of owner direction and open questions, so decisions are not los
 - "Loose" meant it slides down too easily; seated it is stable. Bending the old tongue up made it hold more. Screws: M2 countersunk self-tapping like the owner's robots; heat-set inserts are also fine but we use self-tapping; whatever must be opened goes behind the sliding cap.
 - Claude: steeper holding ramp, a four-strength catch coupon, countersunk holes in the back plate coupon.
 
+### Owner: the upper shell's edge was sharp
+- The owner noticed (and felt it would be uncomfortable) that the upper shell had no rounded front edge while the cap does. Claude's earlier claim that "the cap and shell have sharp edges" was wrong about the cap, and the reason given (a bed-side fillet overhangs) was wrong too. Fixed: 1.5 mm front fillet on the upper shell, 1.0 on the wheel, 1.7 on the back plate's outer edge.
+
 ### Owner: continue while the boards are on the way
 - "The boards arrive in a day or two; do you want to go on?" Claude: yes, the parts that do not depend on measurements: the dial (wheel, plate, cam). The switch carrier, the key and the stand wait for the switches and the boards.
 
