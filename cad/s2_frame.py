@@ -30,7 +30,7 @@ HUB_OD, SEAT_ID, SEAT_BOT = 17.0, 14.2, 9.0       # the microphone seat: the rou
 SOUND_D = 7.0                                      # the opening in the hub's flange in front of the board's sound hole
 SPOKES = (90.0, 210.0, 330.0)
 # the in-plane CATCH at each keyhole: a flat arm cut from the floor beside the slot, a nub on its free end pushes into the slot and sits just behind the peg
-ARM_W, ARM_CUT = 0.9, 0.8          # arm width, the cut round it
+ARM_W, ARM_CUT = 1.2, 0.8          # arm width (owner picked coupon variant C, 2026-11-27), the cut round it
 ARM_BELOW, ARM_ABOVE = 3.0, 4.0    # the arm runs from 3 mm below the peg's resting point to 4 mm above it (fixed at the top)
 NUB = 0.6                          # how far the nub reaches into the slot: the neck (2.4 in a 2.8 slot) meets 0.4 mm of interference
 NUB_Y0, NUB_Y1 = 0.1, 1.6          # the nub's footprint along the arm from its free end; its top edge stays 0.2 mm below the resting neck
@@ -42,13 +42,19 @@ def outline_solid(z0, z1, y_top):
     return s.edges(cq.selectors.BoxSelector((-1, -1, z0 - 1), (W + 1, 1, z1 + 1))).edges("|Z").fillet(R_CORNER)
 
 
-def catch(s, px, py, arm_w=ARM_W, nub=NUB, ramp_in=RAMP_IN, ramp_hold=RAMP_HOLD):
-    """Cut one catch arm beside the keyhole slot at (px, py) and add its nub (also used by the catch coupon with other strengths)."""
-    xa0 = px + C.SLOT_W / 2
+def catch(s, px, py, arm_w=ARM_W, nub=NUB, ramp_in=RAMP_IN, ramp_hold=RAMP_HOLD, side=None):
+    """Cut one catch arm beside the keyhole slot at (px, py) and add its nub (also used by the catch coupon with other strengths).
+    side = +1: the arm is on the +x side of the slot, -1: on the -x side. Default: away from the middle of the body (the left keyholes
+    would otherwise put the arm's root inside the round opening)."""
+    if side is None:
+        side = 1 if px > W / 2 else -1
+    xs0 = px + side * C.SLOT_W / 2                       # the slot's edge on the arm's side
+    xa1 = xs0 + side * arm_w                             # the arm's outer face
+    xc = xa1 + side * ARM_CUT                            # the far side of the cut
     ya0, ya1 = py - ARM_BELOW, py + ARM_ABOVE
-    s = s.cut(box(xa0 + arm_w, ya0 - ARM_CUT, Z_I - 0.1, xa0 + arm_w + ARM_CUT, ya1, Z_R + 0.1))      # the outer cut
-    s = s.cut(box(xa0, ya0 - ARM_CUT, Z_I - 0.1, xa0 + arm_w + ARM_CUT, ya0, Z_R + 0.1))             # the cut under the free end
-    n = (cq.Workplane("XY").workplane(offset=Z_I).polyline([(xa0, ya0 + NUB_Y0), (xa0 - nub, ya0 + NUB_Y0 + ramp_in), (xa0 - nub, ya0 + NUB_Y1 - ramp_hold), (xa0, ya0 + NUB_Y1)]).close().extrude(Z_R - Z_I))
+    s = s.cut(box(min(xa1, xc), ya0 - ARM_CUT, Z_I - 0.1, max(xa1, xc), ya1, Z_R + 0.1))           # the outer cut
+    s = s.cut(box(min(xs0, xc), ya0 - ARM_CUT, Z_I - 0.1, max(xs0, xc), ya0, Z_R + 0.1))           # the cut under the free end
+    n = (cq.Workplane("XY").workplane(offset=Z_I).polyline([(xs0, ya0 + NUB_Y0), (xs0 - side * nub, ya0 + NUB_Y0 + ramp_in), (xs0 - side * nub, ya0 + NUB_Y1 - ramp_hold), (xs0, ya0 + NUB_Y1)]).close().extrude(Z_R - Z_I))
     return s.union(n)
 
 

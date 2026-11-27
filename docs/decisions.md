@@ -75,6 +75,7 @@ The owner left the order of work to Claude and allowed the firmware to be prepar
 - **Assembly: M2 self-tapping screws** (as in the owner's robots). **Design the shells so they print with as few supports as possible**, by adding assembly structures instead.
 - Screws (owner, 2026-11-27): **M2 self-tapping, countersunk head** (as in the owner's robots) for now; the body is not meant to be opened often, and what must be reached (later) goes behind the sliding cap. Heat-set inserts (pushed in with a soldering iron) are a method the owner has used and likes, and remain the fallback.
 - Cap catch (owner): "slides down too easily", otherwise stable; a bowed (preloaded) tongue holds firmer: more preload wanted, strength to be chosen by feel from a coupon.
+- **Catch strength (owner tried the coupon, 2026-11-27):** dots 1 and 2 (A, B) are fine for something opened often but may loosen with long use; dots 3 and 4 (C, D) are a little firmer and both good, nothing too tight. **Claude's choice: C** (arm 1.2 mm, nub 0.6 mm, ramps 0.7 / 0.4): the same firmness with the lower strain (1.5 % against 1.7 %), so it should creep less. Revisit when PETG is used (softer, so the hold will drop).
 - Claude's design choices in answer (**the owner may veto**): the body is split into a **lower frame and an upper shell** (each printed with its face on the bed) plus a flat back plate; the cap's catch becomes an in-plane catch at the keyholes; details in [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §10.
 
 ## Proposed by Claude, **not** decided

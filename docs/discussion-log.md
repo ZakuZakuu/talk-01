@@ -11,6 +11,9 @@ A running record of owner direction and open questions, so decisions are not los
 - "Loose" meant it slides down too easily; seated it is stable. Bending the old tongue up made it hold more. Screws: M2 countersunk self-tapping like the owner's robots; heat-set inserts are also fine but we use self-tapping; whatever must be opened goes behind the sliding cap.
 - Claude: steeper holding ramp, a four-strength catch coupon, countersunk holes in the back plate coupon.
 
+### Coupon result
+- Dots 1 and 2: fine, maybe a little loose after long use. Dots 3 and 4: a bit firmer, both good. Claude picks C (dot 3). A check on the real frame found the lower-left catch arm cut off by the round opening: arms of the left keyholes now sit on their outer side.
+
 ### Claude's notes
 - The tongue-and-bump catch cannot be printed face down (the bump sits below the bed): replaced by flat in-plane catches at the keyholes; the cap is tightened (bump idea dropped; the catch nub and a 0.2 mm neck play do it). **Untested.**
 - Body split into a lower frame and an upper shell, both printed face down, plus a back plate; the lower frame and a boss coupon are built; the upper shell comes next. See [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §10.

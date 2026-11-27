@@ -53,7 +53,7 @@ if steep.any():
         print(f"  at height {z:5.1f}: {a[sel].sum():6.1f} mm2, x {pts[:, 0].min():.1f} to {pts[:, 0].max():.1f}, y {pts[:, 1].min():.1f} to {pts[:, 1].max():.1f}")
 # the catch arm
 L = F.ARM_BELOW + F.ARM_ABOVE
-I = 1.6 * F.ARM_W ** 3 / 12
+I = 1.6 * F.ARM_W ** 3 / 12   # arm 1.2 (variant C)
 k = 3 * 3500.0 * I / L ** 3
 dfl = (C.NECK_D / 2) - (C.SLOT_W / 2 - F.NUB)
 print(f"== catch arm {F.ARM_W} x {L} x 1.6 mm: deflection {dfl:.2f} mm, strain {1.5 * F.ARM_W * dfl / L ** 2 * 100:.2f} %, about {k:.1f} N/mm, {k * dfl:.1f} N per peg, {4 * k * dfl:.1f} N for four (hand calculation, PLA typical)")
