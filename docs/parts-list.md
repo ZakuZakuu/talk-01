@@ -68,6 +68,7 @@ The plan for the bench test is in [`bench-test-plan.md`](bench-test-plan.md).
 | 16 | **Steel dowel pins Ø2 × 20 mm** | 10 | "不锈钢 圆柱销 2x20" | the key's hinge pin |
 | 17 | **M2 screws assortment** (M2 × 4, 6, 8) and **M2 heat-set inserts** | 1 set | "M2 螺丝套装", "M2 热熔铜螺母 外径3.2 长3mm" | board posts and the hatch |
 | 17b | **M2 self-tapping screws**, **countersunk (flat) head**, cross recess, the same as the owner's robots: **8 mm** long (7 for the back plate), **5 mm** (2 for the dial module), some 6 and 10 mm spare | 30 | "M2 自攻螺丝 十字 圆头 平头" assorted; if the owner's robot screws are M2, the same ones will do | the body is closed with these; look at the pack's label and tell me the size and head |
+| 17c | **Closed-cell foam pad, 2 mm thick** (a sheet or 6 x 6 mm squares), 2 pieces for the wheel's switches (more for the board and the microphone) | 1 sheet | "EVA 泡棉 2mm 单面背胶" | the switches float on it; tact switches 6 x 6 x 4.3: 4 in all (2 wheel, 2 key) |
 | 18 | Spare 1.75 mm filament pieces | (from a spool) | any | the wheel's axle in the mock-up |
 
 ## C · Printing

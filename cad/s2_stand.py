@@ -16,10 +16,13 @@ from s2_lower import box, cyl
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
 ST_Z0, ST_Z1 = 0.2, 3.8                  # the stand's thickness range (its outer face 0.2 mm inside the back surface: a fine seam line)
-ARMS = ((12.0, 17.0), (31.0, 36.0))      # the two arms' x ranges (5 wide); the island between them stays flush with the plate
-FOOT_Y0, FOOT_Y1 = 2.5, 8.0              # the foot bar
+ARMS = ((12.0, 18.0), (30.0, 36.0))      # the two arms' x ranges (6 wide); the island between them stays flush with the plate
+FOOT_Y0, FOOT_Y1 = 2.5, 9.0              # the foot bar
 Y_P, Z_P = 46.5, 2.0                     # the hinge axis (along x)
-ARM_R = 2.5                              # the arms' rounded top ends
+ARM_R = 3.0                              # the arms' rounded top ends
+RIB_PITCH, RIB_W, RIB_D = 3.0, 0.9, 0.5  # horizontal ribs across the arms, echoing the cap's ridges (grooves in the outer face)
+HOOK = (19.0, 29.0, 1.4, 2.6, 1.2)       # a nail groove in the foot's end face: x0, x1, z0, z2, depth
+NOTCH_X = (18.0, 30.0)                   # the finger notch the back plate gets at the bottom edge, in front of the foot
 STUB_D, STUB_L = 2.2, 1.6
 GAP = 0.3                                # the pocket's clearance round the stand
 POCKET_DEPTH = 3.9
@@ -31,15 +34,26 @@ NUB_Y = Y_P - 8.0
 NUB_R, NUB_OUT = 0.8, 0.5
 
 
-def stand():
+def stand_base():
+    """The U's outline as a plain solid (no ribs, no stubs): the pocket in the back plate is cut from its outline."""
     s = None
     for (x0, x1) in ARMS:
         a = box(x0, FOOT_Y0, ST_Z0, x1, Y_P, ST_Z1).union(cyl((x0 + x1) / 2, Y_P, ARM_R, ST_Z0, ST_Z1))
         s = a if s is None else s.union(a)
     foot = box(ARMS[0][0], FOOT_Y0, ST_Z0, ARMS[1][1], FOOT_Y1, ST_Z1)
     s = s.union(foot)
-    s = s.edges(cq.selectors.BoxSelector((ARMS[0][0] - .1, FOOT_Y0 - .1, ST_Z0 - 1), (ARMS[0][0] + .1, FOOT_Y0 + .1, ST_Z1 + 1))).edges("|Z").fillet(2.2)
-    s = s.edges(cq.selectors.BoxSelector((ARMS[1][1] - .1, FOOT_Y0 - .1, ST_Z0 - 1), (ARMS[1][1] + .1, FOOT_Y0 + .1, ST_Z1 + 1))).edges("|Z").fillet(2.2)
+    for (x, y, r) in ((ARMS[0][0], FOOT_Y0, 3.0), (ARMS[1][1], FOOT_Y0, 3.0), (ARMS[0][1], FOOT_Y1, 2.5), (ARMS[1][0], FOOT_Y1, 2.5)):     # outer foot corners and the inner junctions
+        s = s.edges(cq.selectors.BoxSelector((x - .1, y - .1, ST_Z0 - 1), (x + .1, y + .1, ST_Z1 + 1))).edges("|Z").fillet(r)
+    return s
+
+
+def stand():
+    s = stand_base()
+    y = FOOT_Y1 + 2.5                                                    # ribs across the arms (not on the foot bar), in the outer face
+    while y + RIB_W < Y_P - 3.5:
+        s = s.cut(box(ARMS[0][0] - 1, y, ST_Z0 - 0.1, ARMS[1][1] + 1, y + RIB_W, ST_Z0 + RIB_D))
+        y += RIB_PITCH
+    s = s.cut(box(HOOK[0], FOOT_Y0 - 0.1, HOOK[2], HOOK[1], FOOT_Y0 + HOOK[4], HOOK[3]))   # the nail groove
     # the stubs, pointing outward along x
     s = s.union(cq.Workplane("YZ").workplane(offset=ARMS[0][0] - STUB_L).center(Y_P, Z_P).circle(STUB_D / 2).extrude(STUB_L + 0.05))
     s = s.union(cq.Workplane("YZ").workplane(offset=ARMS[1][1] - 0.05).center(Y_P, Z_P).circle(STUB_D / 2).extrude(STUB_L + 0.05))

@@ -11,6 +11,9 @@ A running record of owner direction and open questions, so decisions are not los
 - "Loose" meant it slides down too easily; seated it is stable. Bending the old tongue up made it hold more. Screws: M2 countersunk self-tapping like the owner's robots; heat-set inserts are also fine but we use self-tapping; whatever must be opened goes behind the sliding cap.
 - Claude: steeper holding ramp, a four-strength catch coupon, countersunk holes in the back plate coupon.
 
+### Owner: "draw everything; you know the board and the switch sizes; this is for people to use"
+- Fair. Claude had stopped for measurements that were not blocking. Drew the dial's switch carrier and a detent, restyled the stand and gave it a way out (a finger notch and a nail groove). Found a real conflict between the key and the board pocket and asked the owner (mechanical-plan-S2.md section 11, 'The key'). Asked what the hatch's pins are for.
+
 ### Owner on the stand and the PCB
 - Stand: lean not too large, stable; U or any shape, make it look good; when folded it should be sunk into the back (flush), not lying on it. Claude: a flush U stand in a pocket, back plate thickened and printed outer face down; no official Super Mini pcb/STEP file found (only third-party case models of unknown licence).
 

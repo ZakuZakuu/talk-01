@@ -41,9 +41,10 @@ def back():
         s = s.cut(cyl(x, y, CSINK_D / 2, -0.1, 0.0))
     # the stand: a pad on the inner side, then the pocket (the stand's outline plus a gap), the stub holes and the nubs
     s = s.union(box(S.PAD[0], S.PAD[1], S.PAD_Z[0] - 0.01, S.PAD[2], S.PAD[3], S.PAD_Z[1]))
-    wire = S.stand().translate((0, 0, -S.ST_Z0 - 0.1)).faces("<Z").val().outerWire()
+    wire = S.stand_base().translate((0, 0, -S.ST_Z0 - 0.1)).faces("<Z").val().outerWire()
     pocket = cq.Workplane("XY").add(wire).toPending().offset2D(S.GAP).extrude(S.POCKET_DEPTH + 0.1)
     s = s.cut(pocket)
+    s = s.cut(box(S.NOTCH_X[0], -0.1, -0.1, S.NOTCH_X[1], S.FOOT_Y0 + 0.3, S.POCKET_DEPTH))        # the finger notch at the bottom edge: reaches the foot's nail groove
     s = s.cut(cq.Workplane("YZ").workplane(offset=S.ARMS[0][0] - S.GAP - S.STUB_L - 0.4).center(S.Y_P, S.Z_P).circle(S.HOLE_D / 2).extrude(S.STUB_L + 0.5))
     s = s.cut(cq.Workplane("YZ").workplane(offset=S.ARMS[1][1] + S.GAP - 0.1).center(S.Y_P, S.Z_P).circle(S.HOLE_D / 2).extrude(S.STUB_L + 0.5))
     for nx in (S.ARMS[0][0] - S.GAP + S.NUB_OUT - S.NUB_R, S.ARMS[1][1] + S.GAP - S.NUB_OUT + S.NUB_R):
