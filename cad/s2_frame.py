@@ -15,7 +15,7 @@ import math
 import os
 import cadquery as cq
 from export_util import export_stl
-from s2_lower import box, cyl
+from s2_lower import box, cyl, extrude_xz
 from s2_params import W, WALL, Z_R, Z_I, SEAM_Y, R_CORNER
 import s2_cap as C
 
@@ -24,7 +24,7 @@ BACK_Z = 1.8                        # the back plate seats here
 Y_TOP = SEAM_Y                      # the seam with the upper shell, 52
 END_T = 1.6                         # the end wall at the seam
 BOSS_OD, PILOT_D, PILOT_DEPTH = 5.0, 1.9, 7.0     # M2 self-tapping; the pilot is modelled 0.3 over the 1.6 rule because small holes print small
-BOSSES = ((4.6, 4.6), (W - 4.6, 4.6), (WALL + 2.3, 26.0), (W - WALL - 2.3, 26.0), (WALL + 2.3, 46.0), (W - WALL - 2.3, 46.0))   # side bosses overlap the wall by 0.2 mm (a tangent boss makes a non-manifold edge)
+BOSSES = ((4.6, 4.6), (W - 4.6, 4.6), (WALL + 2.3, 26.0), (W - WALL - 2.3, 26.0), (W - WALL - 2.3, 46.0))   # no boss on the left at y 46: the key's lane (x < 10, y 28 to 78) is kept free;   # side bosses overlap the wall by 0.2 mm (a tangent boss makes a non-manifold edge)
 HUB_C = C.HOLE_C
 HUB_OD, SEAT_ID, SEAT_BOT = 17.0, 14.2, 9.0       # the microphone seat: the round board (13 to 13.8) is to be measured
 SOUND_D = 7.0                                      # the opening in the hub's flange in front of the board's sound hole
@@ -63,7 +63,7 @@ def frame(with_extension=False):
     s = outline_solid(BACK_Z, Z_R, y_top)
     s = s.cut(box(WALL, WALL, BACK_Z - 1, W - WALL, Y_TOP - END_T, Z_I))        # the cavity, open at the back
     # the wire slot through the end wall (between the zones)
-    s = s.cut(box(18.0, Y_TOP - END_T - 0.1, 5.0, 30.0, Y_TOP + 0.1, 11.0))
+    s = s.cut(extrude_xz([(18.0, 11.0), (30.0, 11.0), (24.0, 5.0)], Y_TOP - END_T - 0.1, Y_TOP + 0.1))      # a triangle, apex toward the back: 45 degree flanks, no bridge
     # the floor features
     for (px, py) in C.PEGS:                                                      # the keyholes
         s = s.cut(cyl(px, py - C.SLIDE, C.ENTRY_D / 2, Z_I - 0.1, Z_R + 0.1))

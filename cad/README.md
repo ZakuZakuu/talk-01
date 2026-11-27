@@ -23,6 +23,12 @@ Licence: [CERN-OHL-P-2.0](../LICENSES/CERN-OHL-P-2.0.txt) (see [`../LICENSING.md
 
 ![S2 cap](out/preview_s2_cap.png)
 
+### The upper shell and the back plate
+
+[`s2_upper.py`](s2_upper.py), [`s2_back.py`](s2_back.py), [`check_s2_upper.py`](check_s2_upper.py), [`assemble.py`](assemble.py): the control zone (printed front face down) and the flat back plate (outer face up, countersunk M2 holes); the key, the dial module, the hatch and the stand are still to come. See [`../docs/mechanical-plan-S2.md`](../docs/mechanical-plan-S2.md) §11.
+
+![S2 body](out/preview_s2_body.png)
+
 ### The lower frame, printed without supports
 
 [`s2_frame.py`](s2_frame.py), [`check_s2_frame.py`](check_s2_frame.py), [`boss_test.py`](boss_test.py): the floor under the cap with its walls, six screw bosses, the microphone seat and the in-plane catches, printed **cap-seat face down**; plus a screw-boss coupon. The reasoning: [`../docs/mechanical-plan-S2.md`](../docs/mechanical-plan-S2.md) §10.

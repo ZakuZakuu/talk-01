@@ -112,6 +112,17 @@ def main():
               os.path.join(OUT, "preview_s2_frame.png"), "S2 lower frame, printed FRONT FACE DOWN, no supports", cols=2)
     except Exception as e:
         print("frame preview skipped:", e)
+    try:
+        asm = trimesh.load(os.path.join(OUT, "s2_body_assembled_view.stl"))
+        opn = trimesh.load(os.path.join(OUT, "s2_body_open_view.stl"))
+        up = trimesh.load(os.path.join(OUT, "s2_upper_PRINT_front_down.stl"))
+        bk = trimesh.load(os.path.join(OUT, "s2_back_PRINT_outer_face_up.stl"))
+        sheet([(asm, -50, 20, "the body, front (frame + upper shell + cap + back plate + a plain wheel)", {"px": 640}), (asm, 130, 20, "the body, back (7 countersunk screws)", {"px": 640}),
+               (opn, 140, 35, "without the back plate and cap: the board pocket, the tube, the bosses", {"px": 640}), (up, 0, 0, "upper shell as printed, from above", {"px": 640}),
+               (up, -50, 25, "upper shell as printed, tilted", {"px": 640}), (bk, 0, 0, "back plate as printed (outer face up)", {"px": 640})],
+              os.path.join(OUT, "preview_s2_body.png"), "S2 body: lower frame + upper shell + back plate", cols=2)
+    except Exception as e:
+        print("body preview skipped:", e)
     print("previews written")
 
 

@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: CERN-OHL-P-2.0
 """A small coupon for M2 self-tapping screws in printed bosses: four bosses with pilot holes of 1.7, 1.8, 1.9 and 2.0 mm (1 to 4 dots
-beside each), and a plate with clearance holes and 90 degree countersinks (for countersunk screws; exported countersink down, as it will print). Print the bosses as exported (they stand up, as in the real parts).
+beside each), and a plate with clearance holes and 90 degree countersinks (for countersunk screws; the countersunk face is up, as the real back plate prints). Print the bosses as exported (they stand up, as in the real parts).
     python3 cad/boss_test.py
 """
 import os
@@ -33,8 +33,7 @@ def plate():
         depth = (CSINK_D - CLEAR_D) / 2
         cone = cq.Solid.makeCone(CLEAR_D / 2, CSINK_D / 2, depth, cq.Vector(x, 6.0, PLATE_T - depth), cq.Vector(0, 0, 1))
         p = p.cut(cq.Workplane("XY").add(cone))
-    # printed with the countersunk (outer) face on the bed: the 45 degree cone is then a limit-case overhang, and the visible face is the smooth one
-    return p.rotate((0, 0, 0), (1, 0, 0), 180).translate((0, 14, PLATE_T))
+    return p      # printed as exported: the countersunk (outer) face UP, so the cone narrows downward and nothing overhangs
 
 
 def build():

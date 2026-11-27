@@ -11,6 +11,9 @@ A running record of owner direction and open questions, so decisions are not los
 - "Loose" meant it slides down too easily; seated it is stable. Bending the old tongue up made it hold more. Screws: M2 countersunk self-tapping like the owner's robots; heat-set inserts are also fine but we use self-tapping; whatever must be opened goes behind the sliding cap.
 - Claude: steeper holding ramp, a four-strength catch coupon, countersunk holes in the back plate coupon.
 
+### Owner: no supports
+- "Try it; print with few supports (quality, and they are a pain to remove); research fixed assembly structures." Claude built the upper shell and the back plate with only 45° slopes and short flat bridges, and listed what is left (the wheel window's short bridge; the key, the dial module, the hatch).
+
 ### Coupon result
 - Dots 1 and 2: fine, maybe a little loose after long use. Dots 3 and 4: a bit firmer, both good. Claude picks C (dot 3). A check on the real frame found the lower-left catch arm cut off by the round opening: arms of the left keyholes now sit on their outer side.
 
