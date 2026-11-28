@@ -304,3 +304,8 @@ A running record of owner direction and open questions, so decisions are not los
 4. **Power and wireless** — wired USB-C only for v0.1 with room reserved for a later battery, or should the first shell already include batteries? (Claude's recommendation is in the chat reply; not yet decided.)
 5. **Hardware license** — any preference for the enclosure and PCB files later? (No rush; only needed before design files are published.)
 6. **Concept direction** — any pager, telegraph, radio or other objects you love the look of? Photos would help set proportion and details.
+
+## 2026-11-28 · The wrong board, the key, the hatch, a design pass
+- The seller sent a full-size ESP32-S3 (N8R2) instead of the Super Mini; the owner returns it. It would not fit the S2 interior (about 63 to 70 mm long against the board pocket's 23.5); it could serve a bench test of the firmware if kept.
+- Owner: the shorter key is acceptable; the hatch is Claude's call ("a few pins used for debugging, explained, and a small lid to close when not in use"); the stand is still a bit ugly, lacking industrial design; aim for the standard of Teenage Engineering or Nothing, and improve wherever possible.
+- Claude: key (35 mm, pivot pin, two switches on foam, a stop), a debug hatch with a pin map in the lid, a flush flap stand with a hard stop, six symmetric screws and top hooks, lettering, the wheel's index and mode letters. [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §13; renders in [`../cad/out/`](../cad/out/) (`render_s2_v3_*.png`).

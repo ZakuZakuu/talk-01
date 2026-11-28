@@ -29,7 +29,7 @@ Licence: [CERN-OHL-P-2.0](../LICENSES/CERN-OHL-P-2.0.txt) (see [`../LICENSING.md
 
 ### The upper shell and the back plate
 
-[`s2_upper.py`](s2_upper.py), [`s2_back.py`](s2_back.py), [`check_s2_upper.py`](check_s2_upper.py), [`assemble.py`](assemble.py): the control zone (printed front face down) and the flat back plate (outer face up, countersunk M2 holes); the key, the dial module, the hatch and the stand are still to come. See [`../docs/mechanical-plan-S2.md`](../docs/mechanical-plan-S2.md) §11.
+[`s2_upper.py`](s2_upper.py), [`s2_back.py`](s2_back.py), [`check_s2_upper.py`](check_s2_upper.py), [`assemble.py`](assemble.py): the control zone (printed front face down) and the flat back plate (outer face down, six countersunk M2 holes, two top hooks). [`s2_dial.py`](s2_dial.py): the wheel and its module. [`s2_key.py`](s2_key.py): the push-to-talk key (printed on its back). [`s2_stand.py`](s2_stand.py): the flap stand. [`s2_hatch.py`](s2_hatch.py): the debug hatch's lid. [`check_s2_back.py`](check_s2_back.py): fit and print checks of these. See [`../docs/mechanical-plan-S2.md`](../docs/mechanical-plan-S2.md) §11 and §13. Engraved lettering uses JetBrains Mono (SIL Open Font Licence) if it is installed, else CadQuery's default font.
 
 ![S2 body](out/preview_s2_body.png)
 

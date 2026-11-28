@@ -12,10 +12,11 @@ for a typical plug. The dial module (plate, cam, switches), the key's window and
 import math
 import os
 import cadquery as cq
-from export_util import export_stl
+from export_util import export_stl, text_solid
 from s2_lower import box, cyl
 from s2_params import W, H, D, WALL, CHAMFER, R_CORNER, SEAM_Y, WHEEL_R, POCKET_GAP, WHEEL_CX
 import s2_frame as F
+import s2_key as K
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
 Z_BACK, Z_FRONT = F.BACK_Z, D
@@ -37,10 +38,16 @@ BD_Z_PCB = (10.1, 11.3)                 # the pcb's back and front face: the com
                                         # and BOOT / RESET can be pressed through the back plate
 USB_X = (BD_X0 + BD_X1) / 2             # the connector's centre
 USB_ZC = 8.5                            # its centre in depth
-BOSSES_UP = ((16.0, 59.0), (44.4, 56.0))                         # back-plate screws (M2 self-tapping into the pilots)
+BOSSES_UP = ((16.0, 59.0), (W - 16.0, 59.0))                     # back-plate screws (M2 self-tapping into the pilots); symmetric with the lower ones (2026-11-28)
 EAR_BOSSES = ((WHEEL_CX - 8.0, 60.5), (WHEEL_CX + 8.0, 60.5))     # the dial module's two screws, drawing it onto its seat (M2 x 5)
 EAR_BOSS_Z = 11.5                       # the boss ends 0.3 mm IN FRONT of the plate's front face (11.2): the seat, not the screws, sets the position
-TABS_X = (10.0, W - 10.0)               # the lower frame's alignment tabs (z 6 to 8.4, y 52 to 55)
+TABS_X = F.TABS_X                       # the lower frame's alignment tabs (z 6 to 8.4, y 52 to 55)
+TOP_HOOKS_X = (7.5, 25.5)               # the back plate's two top hooks (x of their left edge, 5 wide) catch in slots in the top wall's inner face
+HOOK_W, HOOK_SLOT_Z = 5.0, (2.2, 3.4)
+# marks on the face (engraved 0.4 mm into the front, which prints on the bed): the wordmark and the wheel's index triangle
+MARK_DEPTH = 0.4
+WORDMARK = ("talk.01", 3.2, 4.2, 55.2)  # text, size, x, y (baseline-ish): the control zone's lower left
+
 
 
 def prism(z0, z1):
@@ -77,6 +84,13 @@ def poly_xz(pts, y0, y1):
     return cq.Workplane("XZ").workplane(offset=-y1).polyline(pts).close().extrude(y1 - y0)
 
 
+def index_mark():
+    """A small triangle on the face pointing at the wheel from the left (the dial's index, like a camera's mode dial)."""
+    tip = WHEEL_CX - BORE_R - 0.9
+    pts = [(tip, WHEEL_CY), (tip - 2.2, WHEEL_CY + 1.3), (tip - 2.2, WHEEL_CY - 1.3)]
+    return cq.Workplane("XY").workplane(offset=Z_FRONT - MARK_DEPTH).polyline(pts).close().extrude(MARK_DEPTH + 0.1)
+
+
 def upper(with_pilots=True):
     shell = outer_solid()
     cavity = inset_prism(Z_BACK - 0.1, Z_FW, WALL).intersect(box(-1, Y0 + END_T, Z_BACK - 1, W + 1, H + 1, Z_FW + 1))
@@ -108,6 +122,15 @@ def upper(with_pilots=True):
     zt, zb, hw, ch = USB_ZC - 3.4, USB_ZC + 3.4, 6.5, 3.4      # zt the back side (the print's ceiling), zb the front side
     pts = [(USB_X - hw, zb), (USB_X + hw, zb), (USB_X + hw, zt + ch), (USB_X + hw - ch, zt), (USB_X - hw + ch, zt), (USB_X - hw, zt + ch)]
     s = s.cut(poly_xz(pts, H - WALL - 0.1, H + 0.1))
+    # the key: the window's upper part (the frame has the rest) and the end wall notched for the key and its upper switch
+    s = s.cut(K.window_cut(Y0 - 0.1, H))
+    s = s.cut(box(F.END_NOTCH[0], Y0 - 0.1, Z_BACK - 0.1, F.END_NOTCH[1], Y0 + END_T + 0.1, F.END_NOTCH[2]))
+    # the back plate's top hooks: slots in the top wall's inner face, 1 mm deep (a 0.4 mm skin over each when printed: a 5.6 mm bridge)
+    for hx in TOP_HOOKS_X:
+        s = s.cut(box(hx - 0.3, H - WALL - 0.1, HOOK_SLOT_Z[0], hx + HOOK_W + 0.3, H - WALL + 1.0, HOOK_SLOT_Z[1]))
+    # the marks on the face
+    s = s.cut(text_solid(WORDMARK[0], WORDMARK[1], WORDMARK[2], WORDMARK[3], Z_FRONT - MARK_DEPTH, MARK_DEPTH + 0.1))
+    s = s.cut(index_mark())
     # alignment slots for the lower frame's tabs (blind, 2.8 wide: a 3 mm bridge)
     for tx in TABS_X:
         s = s.cut(box(tx - 1.4, Y0 - 0.1, 5.8, tx + 1.4, Y0 + 3.3, 8.6))

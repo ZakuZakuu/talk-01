@@ -20,6 +20,7 @@ A small walkie-talkie-like **wired USB-C microphone**: a real microphone first (
 
 ## 3 · The key (left edge, upper half)
 - On the **left edge, y 12 to 58** (46 mm long), **slanted** (the TE-lever idea, our own shape).
+  - **Changed by the owner, 2026-11-28:** about **35 mm** long (the window runs 25 to 60.5 mm up from the bottom), because the controller board takes the rest of the left edge; see [`decisions.md`](decisions.md).
 - Sticks out **5 mm** (the owner found the middle block, 5 mm, the most comfortable), **11 mm deep**, radii 2 mm or more.
 - **Two stages**: a soft first switch starts the talk (hold); a second switch at the bottom is a quiet latch confirm. A **rubber bump** at the bottom stop. The lesson from TE's lever is in [`research/te-ting-reference.md`](research/te-ting-reference.md).
 - A spring returns the key; it turns on a steel pin at its bottom.
@@ -45,7 +46,7 @@ A small walkie-talkie-like **wired USB-C microphone**: a real microphone first (
 | Wheel | two small switches and a printed cam |
 | Cable | a coiled USB-C cable, bought, at the top edge |
 | Space | a **general expansion space** (about 43 × 28 × 11 mm), not a battery bay |
-| Back | a small **hatch with the pins** and a **BOOT/RESET access**; a **small U stand** |
+| Back | a small **hatch with the pins** and a **BOOT/RESET access**; a **small U stand** (2026-11-28: the hatch is a debug hatch over the board with a pin map inside its lid; the stand is a flush flap, owner asked for a better look) |
 
 Firmware is not part of this freeze: a bench test comes first ([`research/claude-review.md`](research/claude-review.md)). The key mapping stays configurable (Alt by default).
 

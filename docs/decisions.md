@@ -80,6 +80,12 @@ The owner left the order of work to Claude and allowed the firmware to be prepar
 - **Dial switches (owner, 2026-11-27): no lever micro switches (too big, too costly); solve the tact switches' 0.3 mm travel by design.** The plan is a flat printed finger between cam and button, like the cap's catch arm, which flexes the excess; to be drawn once the switches are in hand ([`mechanical-plan-S2.md`](mechanical-plan-S2.md) §11).
 - Claude's design choices in answer (**the owner may veto**): the body is split into a **lower frame and an upper shell** (each printed with its face on the bed) plus a flat back plate; the cap's catch becomes an in-plane catch at the keyholes; details in [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §10.
 
+## The key, the hatch and a design pass (owner, 2026-11-28)
+- **The key is shortened** to what fits below the Super Mini (option A): the frozen 46 mm (y 30 to 76) could not be built; it is now **about 35 mm (window y 25 to 60.5)**, still on the left edge, still slanted and 5 mm proud. This changes the frozen spec §3 by the owner's word ("可以接受").
+- **The back hatch:** the owner left it to Claude ("你自己看吧"): a **debug hatch over the Super Mini** with a flush lid (open it for BOOT, RESET, the LED and the board's pads); the **lid's inner face carries a pin map** ("放几个调试时会用到的引脚说明"); closed when not in use. It replaces the paper-clip slot.
+- **The board that arrived** is a full-size ESP32-S3 (N8R2), not the Super Mini: the owner is returning it; the design stays on the Super Mini.
+- **Look:** the owner asked for a better industrial-design standard throughout (Teenage Engineering, Nothing); the U stand was still "a bit ugly". Claude's answer (the owner may veto): a **flush flap stand** with a hard stop, a symmetric six-screw back with top hooks, the hatch, engraved lettering, a wordmark and the wheel's index on the face, mode letters on the wheel; details in [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §13.
+
 ## Proposed by Claude, **not** decided
 
 - Modes on the wheel: **DICT, TALK, OPEN, LOCK**, with the wheel's click as a latch.

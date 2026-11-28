@@ -18,13 +18,17 @@ from export_util import export_stl
 from s2_lower import box, cyl, extrude_xz
 from s2_params import W, WALL, Z_R, Z_I, SEAM_Y, R_CORNER
 import s2_cap as C
+import s2_key as K
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
 BACK_Z = 1.8                        # the back plate seats here
 Y_TOP = SEAM_Y                      # the seam with the upper shell, 52
 END_T = 1.6                         # the end wall at the seam
 BOSS_OD, PILOT_D, PILOT_DEPTH = 5.0, 1.9, 7.0     # M2 self-tapping; the pilot is modelled 0.3 over the 1.6 rule because small holes print small
-BOSSES = ((4.6, 4.6), (W - 4.6, 4.6), (WALL + 2.3, 26.0), (W - WALL - 2.3, 26.0), (W - WALL - 2.3, 46.0))   # no boss on the left at y 46: the key's lane (x < 10, y 28 to 78) is kept free;   # side bosses overlap the wall by 0.2 mm (a tangent boss makes a non-manifold edge)
+BOSSES = ((4.6, 4.6), (W - 4.6, 4.6), (WALL + 2.3, 22.0), (W - WALL - 2.3, 22.0))   # four, symmetric (2026-11-28; the side pair moved down from y 26 to clear the key's window, y 25 to 60.5);
+                                                                                     # side bosses overlap the wall by 0.2 mm (a tangent boss makes a non-manifold edge)
+TABS_X = (15.0, W - 15.0)          # the alignment tabs (moved from x 10: the key's switch bracket passes the end wall at x < 12.5)
+END_NOTCH = (1.5, 12.5, 12.95)     # the end wall is notched at x 1.5 to 12.5, from the back up to the floor (z 13), for the key, its lip and its upper switch
 HUB_C = C.HOLE_C
 HUB_OD, SEAT_ID, SEAT_BOT = 17.0, 14.2, 9.0       # the microphone seat: the round board (13 to 13.8) is to be measured
 SOUND_D, SOUND_DX = 5.5, -2.8                      # the opening in the hub's flange in front of the board's sound hole: that hole is about 3 mm off the board's centre (-x in the photo's orientation)
@@ -87,8 +91,12 @@ def frame(with_extension=False):
         boss = cyl(bx, by, BOSS_OD / 2, BACK_Z, Z_I + 0.01)
         s = s.union(boss)
         s = s.cut(cyl(bx, by, PILOT_D / 2, BACK_Z - 0.1, BACK_Z + PILOT_DEPTH))
+    # the key: its window in the left wall, the notch in the end wall, the blind hole for its pin in the floor
+    s = s.cut(K.window_cut(0.0, Y_TOP + 0.1))
+    s = s.cut(box(END_NOTCH[0], Y_TOP - END_T - 0.1, BACK_Z - 0.1, END_NOTCH[1], Y_TOP + 0.1, END_NOTCH[2]))
+    s = s.cut(cyl(K.PIN[0], K.PIN[1], K.PIN_HOLE_FIXED / 2, Z_I - 0.1, Z_I + 1.0))
     # two alignment tabs poking up from the end wall into the upper shell
-    for tx in (10.0, W - 10.0):
+    for tx in TABS_X:
         s = s.union(box(tx - 1.2, Y_TOP - 0.01, 6.0, tx + 1.2, Y_TOP + 3.0, 8.4))
     return s
 

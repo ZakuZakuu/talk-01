@@ -21,7 +21,7 @@ Heights are typical values for a 6 x 6 x 4.3 mm tact switch (housing 3.5, button
 import math
 import os
 import cadquery as cq
-from export_util import export_stl
+from export_util import export_stl, text_solid
 from s2_lower import box, cyl
 from s2_params import W, H, WHEEL_R
 import s2_upper as U
@@ -32,6 +32,11 @@ WHEEL_Z0, WHEEL_Z1 = 11.6, 19.0
 STUB_D, STUB_FLAT = 3.0, 0.4                          # the stub's diameter and the D flat's depth
 WHEEL_FILLET = 1.0                                    # the face edge (a fillet on the bed face prints fine: each layer steps out 0.3 mm or less)
 GROOVES, GROOVE_R = 24, 0.8
+# the modes on the wheel's face, engraved (owner's spec: icons by sticker or multi-colour inlay; these letters are the base). The index is
+# on the body at the wheel's left (180 deg); turning the wheel 45 deg counter-clockwise brings the next one to it. Which turn direction
+# goes with which Gray code is set in the firmware.
+MODE_MARKS = (("D", 180.0), ("T", 135.0), ("O", 90.0), ("L", 45.0))     # DICT, TALK, OPEN, LOCK
+MARK_R, MARK_DEPTH = 6.6, 0.4
 PLATE_Z0, PLATE_Z1, PLATE_HOLE = 10.0, 11.2, 3.5
 PLATE_R_FRONT, PLATE_R_BACK = U.SEAT_R1 - 0.1, U.SEAT_R0 - 0.2      # the bevel runs 45 degrees (kept 0.1 clear of the shell's cone)
 # --- the cam and the switches
@@ -72,6 +77,10 @@ def wheel():
     for i in range(GROOVES):
         a = 2 * math.pi * i / GROOVES
         w = w.cut(cyl(CX + (WHEEL_R + 0.25) * math.cos(a), CY + (WHEEL_R + 0.25) * math.sin(a), GROOVE_R, WHEEL_Z0 - 1, WHEEL_Z1 + 1))
+    for (letter, ang) in MODE_MARKS:      # the four modes, engraved; each one is upright when it stands at the index (on the left, 180 deg)
+        t = text_solid(letter, 2.6, 0, 0, WHEEL_Z1 - MARK_DEPTH, MARK_DEPTH + 0.1, halign="center", valign="center")
+        t = t.rotate((0, 0, 0), (0, 0, 1), ang - 180.0).translate((CX + MARK_R * math.cos(math.radians(ang)), CY + MARK_R * math.sin(math.radians(ang)), 0))
+        w = w.cut(t)
     return w.union(d_stub(CAM_Z0 + 0.2, WHEEL_Z0 + 0.05))
 
 
