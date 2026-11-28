@@ -86,6 +86,11 @@ The owner left the order of work to Claude and allowed the firmware to be prepar
 - **The board that arrived** is a full-size ESP32-S3 (N8R2), not the Super Mini: the owner is returning it; the design stays on the Super Mini.
 - **Look:** the owner asked for a better industrial-design standard throughout (Teenage Engineering, Nothing); the U stand was still "a bit ugly". Claude's answer (the owner may veto): a **flush flap stand** with a hard stop, a symmetric six-screw back with top hooks, the hatch, engraved lettering, a wordmark and the wheel's index on the face, mode letters on the wheel; details in [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §13.
 
+## Look, v4 (owner, 2026-11-28)
+- The owner agreed with the reading of the TE comparison: the **grid** under everything is the key point, then the layer of marks.
+- **No AMS yet** (may buy one later); the **grille may change completely**; a **front lamp** is wanted (a light pipe is fine); the **buzzer** stays for later; a small **top knob** was floated as optional ("if it is trouble, skip it").
+- The owner asked for **two or three versions** to choose from: A, B, C in [`mechanical-plan-S2.md`](mechanical-plan-S2.md) §14. **Not yet chosen.**
+
 ## Proposed by Claude, **not** decided
 
 - Modes on the wheel: **DICT, TALK, OPEN, LOCK**, with the wheel's click as a latch.

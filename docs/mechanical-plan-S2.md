@@ -192,6 +192,24 @@ The owner chose the shorter key, left the hatch to Claude, and asked for a bette
 
 **Not checked by anything but numbers:** the feel of the key's stages and its foam, the hinge's friction (the pin's holes are guesses: small holes print small), the hatch's click, the switches' real sizes, the BOOT/RESET positions on the real board.
 
+## 14 · The graphics layer and three look directions (v4, 2026-11-28)
+The owner compared v3 with Teenage Engineering's product photos and agreed with Claude's reading: the shapes and proportions hold up; what is missing is the **layer of printed marks** and, under it, **a grid** ("the most important point"). The owner has no AMS yet (may buy one), the grille may change completely, a front lamp is wanted (it was in the spec's control zone and had been dropped), a buzzer stays in the backlog, and a small top knob was floated as optional. The owner left the evening to Claude: "make two or three versions".
+
+**Common to all versions** ([`../cad/s2_graphics.py`](../cad/s2_graphics.py)):
+- **The grid:** a 4 mm margin on every edge; the wheel's centre line (y 75) is the upper zone's axis, carrying the lamp and the first tick.
+- **Marks as solids 0.4 mm deep** in the faces that print on the bed: engraved now (fill with paint and wipe), or printed as a second colour with an AMS from the same `*_ink.stl` files, flush like a pad print. Type: Inter (SIL OFL); small labels 2.3 mm (about 1.7 mm cap height, strokes about 0.35 mm: about the finest a 0.4 mm nozzle prints).
+- **The lamp:** a dot on the face, a guide tube behind it, a 1.75 mm clear filament as the light pipe down to a small LED stuck on the Super Mini's front face (pin map: GPIO 1, a plan).
+- **The wheel:** a finer knurl (40 grooves), a pointer instead of letters (the modes are on the body's scale now), a recessed ring round its bore that frames it. **The USB-C opening** has a 0.6 mm step round it.
+
+**Three directions** (`STYLE` in `s2_graphics.py`; renders in [`../design/renders/v4/`](../design/renders/v4/)):
+- **A "instrument"** (Claude's recommendation): an arc, four ticks and the words DICT / TALK / OPEN / LOCK round the wheel; ridged cap with a block of equal slots; the WARM palette.
+- **B "radio"**: four dots and numbers 1 to 4, the legend on the back; a flat cap with a field of round holes framed by a fine ring; one light grey.
+- **C "signal"**: the wordmark runs up the left margin in one column with the lamp and the key's mark; mono labels; a dark body, a black cap and a light wheel.
+
+**The top knob:** not added. The top is taken by the board (left) and the wheel's tube (right), leaving under 3 mm; and with no speaker, "volume" would be input gain, which the wheel or the firmware can set. To be revisited if the owner wants it.
+
+All checks pass after the change ([`../cad/check_s2_upper.py`](../cad/check_s2_upper.py), [`../cad/check_s2_back.py`](../cad/check_s2_back.py)). Nothing printed.
+
 ## 12 · Next
 1. ~~The owner prints `s2_cap_shell.stl`~~ done in round 3. Old text: the owner prints **`s2_cap_shell.stl`** (front up, supports from the bed under the detent tongue) and **`s2_cap_PRINT_face_down.stl`** ([`../cad/out/`](../cad/out/)) and tries the cap: does it go on, slide, click, hold, come off?
 2. ~~The owner decides the wheel~~: **P chosen**.

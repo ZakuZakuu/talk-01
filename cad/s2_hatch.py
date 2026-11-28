@@ -25,7 +25,7 @@ TABS = ((6.4, 9.4), (12.6, 15.6))         # the top hooks' x ranges
 HOOK_REACH = 0.75                          # beyond the opening's top edge, under the plate
 ARM = dict(x_root=6.0, x_free=15.3, w=1.2, slit=0.5)
 NUB = dict(x0=13.3, x1=15.0, depth=0.55, z=(0.45, 0.95, 1.1, 1.55))   # z: hold ramp start, flat, flat end, entry ramp end (seen from outside: the hold side is outward)
-PIN_MAP = ("MIC 4 5 6", "KEY 7 8", "DIAL 9 10", "FREE 1 2 3")
+PIN_MAP = ("MIC 4 5 6", "KEY 7 8", "DIAL 9 10", "LAMP 1", "FREE 2 3")     # v4: the front lamp on GPIO 1 (a plan)
 
 
 def lid():
@@ -45,10 +45,10 @@ def lid():
     prof = [(LY0 + 0.01, z0), (LY0 - d, z1), (LY0 - d, z2), (LY0 + 0.01, z3)]
     s = s.union(cq.Workplane("YZ").workplane(offset=NUB["x0"]).polyline(prof).close().extrude(NUB["x1"] - NUB["x0"]))
     # the pin map on the inner face (reads from the inside: no mirror), 0.3 mm deep
-    y = LY1 - 3.6
+    y = LY1 - 3.3
     for line in PIN_MAP:
         s = s.cut(text_solid(line, 1.9, LX0 + 0.8, y, T - 0.3, 0.4))
-        y -= 3.25
+        y -= 2.85
     return s
 
 

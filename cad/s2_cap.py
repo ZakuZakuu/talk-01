@@ -11,11 +11,13 @@ This is a test piece (the lower part of the front shell, cut at z = 9 and y = 58
 over the cavity, so switch on supports from the bed under it) and the cap from s2_cap_PRINT_face_down.stl (front face down, pegs pointing up).
     python3 cad/s2_cap.py
 """
+import math
 import os
 import cadquery as cq
 from export_util import export_stl
 from s2_lower import box, cyl
 from s2_params import *
+import s2_graphics as G
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
 Z_CUT, Y_TOP = 9.0, 58.0
@@ -61,21 +63,46 @@ def peg(px, py):
     return neck.union(cone).union(head)
 
 
-def cap(offset=0.0, groove=True):
+GRILLE = None               # None: follow the graphics style (s2_graphics.STYLE); or force one of: v4 (2026-11-28): "slots" = the ridges stay, the openings are a block of equal slots; "holes" = a flat cap with a
+                            # field of round holes; "v3" = the old openings (every gap cut where it crosses the round hole: uneven lengths)
+SLOT_L = 20.0               # the slots' length (all equal), centred on the hole
+HOLE_PITCH, HOLE_DIA, HOLE_FIELD_R = 3.0, 1.6, 14.0
+
+
+def cap(offset=0.0, groove=True, grille=None):
     """The cap; offset (negative = slid down) shifts it along y. offset 0 is the locked position."""
+    grille = grille or G.STYLES[G.STYLE]["grille"] if GRILLE is None else (grille or GRILLE)
     c = cq.Workplane("XY").workplane(offset=Z_R).center((CAP_X0 + CAP_X1) / 2, (CAP_Y0 + CAP_Y1) / 2).rect(CAP_X1 - CAP_X0, CAP_Y1 - CAP_Y0).extrude(LID_T)
     c = c.edges(cq.selectors.BoxSelector((-1, -1, Z_R - 1), (W + 1, CAP_Y0 + 1, Z_F + 1))).edges("|Z").fillet(R_CORNER - CAP_INSET)
     c = c.faces(">Z").edges(cq.selectors.BoxSelector((-1, -1, Z_F - 0.01), (W + 1, CAP_Y1 - 1, Z_F + 0.01))).fillet(1.5)
     y = CAP_Y0 + 2.0
     gaps = []
-    while y + RIDGE_W + RIDGE_GAP < RIDGES_END:
+    while grille != "holes" and y + RIDGE_W + RIDGE_GAP < RIDGES_END:
         g0 = y + RIDGE_W
         c = c.cut(box(-1, g0, Z_R + LID_BASE, W + 1, g0 + RIDGE_GAP, Z_F + 1))
         gaps.append((g0, g0 + RIDGE_GAP))
         y += RIDGE_PITCH
-    disc = cyl(HOLE_C[0], HOLE_C[1], HOLE_D / 2 - 2.0, Z_R - 0.1, Z_R + LID_BASE + 0.1)  # through-slots, only over the round hole
-    for (g0, g1) in gaps:
-        c = c.cut(box(-1, g0, Z_R - 0.2, W + 1, g1, Z_R + LID_BASE + 0.2).intersect(disc))
+    r_open = HOLE_D / 2 - 2.0
+    if grille == "v3":
+        disc = cyl(HOLE_C[0], HOLE_C[1], r_open, Z_R - 0.1, Z_R + LID_BASE + 0.1)  # through-slots, only over the round hole
+        for (g0, g1) in gaps:
+            c = c.cut(box(-1, g0, Z_R - 0.2, W + 1, g1, Z_R + LID_BASE + 0.2).intersect(disc))
+    elif grille == "slots":                 # a block of equal slots with round ends: every one lies wholly over the round hole
+        for (g0, g1) in gaps:
+            yc = (g0 + g1) / 2
+            dy = abs(yc - HOLE_C[1])
+            if dy < r_open and math.sqrt(r_open ** 2 - dy ** 2) >= SLOT_L / 2 + 0.3:
+                c = c.cut(cq.Workplane("XY").workplane(offset=Z_R - 0.2).center(HOLE_C[0], yc).slot2D(SLOT_L, g1 - g0, 0).extrude(LID_BASE + 0.4))
+    else:                                   # a flat cap with round holes on a square grid
+        n = int(HOLE_FIELD_R // HOLE_PITCH) + 1
+        for i in range(-n, n + 1):
+            for j in range(-n, n + 1):
+                x, y2 = HOLE_C[0] + i * HOLE_PITCH, HOLE_C[1] + j * HOLE_PITCH
+                if math.hypot(i * HOLE_PITCH, j * HOLE_PITCH) <= HOLE_FIELD_R - HOLE_DIA / 2:
+                    c = c.cut(cyl(x, y2, HOLE_DIA / 2, Z_R - 0.2, Z_F + 0.2))
+    ink = G.cap_ink(extra=0.1)
+    if ink is not None:
+        c = c.cut(ink)
     if groove:                                                                            # the old detent groove in the cap's back (not used by the support-free frame)
         gv = GROOVE
         c = c.cut(box(gv["x0"], TONGUE["yc"] - gv["w"] / 2, Z_R - 0.1, gv["x1"], TONGUE["yc"] + gv["w"] / 2, Z_R + gv["depth"]))

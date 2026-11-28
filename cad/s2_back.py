@@ -22,6 +22,7 @@ import s2_frame as F
 import s2_upper as U
 import s2_stand as S
 import s2_key as K
+import s2_graphics as G
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
 T = F.BACK_Z                           # 1.8
@@ -111,7 +112,7 @@ def back(sweep_end=SWEEP_END):
     s = s.cut(box(g[0], hy0 - g[4], g[2], g[1], hy0 + 0.1, g[3]))
     s = s.cut(cq.Workplane("XY").workplane(offset=-0.1).center(8.5, hy0).slot2D(5.0, 3.0, 0).extrude(0.9))
     # the lettering
-    s = s.cut(lettering())
+    s = s.cut(G.back_ink(extra=0.1))     # v4: the graphics layer (s2_graphics.py)
     return s
 
 
